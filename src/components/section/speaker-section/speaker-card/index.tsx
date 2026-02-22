@@ -36,7 +36,7 @@ export function SpeakerCard({
   const cardContent = (
     <>
       {/* Avatar */}
-      <div className="group relative aspect-[3/4] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-black border-b-4 border-transparent transition-colors duration-300 group-hover:border-[#e81111]">
+      <div className="group relative aspect-square md:aspect-[3/4] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-950 to-black border-b-4 border-transparent transition-colors duration-300 group-hover:border-[#e81111]">
         {speaker.image ? (
           <Image
             src={speaker.image}
@@ -54,10 +54,10 @@ export function SpeakerCard({
         )}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
         <div className="absolute bottom-3 right-3 flex items-center gap-2">
-          <span className="flex h-7 w-7 items-center justify-center rounded-sm bg-white/90 text-[10px] font-semibold text-black shadow-sm">
+          <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-white/90 text-[10px] font-semibold text-black shadow-sm md:h-7 md:w-7">
             X
           </span>
-          <span className="flex h-7 w-7 items-center justify-center rounded-sm bg-white/90 text-[10px] font-semibold text-black shadow-sm">
+          <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-white/90 text-[10px] font-semibold text-black shadow-sm md:h-7 md:w-7">
             in
           </span>
         </div>
@@ -65,13 +65,15 @@ export function SpeakerCard({
 
       {/* Info */}
       <div className="px-1 pt-4 pb-2 text-left">
-        <p className="text-white text-xl font-bold leading-snug">
+        <p className="text-white text-base md:text-xl font-bold leading-snug">
           {name}
         </p>
-        <p className="mt-1 text-sm text-[#e81111] leading-snug">
+        <p className="mt-1 text-xs md:text-sm text-[#e81111] leading-snug">
           {role}
         </p>
-        <p className="text-xs text-white/60 leading-snug">{company}</p>
+        <p className="text-[11px] md:text-xs text-white/60 leading-snug">
+          {company}
+        </p>
       </div>
     </>
   );

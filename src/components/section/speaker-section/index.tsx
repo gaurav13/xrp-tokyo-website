@@ -57,12 +57,12 @@ export function SpeakerSection() {
       id="speakers"
       className={`relative w-full flex flex-col items-center justify-center bg-black rounded-tr-2xl rounded-tl-2xl ${SECTION_STYLES.sticky} scroll-mt-24`}
     >
-      <div className={SECTION_STYLES.container}>
+      <div className={`${SECTION_STYLES.container} px-4 sm:px-6 lg:px-8`}>
         <div className="flex flex-col items-center text-center text-white">
           <div className="mb-3 h-px w-24 bg-[#e81111]" aria-hidden="true" />
           <SectionTitle
             title={t("speakerSection.title")}
-            className="text-white"
+            className="text-white text-xl md:text-3xl"
             accentClassName="bg-gradient-to-r from-transparent via-[#e81111] to-transparent"
           />
 
@@ -88,7 +88,7 @@ export function SpeakerSection() {
             </motion.p>
           ) : (
             <motion.div
-              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full mt-4"
+              className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full mt-4"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
