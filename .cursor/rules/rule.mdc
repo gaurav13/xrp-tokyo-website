@@ -1,0 +1,346 @@
+---
+alwaysApply: true
+---
+
+# Project Rules – Design-First Next.js Website  
+(Stack: Next.js + TypeScript + shadcn/ui)
+
+You are an AI assistant working on a **design-first marketing website** built with:
+- Next.js (App Router)
+- TypeScript
+- shadcn/ui (Tailwind-based design system)
+
+Your top priority is:
+
+> Beautiful, consistent visual design and smooth UX first.  
+> Code structure is important, but second.
+
+When making decisions, always optimize for:
+1. Visual hierarchy
+2. Whitespace and rhythm
+3. Typographic quality
+4. Consistent use of design tokens
+5. Subtle, delightful motion
+
+---
+
+## 0. Global Design Principles
+
+- **Clarity over cleverness**  
+  Layouts must be instantly understandable. Avoid visual noise, unnecessary borders, and too many colors.
+
+- **Consistent rhythm**  
+  Use a consistent spacing scale (4 or 8 px-based). Avoid “almost, but not quite” spacing (e.g. 17px vs 16px).
+
+- **Hierarchy & focus**  
+  Each screen and section must have:
+  - One clear primary focus (hero text, main CTA, etc.)
+  - Limited secondary elements
+  - Tertiary details that don’t fight for attention
+
+- **Reduction**  
+  If an element doesn’t directly help understanding or conversion, remove it.
+
+- **Design tokens first**  
+  Do not hard-code arbitrary colors, radii, or shadows when shadcn tokens exist. Use the design system.
+
+---
+
+## 1. Layout & Grid System
+
+### 1.1 Page Width & Container
+
+- Use a **fixed max-width layout** for main content.
+- Base rule:
+  - max-width: around 1100–1200px (e.g. `max-w-5xl` / `max-w-6xl`)
+  - Centered with side paddings (e.g. `mx-auto w-full px-4 md:px-6 lg:px-8`)
+
+### 1.2 Spacing & Grid
+
+- Use an **8px base grid** (4 is acceptable for fine-tuning).
+  - Typical vertical section padding: `py-16` / `py-20` / `py-24`
+  - Typical gaps: `gap-4`, `gap-6`, `gap-8`, `gap-10`
+- Avoid unaligned margins / paddings that break the vertical rhythm.
+
+### 1.3 Layout Patterns
+
+Prefer:
+- Two-column layouts with **3:5 or 5:8** proportions (text vs image). Avoid strict 50:50 unless necessary.
+- Single-column centered layouts for important messages (hero, main CTA).
+- Align content to a clear vertical axis. Avoid “drifting” cards or misaligned headings.
+
+---
+
+## 2. Typography System
+
+### 2.1 General Rules
+
+- Typography is one of the main design tools. Keep it:
+  - Simple scale (H1–H4 + body + caption)
+  - Consistent across pages
+- Avoid more than:
+  - 2–3 font sizes in a single section
+  - 2 weights (e.g. regular, semibold) in a single block
+
+### 2.2 Suggested Scale (example)
+
+- H1: `text-4xl md:text-5xl` – main hero
+- H2: `text-3xl md:text-4xl` – section titles
+- H3: `text-2xl` – card titles, sub-sections
+- Body: `text-base md:text-[15px]` with `leading-relaxed`
+- Small: `text-sm` with `leading-relaxed`
+
+Use:
+- Tight tracking for headings: `tracking-tight`
+- Comfortable line-height for Japanese: `leading-relaxed` or `leading-loose`
+
+### 2.3 Japanese Typesetting Rules
+
+- Use **half-width** for numbers and Latin characters consistently.
+- Avoid mixing full-width and half-width digits in the same sentence.
+- Avoid manual `<br />` for Japanese text unless art-directed.
+  - If breaking lines, avoid:
+    - Starting a line with 、 。 」 ） ？ ！ and similar punctuation.
+- For multi-line headings, consider `text-balance` / `text-pretty` if available.
+
+---
+
+## 3. Color System & Theming (shadcn/ui)
+
+### 3.1 Use Tokens, Not Raw Colors
+
+- Always prefer shadcn tokens:
+  - `bg-background`, `bg-card`, `text-foreground`, `text-muted-foreground`
+  - `bg-primary`, `text-primary-foreground`
+  - `border-border`, `ring-ring`, `bg-muted`, `bg-accent`, etc.
+- Do **not** introduce arbitrary hex colors directly in components unless explicitly required.
+
+### 3.2 Palette Structure
+
+- One **primary accent color** for CTAs (buttons, key links).
+- One **secondary accent** for supporting UI (tags, subtle highlights).
+- A neutral grayscale as the base:
+  - Background slightly tinted (light or dark mode)
+  - Surfaces: slightly elevated backgrounds (cards, panels)
+- Avoid using too many bright colors at once. Limit main accent usage to:
+  - Buttons
+  - Key links
+  - Important tags / badges
+
+---
+
+## 4. Shape, Elevation & Effects
+
+### 4.1 Corners
+
+- Global rule:
+  - Use consistent rounded corners (e.g. `rounded-xl` / `rounded-2xl`).
+  - Set shadcn `radius` in theme and use it everywhere.
+- Do not mix many radii (`rounded-md`, `rounded-3xl`, `rounded-full`) in a chaotic way.
+
+### 4.2 Shadows & Elevation
+
+- Use a **small set** of elevation levels:
+  - Low: subtle (`shadow-sm`)
+  - Medium: `shadow-md` or `shadow-lg`
+  - High: reserved for modals / very important floating elements
+- Shadows should be soft and diffuse, not harsh.
+- Avoid very dark, short, “cheap-looking” shadows.
+
+### 4.3 Borders & Dividers
+
+- Prefer borders in `border-border` with low contrast.
+- Avoid too many lines. Prefer:
+  - Padding and spacing
+  - Slight background change
+  - Soft shadow  
+  instead of stacking borders.
+
+---
+
+## 5. Components with shadcn/ui
+
+### 5.1 Buttons
+
+- Define clear variants:
+  - **Primary** – main CTA; solid `bg-primary text-primary-foreground`
+  - **Secondary** – outline/ghost style
+  - **Ghost** – minimal for navigation / less important actions
+- Rules:
+  - Minimum touch area: around `h-10` (`py-2.5 px-4`)
+  - Clear states: default / hover / active / disabled
+  - Hover: subtle scale or shadow changes, not large jumps
+
+### 5.2 Cards
+
+- Cards must always:
+  - Have consistent padding (`p-6` / `p-8`)
+  - Use `bg-card text-card-foreground`
+  - Use consistent radius (`rounded-2xl` recommended)
+  - Optionally a light border + subtle shadow
+- Inside a card:
+  - Title (H3)
+  - Short description
+  - Optional icon or badge
+  - Optional footer / action area
+
+### 5.3 Form Elements
+
+- Use shadcn `Input`, `Textarea`, `Select`, etc.
+- Inputs should:
+  - Use full width where possible
+  - Have comfortable height for touch
+  - Provide a clear focus ring (use `ring-ring` tokens)
+
+---
+
+## 6. Motion & Micro-interactions
+
+### 6.1 Motion Philosophy
+
+- Motion exists to:
+  - Draw attention
+  - Communicate hierarchy
+  - Provide feedback
+- It should be:
+  - Subtle
+  - Smooth
+  - Consistent
+
+### 6.2 Basic Motion Rules
+
+- Duration:
+  - Small interactions: 150–220ms
+  - Section entrance: 400–600ms
+- Easing:
+  - Use `ease-out`, `ease-in-out`, or Framer Motion’s `easeInOut`
+- Distance:
+  - Avoid large translations. Typical slide-in: 16–32px
+
+### 6.3 Common Patterns
+
+- On-scroll reveal:
+  - Fade + slight upward slide for sections and cards
+- Hover:
+  - Small scale (e.g. up to `scale-105`)
+  - Shadow emphasis
+  - Subtle color shifts
+- Parallax / scroll-based motion:
+  - Only for hero or special sections
+  - Must not interfere with readability
+  - Respect `prefers-reduced-motion`
+
+---
+
+## 7. Section Design Patterns
+
+Always structure pages into clear sections with a purpose.
+
+### 7.1 Hero Section
+
+- Contains:
+  - Clear one-line value proposition
+  - Short supporting sentence
+  - Primary CTA (+ optional secondary CTA)
+  - Visual (image, illustration, or background effect)
+- Layout:
+  - Large heading with clear hierarchy
+  - Plenty of whitespace
+  - Visual element should not overpower text
+
+### 7.2 Features Section
+
+- Repeated pattern with cards (commonly 3 or 6).
+- Each card:
+  - Icon or small visual
+  - Short title (1 line)
+  - Short body (2–3 lines max)
+- Use consistent sizing and alignment.
+
+### 7.3 Social Proof / Testimonials
+
+- Logos:
+  - Grid with low-contrast logos
+- Quotes:
+  - Card-like blocks with avatar, name, role
+  - Use `text-muted-foreground` for body text
+
+### 7.4 CTA Section
+
+- Strong contrast background.
+- One clear message + CTA.
+- Visually simple, few elements, big impact.
+
+---
+
+## 8. Imagery & Iconography
+
+- Use `next/image` with proper aspect ratios.
+- For hero imagery:
+  - Consider soft gradients, glows, or blurred shapes as background.
+- Icons:
+  - Use a consistent icon set (e.g. Lucide)
+  - Do not mix different icon styles (outline + filled + cartoon)
+
+Avoid:
+- Random stock photos with mismatched style.
+- Noisy, distracting background images.
+
+---
+
+## 9. Responsive Behavior
+
+- Mobile-first:
+  - Stack columns vertically.
+  - Center align main content.
+- Tablet (`md:`):
+  - Introduce grids (e.g. two-column layout).
+- Desktop (`lg:` and up):
+  - Use 2–3 columns, side-by-side hero, etc.
+
+On all breakpoints:
+- Maintain adequate padding (`px-4` mobile, `px-6`/`px-8` desktop).
+- Ensure tap targets are big enough and spacing is not too tight.
+
+---
+
+## 10. Content & Copy
+
+- Copy must be:
+  - Short and clear
+  - Structured as: heading → short lead → details
+- Prefer bullet lists for explaining features.
+- Avoid walls of text in a single section.
+
+Default language: **Japanese**, but keep the visual hierarchy and rhythm consistent regardless of language.
+
+---
+
+## 11. Coding Rules (Design-Oriented)
+
+- Keep components simple and focused on **visual structure**.
+- Prefer:
+  - `Section`, `SectionHeader`, `SectionTitle`, `SectionDescription` components for consistent look
+  - `Container` component to centralize width and padding
+- When editing, prioritize:
+  - Keeping design tokens and layout consistent
+  - Avoid breaking visual rhythm (spacing, alignment) even if code could be shorter
+
+---
+
+## 12. Things NOT To Do (Design Version)
+
+Do NOT:
+- Use random hex colors instead of theme tokens.
+- Mix many radii, shadows, and border styles arbitrarily.
+- Overcrowd sections with too much text or too many components.
+- Add heavy or distracting animations.
+- Break the grid with misaligned cards or inconsistent spacing.
+- Introduce new UI libraries (MUI, Chakra, etc.) on top of shadcn without explicit instruction.
+
+---
+
+Remember:
+
+> If there is a trade-off between “clever code” and “clean, beautiful, consistent design,”  
+> **always choose design**.

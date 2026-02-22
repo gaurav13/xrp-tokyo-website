@@ -1,0 +1,74 @@
+{
+  "splash": {
+    "officialInEventOf": "Official In-Event of"
+  },
+  "header": {
+    "sponsor": "スポンサー",
+    "getTicket": "チケット",
+    "openMenu": "メニューを開く",
+    "followOnX": "Xでフォロー",
+    "selectLanguage": "言語を選択",
+    "giveaway": "ギブアウェイ",
+    "about": "概要",
+    "highlights": "ハイライト",
+    "speakers": "スピーカー",
+    "sponsors": "スポンサー"
+  },
+  "hero": {
+    "eventSchedule": "イベント日程",
+    "getTicket": "チケット購入",
+    "getTicketTooltip": "TEAMZ Summit 2026で参加できます"
+  },
+  "eventInfo": {
+    "dateDisplay": "2026年4月7日",
+    "location": "東京・八芳園"
+  },
+  "eventOverview": {
+    "title": "About",
+    "heading": {
+      "line1": "アジア最大級XRPカンファレンス",
+      "line2Before": "XRPの無限の可能性を",
+      "glitchWord": "体感",
+      "line2After": "せよ。"
+    },
+    "content": {
+      "paragraph1": "暗号資産XRPは、その圧倒的な送金速度とコスト効率、そして環境負荷の低さにより、長年にわたりグローバルな「価値のインターネット」を実現するブリッジ通貨として世界中で採用されてきました。今、その役割は国際送金の枠を大きく超え、機関投資家による採用やRWA（現実資産）のトークン化、そしてDeFiといった新たな金融領域へと急速にその有用性を拡大させています。",
+      "paragraph2": "XRP Tokyo 2026は、この「XRP」が切り拓く未来を共有し、共に創り上げるための日本最大級のカンファレンスです。XRPの信頼性とスケーラビリティを支える基盤「XRP Ledger」の最新技術やロードマップを軸に、エコシステムを牽引する国内外のトップリーダー、開発者、企業が東京・八芳園に集結します。",
+      "paragraph3": "本イベントは、XRPを愛するコミュニティとビジネスリーダーが交差する熱気ある場です。XRPの真価と可能性を再確認し、次世代の金融インフラを担う最前線の知見を得ることで、参加者一人ひとりにとって新たな機会やプロジェクトが生まれる、記念すべき一日となるでしょう。"
+    }
+  },
+  "nextSection": {
+    "title": "物語はここから動き出す"
+  },
+  "speakerSection": {
+    "title": "Speakers",
+    "comingSoon": "スピーカーは順次発表予定です。"
+  },
+  "sponsorSection": {
+    "title": "Sponsors",
+    "cta": "スポンサーになる",
+    "comingSoon": "Coming Soon",
+    "categories": {
+      "title": "Title",
+      "platinum": "Platinum",
+      "gold": "Gold",
+      "silver": "Silver",
+      "bronze": "Bronze",
+      "mediaPartner": "Media Partner",
+      "education": "Education Partner",
+      "communityPartner": "Community Partner"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 XRP Tokyo",
+    "poweredBy": "Powered by XRPL Japan"
+  },
+  "giveaway": {
+    "title": "チケット購入者限定",
+    "subtitle": "XRPハードウォレットをプレゼント",
+    "description": "数量限定でプレゼント！\nなくなり次第終了。",
+    "cta": {
+      "register": "専用サイトで申し込む"
+    }
+  }
+}

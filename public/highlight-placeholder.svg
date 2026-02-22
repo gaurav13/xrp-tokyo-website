@@ -1,0 +1,29 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0b0b" />
+      <stop offset="50%" stop-color="#1a1a1a" />
+      <stop offset="100%" stop-color="#0b0b0b" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e81111" />
+      <stop offset="100%" stop-color="#ff4d4d" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <rect x="60" y="60" width="1080" height="680" rx="32" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+  <rect x="80" y="80" width="1040" height="40" rx="20" fill="rgba(255,255,255,0.06)" />
+  <rect x="80" y="140" width="520" height="28" rx="14" fill="rgba(255,255,255,0.08)" />
+  <rect x="80" y="184" width="420" height="22" rx="11" fill="rgba(255,255,255,0.05)" />
+  <rect x="80" y="230" width="620" height="14" rx="7" fill="rgba(255,255,255,0.05)" />
+  <rect x="80" y="270" width="220" height="8" rx="4" fill="url(#accent)" />
+  <circle cx="980" cy="210" r="160" fill="rgba(255,255,255,0.05)" />
+  <circle cx="980" cy="210" r="120" fill="rgba(232,17,17,0.15)" />
+  <circle cx="980" cy="210" r="70" fill="rgba(255,255,255,0.08)" />
+  <text x="80" y="520" fill="rgba(255,255,255,0.9)" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700">
+    XRP Tokyo Highlight
+  </text>
+  <text x="80" y="590" fill="rgba(255,255,255,0.6)" font-family="Arial, Helvetica, sans-serif" font-size="24">
+    Dummy image placeholder
+  </text>
+</svg>

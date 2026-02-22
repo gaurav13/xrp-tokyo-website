@@ -1,0 +1,157 @@
+{
+  "speakers": [
+    {
+      "name": "Markusssss Infanger",
+      "role": "SVP, RippleX",
+      "company": "Ripple",
+      "bio": "Markus Infanger, SVP of RippleX at Ripple. He leads product development, strategic partnerships, and the expansion of the XRP Ledger developer ecosystem.",
+      "image": "https://framerusercontent.com/images/VuAjku1L5Wv525L9Uf2oJ9IOvhY.png?scale-down-to=1024&width=4316&height=4320"
+    },
+    {
+      "name": "Christina Chan",
+      "role": "Senior Director, Ecosystem Growth",
+      "company": "Ripple",
+      "bio": "Christina Chan leads ecosystem growth initiatives, partnering with builders and institutions to expand real-world use cases across the XRP Ledger.",
+      "image": "https://framerusercontent.com/images/VuAjku1L5Wv525L9Uf2oJ9IOvhY.png?scale-down-to=1024&width=4316&height=4320"
+    },
+    {
+      "name": "Kelvin Koh",
+      "role": "Co-Founder and Partner",
+      "company": "Spartan Group",
+      "bio": "Kelvin Koh is a co-founder and partner at Spartan Group, advising and investing in leading Web3 projects.",
+      "image": "https://framerusercontent.com/images/VuAjku1L5Wv525L9Uf2oJ9IOvhY.png?scale-down-to=1024&width=4316&height=4320"
+    },
+    {
+      "name": "Nihal Maunder",
+      "role": "Partner",
+      "company": "Pantera Capital",
+      "bio": "Nihal Maunder is a partner at Pantera Capital, focusing on growth-stage investments in the digital asset ecosystem.",
+      "image": "https://framerusercontent.com/images/VuAjku1L5Wv525L9Uf2oJ9IOvhY.png?scale-down-to=1024&width=4316&height=4320"
+    }
+  ],
+  "sponsors": [
+    {
+      "name": "Ripple",
+      "tier": "Title",
+      "logo": "/sponsors/title/ripple.png",
+      "website": "https://ripple.com/"
+    },
+    {
+      "name": "Doppler Finance",
+      "tier": "Platinum",
+      "logo": "/sponsors/platinum/doppler-finance.svg",
+      "website": "https://doppler.finance/"
+    },
+    {
+      "name": "anodos",
+      "tier": "Gold",
+      "logo": "/sponsors/gold/anodos.png",
+      "website": "https://anodos.finance/"
+    },
+    {
+      "name": "XRPCafe",
+      "tier": "Silver",
+      "logo": "/sponsors/silver/xrpcafe.svg",
+      "website": "https://xrp.cafe"
+    },
+    {
+      "name": "Xaman",
+      "tier": "Silver",
+      "logo": "/sponsors/silver/xaman.svg",
+      "website": "https://xaman.app/"
+    },
+    {
+      "name": "Giant Gox",
+      "tier": "Bronze",
+      "logo": "/sponsors/bronze/giantgox.jpg",
+      "website": "https://x.com/GiantGox"
+    },
+    {
+      "name": "メイフラちゃん",
+      "tier": "Bronze",
+      "logo": "/sponsors/bronze/mayflower3096.jpg",
+      "website": "https://x.com/mayflower3096"
+    },
+    {
+      "name": "CoinPost",
+      "tier": "Media Partner",
+      "logo": "/partners/media/coinpost.png"
+    },
+    {
+      "name": "New Economy",
+      "tier": "Media Partner",
+      "logo": "/partners/media/neweconomy.png"
+    },
+    {
+      "name": "News Tagline",
+      "tier": "Media Partner",
+      "logo": "/partners/media/news_tagline.png"
+    },
+    {
+      "name": "東大公開講座",
+      "tier": "Education",
+      "logo": "/partners/education/東大公開講座.png"
+    },
+    {
+      "name": "渋谷Web3大学",
+      "tier": "Community Partner",
+      "logo": "/partners/community/渋谷Web3大学横.jpg"
+    },
+    {
+      "name": "OP Market",
+      "tier": "Community Partner",
+      "logo": "/partners/community/opmarket.jpg"
+    },
+    {
+      "name": "Text RP",
+      "tier": "Community Partner",
+      "logo": "/partners/community/text-rp.jpg"
+    },
+    {
+      "name": "Wavee",
+      "tier": "Community Partner",
+      "logo": "/partners/community/wavee.svg"
+    },
+    {
+      "name": "Wave of Innovation",
+      "tier": "Community Partner",
+      "logo": "/partners/community/wave-of-innovation.svg"
+    },
+    {
+      "name": "Web3 Salon",
+      "tier": "Community Partner",
+      "logo": "/partners/community/web3-salon.png"
+    },
+    {
+      "name": "AI Agent Run",
+      "tier": "Community Partner",
+      "logo": "/partners/community/ai-agent-run.png"
+    },
+    {
+      "name": "XRPL Korea",
+      "tier": "Community Partner",
+      "logo": "/partners/community/xrplkorea_v_black.svg"
+    },
+    {
+      "name": "XRPL Africa",
+      "tier": "Community Partner",
+      "logo": "/partners/community/xrpl-africa.jpg"
+    },
+    {
+      "name": "XRPL Canada",
+      "tier": "Community Partner",
+      "logo": "/partners/community/xrpl-canada.jpeg"
+    },
+    {
+      "name": "XRPL Malaysia",
+      "tier": "Community Partner",
+      "logo": "/partners/community/xrpl-malaysia.jpg"
+    },
+    {
+      "name": "Terry Toto",
+      "tier": "Community Partner",
+      "logo": "/partners/community/terry-toto.svg",
+      "website": "https://terrytoto.com/"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "splash": {
+    "officialInEventOf": "Official In-Event of"
+  },
+  "header": {
+    "sponsor": "Sponsor",
+    "getTicket": "Get Ticket",
+    "openMenu": "Open menu",
+    "followOnX": "Follow on X",
+    "selectLanguage": "Select language",
+    "giveaway": "Giveaway",
+    "about": "About",
+    "highlights": "Highlights",
+    "speakers": "Speakers",
+    "sponsors": "Sponsors"
+  },
+  "hero": {
+    "eventSchedule": "Event Schedule",
+    "getTicket": "Get Ticket",
+    "getTicketTooltip": "Available at TEAMZ Summit 2026"
+  },
+  "eventInfo": {
+    "dateDisplay": "April 7, 2026",
+    "location": "Happo-en, Tokyo"
+  },
+  "eventOverview": {
+    "title": "About",
+    "heading": {
+      "line1": "Asia's Largest XRP Conference",
+      "line2Before": "Experience the infinite possibilities of XRP",
+      "glitchWord": "experience",
+      "line2After": "."
+    },
+    "content": {
+      "paragraph1": "XRP Tokyo 2026 is Japan's premier XRP & Web3 conference representing Asia.",
+      "paragraph2": "This event is held as an official event of TEAMZ Web3/AI Summit 2026, bringing together leaders, developers, investors, companies, and community members from Japan and around the world who are driving the XRP and XRP Ledger ecosystem.",
+      "paragraph3": "XRP Tokyo 2026 is a milestone event for the XRP community in Japan's Web3 scene."
+    }
+  },
+  "nextSection": {
+    "title": "The journey begins."
+  },
+  "speakerSection": {
+    "title": "Speakers",
+    "comingSoon": "Speakers will be announced soon."
+  },
+  "sponsorSection": {
+    "title": "Sponsors",
+    "cta": "Become a Sponsor",
+    "comingSoon": "Coming Soon",
+    "categories": {
+      "title": "Title",
+      "platinum": "Platinum",
+      "gold": "Gold",
+      "silver": "Silver",
+      "bronze": "Bronze",
+      "mediaPartner": "Media Partner",
+      "education": "Education Partner",
+      "communityPartner": "Community Partner"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 XRP Tokyo",
+    "poweredBy": "Powered by XRPL Japan"
+  },
+  "giveaway": {
+    "title": "Exclusive for Ticket Holders",
+    "subtitle": "XRP Hardware Wallet Giveaway",
+
+    "description": "Limited quantity giveaway!\nFirst come, first served.",
+    "cta": {
+      "register": "Register on the dedicated site"
+    }
+  }
+}
