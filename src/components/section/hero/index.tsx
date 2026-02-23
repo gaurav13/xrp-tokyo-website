@@ -88,7 +88,7 @@ export function Hero() {
   }}
   transition={{ duration: 6, repeat: Infinity, times: [0, 0.35, 0.45, 0.7, 0.8] }}
 >
-  JOIN THE FUTURE FINANCE
+  JOIN THE FUTURE OF FINANCE
 </motion.text>
 
   {/* 3. Particle Explosion Section */}
@@ -140,20 +140,31 @@ export function Hero() {
           <CTAButtons shouldAnimate={isSplashComplete} />
         </div> */}
         <div className="flex flex-col items-center justify-center text-center">
-  <Link href="https://tickets.teamz.co.jp/?utm_source=xrp" target="_blank">
+ <Link 
+  href="https://tickets.teamz.co.jp/?utm_source=xrp" 
+  target="_blank" 
+  className="block w-full overflow-hidden rounded-xl" 
+>
+  <div className="relative w-full transition-transform duration-500 ease-out hover:scale-105">
     <Image
       src="/headerinternalimage.png"
       alt="XRP Tokyo 2026"
-      width={1000}
+      width={1920} 
       height={800}
-      className="w-full max-w-4xl h-auto"
       priority
+      sizes="100vw"
+      className="w-full h-auto object-cover md:object-center"
+      style={{
+        maxWidth: '100%',
+        height: 'auto',
+      }}
     />
-  </Link>
+  </div>
+</Link>
 </div>
       </div>
 
-      {/* カレンダーモーダル */}
+
       <Dialog open={isCalendarOpen} onClose={setIsCalendarOpen}>
         <DialogPanel className="w-full max-w-[90vw] sm:max-w-sm md:max-w-md p-4 sm:p-6">
           <DialogHeader className="mb-4 sm:mb-5 text-center">

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { SECTION_STYLES } from "@/lib/styles/common";
-
+import Link from 'next/link';
 const HIGHLIGHT_IMAGES = [
   { src: "/event-images/download1.jpg", alt: "Main hall" },
   { src: "/event-images/download3.jpg", alt: "Conference stage" },
@@ -32,8 +32,8 @@ export function HighlightsSection() {
           <div className="mt-4 h-0.5 w-20 rounded-full bg-[#e81111]" />
         </div>
 
-        <div className="relative mt-12 w-full max-w-6xl mx-auto">
-          {/* Mobile-first: simple grid */}
+        <div className="relative mt-12 w-full mx-auto">
+          {/*
           <div className="grid grid-cols-2 gap-4 md:hidden">
             {HIGHLIGHT_IMAGES.slice(0, 6).map((img, index) => (
               <HighlightCard
@@ -45,7 +45,7 @@ export function HighlightsSection() {
             ))}
           </div>
 
-          {/* Desktop: centered hero with surrounding images */}
+          
           <div className="relative hidden md:block min-h-[560px]">
             <div className="absolute left-1/2 top-1/2 w-[48%] -translate-x-1/2 -translate-y-1/2">
               <HighlightCard
@@ -83,7 +83,26 @@ export function HighlightsSection() {
 
           <div className="pointer-events-none absolute -left-10 -top-6 h-24 w-24 rounded-full bg-[#e81111]/20 blur-3xl" />
           <div className="pointer-events-none absolute -right-8 bottom-6 h-28 w-28 rounded-full bg-white/10 blur-3xl" />
-        </div>
+       */}
+
+
+  <div className="relative w-full transition-transform duration-500 ease-out hover:scale-105">
+    <Image
+      src="/highlights.png"
+      alt="XRP Tokyo 2026"
+      width={1920} 
+      height={800}
+      priority
+      sizes="100vw"
+      className="w-full h-auto object-cover md:object-center"
+      style={{
+        maxWidth: '100%',
+        height: 'auto',
+      }}
+    />
+  </div>
+
+          </div>
       </div>
     </section>
   );
