@@ -74,23 +74,27 @@ export function Hero() {
   x="50%" y="50%"
   dominantBaseline="middle" textAnchor="middle"
   fill="none" stroke="#e81111" strokeWidth="2"
+  // मोबाइल पर छोटा साइज (text-[28px]) और डेस्कटॉप पर बड़ा (md:text-[70px])
+  className="text-[28px] md:text-[70px] font-bold" 
   style={{ 
-    // मोबाइल के लिए छोटा फॉन्ट, डेस्कटॉप के लिए बड़ा
-    fontSize: typeof window !== 'undefined' && window.innerWidth < 768 ? "32px" : "60px", 
-    fontWeight: "bold", 
-    letterSpacing: "4px", 
-    filter: "url(#neonBlur)" 
+    letterSpacing: "2px", 
+    filter: "url(#neonBlur)",
+    fontFamily: "sans-serif"
   }}
-  initial={{ opacity: 0, scale: 0.9 }}
+  initial={{ opacity: 0, scale: 1 }}
   animate={{ 
     opacity: [0, 0, 1, 1, 0],
-    // मोबाइल पर ज़ूम हटा दिया (1.0), डेस्कटॉप पर हल्का ज़ूम रखा (1.1)
-    scale: typeof window !== 'undefined' && window.innerWidth < 768 ? [0.9, 0.9, 1, 1, 1] : [0.9, 0.9, 1, 1.1, 1.2],
-    letterSpacing: typeof window !== 'undefined' && window.innerWidth < 768 ? ["1px", "1px", "2px", "2px", "2px"] : ["2px", "2px", "4px", "8px", "15px"]
+    scale: typeof window !== 'undefined' && window.innerWidth < 768 ? [1, 1, 1, 1, 1] : [1, 1, 1, 1.1, 1.2],
+    
+    letterSpacing: typeof window !== 'undefined' && window.innerWidth < 768 ? ["1px", "2px", "2px"] : ["2px", "4px", "15px"]
   }}
-  transition={{ duration: 6, repeat: Infinity, times: [0, 0.35, 0.45, 0.7, 0.8] }}
+  transition={{ 
+    duration: 6, 
+    repeat: Infinity, 
+    times: [0, 0.35, 0.45, 0.7, 0.8] 
+  }}
 >
-  JOIN THE FUTURE OF FINANCE
+  JOIN THE FUTURE FINANCE
 </motion.text>
 
   {/* 3. Particle Explosion Section */}
