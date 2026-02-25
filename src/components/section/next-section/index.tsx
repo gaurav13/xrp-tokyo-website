@@ -70,18 +70,44 @@ export function NextSection() {
       transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
       className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
     >
-      <a
-        href={content.journeyPrimaryUrl}
-        className="bg-[#e81111] text-white px-8 py-3 rounded-full transition-transform duration-200 hover:scale-[1.03] shadow-[0_0_20px_rgba(232,17,17,0.5)]"
-      >
-        {content.journeyPrimaryLabel}
-      </a>
-      <a
-        href={content.journeySecondaryUrl}
-        className="border border-white text-white px-8 py-3 rounded-full transition-colors duration-200 hover:bg-white hover:text-black"
-      >
-        {content.journeySecondaryLabel}
-      </a>
+    <div className="flex gap-4 items-center justify-center">
+
+  {/* VIP Dinner Pass */}
+  <a
+    href={content.journeyPrimaryUrl}
+    className="
+      px-8 py-3 rounded-full
+      font-semibold
+      text-black
+      bg-gradient-to-r from-[#c89b3c] via-[#f6d365] to-[#b8860b]
+      shadow-[0_0_20px_rgba(246,211,101,0.4)]
+      transition-all duration-300
+      hover:scale-105
+      hover:shadow-[0_0_30px_rgba(246,211,101,0.7)]
+    "
+  >
+   {content.journeyPrimaryLabel}
+  </a>
+
+  {/* General Pass */}
+  <a
+    href={content.journeySecondaryUrl}
+    className="
+      px-8 py-3 rounded-full
+      font-semibold
+      text-white
+      border border-[#e81111]
+      bg-black
+      transition-all duration-300
+      hover:bg-[#e81111]
+      hover:text-white
+      hover:scale-105
+    "
+  >
+  {content.journeySecondaryLabel}
+  </a>
+
+</div>
     </motion.div>
   </div>
 </section>
