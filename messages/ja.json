@@ -37,6 +37,40 @@
       "paragraph3": "本イベントは、XRPを愛するコミュニティとビジネスリーダーが交差する熱気ある場です。XRPの真価と可能性を再確認し、次世代の金融インフラを担う最前線の知見を得ることで、参加者一人ひとりにとって新たな機会やプロジェクトが生まれる、記念すべき一日となるでしょう。"
     }
   },
+  "hubSection": {
+    "heading": {
+      "line1": "東京はハブ。",
+      "line2": "Web3の勢い。",
+      "line3": "オンチェーンの未来。"
+    },
+    "subheading": "アジア最速で成長するXRP特化型ブロックチェーンカンファレンス",
+    "description": "XRP TokyoはXRP Ledgerエコシステム、機関投資家のブロックチェーン導入、そして実社会でのオンチェーン活用に焦点を当てた国際カンファレンスです。",
+    "stats": {
+      "countries": "国",
+      "attendees": "参加者",
+      "speakers": "スピーカー",
+      "days": "日間"
+    }
+  },
+  "redCarpetSection": {
+    "heading": {
+      "line1": "XRP TOKYO 2026",
+      "line2": "レッドカーペット・ガラ",
+      "line3": "VIPアフターパーティー"
+    },
+    "meta": "2026年4月7日 | 6F HALL HAKU | 本館",
+    "description": "XRP TokyoはXRP Ledgerエコシステム、機関投資家のブロックチェーン導入、そして実社会でのオンチェーン活用に焦点を当てた国際カンファレンスです。"
+  },
+  "highlightsSection": {
+    "kicker": "ハイライト",
+    "title": "XRP Tokyo ハイライト"
+  },
+  "journeySection": {
+    "heading": "物語はここから動き出す",
+    "subtext": "2026年、最も影響力のあるXRPイベントに東京で参加しましょう。",
+    "primaryCta": "今すぐ登録",
+    "secondaryCta": "アジェンダを見る"
+  },
   "nextSection": {
     "title": "物語はここから動き出す"
   },

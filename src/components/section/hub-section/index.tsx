@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { SECTION_STYLES } from "@/lib/styles/common";
 
 type HubSectionProps = {
@@ -8,10 +9,10 @@ type HubSectionProps = {
 };
 
 const STATS = [
-  { value: "40+", label: "Countries" },
-  { value: "3,000+", label: "Attendees" },
-  { value: "100+", label: "Speakers" },
-  { value: "3", label: "Days" },
+  { value: "40+", labelKey: "hubSection.stats.countries" },
+  { value: "3,000+", labelKey: "hubSection.stats.attendees" },
+  { value: "100+", labelKey: "hubSection.stats.speakers" },
+  { value: "3", labelKey: "hubSection.stats.days" },
 ];
 
 function HubImages() {
@@ -59,33 +60,34 @@ function HubImages() {
 }
 
 function HubText() {
+  const t = useTranslations();
+
   return (
     <div className="space-y-6">
       <div className="space-y-2">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight tracking-tight">
-          Tokyo as a Hub.
+          {t("hubSection.heading.line1")}
           <br />
-          Web3 Momentum.
+          {t("hubSection.heading.line2")}
           <br />
-          On-Chain Future.
+          {t("hubSection.heading.line3")}
         </h2>
 
         <p className="text-base sm:text-lg text-white/80 font-semibold">
-          Asia&apos;s fastest-growing XRP-focused blockchain conferences
+          {t("hubSection.subheading")}
         </p>
 
         <p className="text-sm sm:text-base text-white/60 max-w-xl">
-          XRP Tokyo is a global conference focused on the XRP Ledger ecosystem,
-          institutional blockchain adoption, and real-world on-chain use cases.
+          {t("hubSection.description")}
         </p>
       </div>
 
       <div className="grid grid-cols-2 gap-6 sm:gap-8 max-w-md">
         {STATS.map((stat) => (
-          <div key={stat.label} className="space-y-1">
+          <div key={stat.labelKey} className="space-y-1">
             <p className="text-3xl sm:text-4xl font-semibold">{stat.value}</p>
             <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#fbc500]">
-              {stat.label}
+              {t(stat.labelKey)}
             </p>
           </div>
         ))}
@@ -96,6 +98,7 @@ function HubText() {
 
 export function HubSection({ variant = "textLeft" }: HubSectionProps) {
   const isImageLeft = variant === "imageLeft";
+  const t = useTranslations();
 
   return (
     <section className="relative w-full bg-black text-white">
@@ -117,22 +120,21 @@ export function HubSection({ variant = "textLeft" }: HubSectionProps) {
         {/* New reversed block (as per screenshot) */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
   {/* TEXT: first on mobile, second on desktop */}
-  <div className="order-1 lg:order-2 space-y-4">
-    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight uppercase">
-      XRP TOKYO 2026
-      <br />
-      RED CARPET GALA
-      <br />
-      VIP AFTER PARTY.
-    </h3>
-    <p className="text-sm sm:text-base text-white/70">
-      7th April 2026 | 6F HALL HAKU | Main Building
-    </p>
-    <p className="text-sm sm:text-base text-white/60 max-w-xl">
-      XRP Tokyo is a global conference focused on the XRP Ledger ecosystem,
-      institutional blockchain adoption, and real-world on-chain use cases.
-    </p>
-  </div>
+          <div className="order-1 lg:order-2 space-y-4">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight uppercase">
+              {t("redCarpetSection.heading.line1")}
+              <br />
+              {t("redCarpetSection.heading.line2")}
+              <br />
+              {t("redCarpetSection.heading.line3")}
+            </h3>
+            <p className="text-sm sm:text-base text-white/70">
+              {t("redCarpetSection.meta")}
+            </p>
+            <p className="text-sm sm:text-base text-white/60 max-w-xl">
+              {t("redCarpetSection.description")}
+            </p>
+          </div>
 
   {/* IMAGES: second on mobile, first on desktop */}
   <div className="order-2 lg:order-1">

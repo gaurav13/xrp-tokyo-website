@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 18 },
@@ -8,13 +9,14 @@ const fadeInUp = {
 };
 
 export function NextSection() {
+  const t = useTranslations();
+
   const content = {
-    journeyHeading: "THE JOURNEY BEGINS",
-    journeySubtext:
-      "Join us in Tokyo for the most influential XRP event of 2026.",
-    journeyPrimaryLabel: "Register Now",
+    journeyHeading: t("journeySection.heading"),
+    journeySubtext: t("journeySection.subtext"),
+    journeyPrimaryLabel: t("journeySection.primaryCta"),
     journeyPrimaryUrl: "#",
-    journeySecondaryLabel: "View Agenda",
+    journeySecondaryLabel: t("journeySection.secondaryCta"),
     journeySecondaryUrl: "#",
   };
 

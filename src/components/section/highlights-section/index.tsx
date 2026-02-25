@@ -24,10 +24,10 @@ export function HighlightsSection() {
       <div className={`${SECTION_STYLES.container} py-16 md:py-24`}>
         <div className="flex flex-col items-center text-center">
           <p className="text-xs uppercase tracking-[0.6em] text-[#e81111]">
-            Highlights
+            Event Highlights
           </p>
           <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl font-semibold">
-            XRP Tokyo Highlights
+            XRP Tokyo 2026 Event Agenda
           </h2>
           <div className="mt-4 h-0.5 w-20 rounded-full bg-[#e81111]" />
         </div>
@@ -86,21 +86,35 @@ export function HighlightsSection() {
        */}
 
 
-  <div className="relative w-full transition-transform duration-500 ease-out hover:scale-105">
+ <div className="relative w-full overflow-hidden transition-transform duration-500 ease-out md:hover:scale-105">
+
+  {/* Mobile Image */}
+  <div className="block md:hidden">
     <Image
-      src="/highlights.png"
+      src="/agenda-mobile.jpeg"
       alt="XRP Tokyo 2026"
-      width={1920} 
+      width={800}
+      height={1200}
+      priority
+      sizes="100vw"
+      className="w-full h-auto object-cover"
+    />
+  </div>
+
+  {/* Desktop Image */}
+  <div className="hidden md:block">
+    <Image
+      src="/highlights.jpg"
+      alt="XRP Tokyo 2026"
+      width={1920}
       height={800}
       priority
       sizes="100vw"
       className="w-full h-auto object-cover md:object-center"
-      style={{
-        maxWidth: '100%',
-        height: 'auto',
-      }}
     />
   </div>
+
+</div>
 
           </div>
       </div>

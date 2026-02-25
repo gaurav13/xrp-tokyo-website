@@ -74,7 +74,6 @@ export function Hero() {
   {/* 2. The "JOIN THE FUTURE" Text Section */}
   <motion.text
   x="50%"
-  // मोबाइल पर सेंटर (50%), डेस्कटॉप पर सेंटर से 40px नीचे खिसका दिया
   y={typeof window !== 'undefined' && window.innerWidth < 768 
     ? "50%" 
     : "calc(83% + 40px)"} 
@@ -153,27 +152,39 @@ export function Hero() {
           <CTAButtons shouldAnimate={isSplashComplete} />
         </div> */}
         <div className="flex flex-col items-center justify-center text-center">
- <Link 
-  href="https://tickets.teamz.co.jp/?utm_source=xrp" 
-  target="_blank" 
-  className="block w-full overflow-hidden rounded-xl" 
->
-  <div className="w-full lg:w-[85%] mx-auto max-h-[650px] object-cover">
-    <Image
-      src="/headerinternalimagedesktop1.png"
-      alt="XRP Tokyo 2026"
-      width={1920} 
-      height={800}
-      priority
-      sizes="100vw"
-      className="w-full h-auto object-cover md:object-center"
-      style={{
-        maxWidth: '100%',
-        height: 'auto',
-      }}
-    />
-  </div>
-</Link>
+  <Link
+    href="https://tickets.teamz.co.jp/?utm_source=xrp"
+    target="_blank"
+    className="block w-full overflow-hidden rounded-xl"
+  >
+    <div className="w-full lg:w-[85%] mx-auto overflow-hidden rounded-xl">
+      {/* Mobile image */}
+      <div className="block md:hidden">
+        <Image
+          src="/xrp-header-mobile1.png"
+          alt="XRP Tokyo 2026"
+          width={800}
+          height={1200}
+          priority
+          sizes="100vw"
+          className="w-full h-auto object-cover object-top"
+        />
+      </div>
+
+      {/* Desktop image */}
+      <div className="hidden md:block">
+        <Image
+          src="/headerinternalimagedesktop2.png"
+          alt="XRP Tokyo 2026"
+          width={1920}
+          height={800}
+          priority
+          sizes="100vw"
+          className="w-full h-auto object-cover object-center"
+        />
+      </div>
+    </div>
+  </Link>
 </div>
       </div>
 

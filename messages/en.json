@@ -37,6 +37,40 @@
       "paragraph3": "XRP Tokyo 2026 is a milestone event for the XRP community in Japan's Web3 scene."
     }
   },
+  "hubSection": {
+    "heading": {
+      "line1": "Tokyo as a Hub.",
+      "line2": "Web3 Momentum.",
+      "line3": "On-Chain Future."
+    },
+    "subheading": "Asia's fastest-growing XRP-focused blockchain conferences",
+    "description": "XRP Tokyo is a global conference focused on the XRP Ledger ecosystem, institutional blockchain adoption, and real-world on-chain use cases.",
+    "stats": {
+      "countries": "Countries",
+      "attendees": "Attendees",
+      "speakers": "Speakers",
+      "days": "Days"
+    }
+  },
+  "redCarpetSection": {
+    "heading": {
+      "line1": "XRP TOKYO 2026",
+      "line2": "RED CARPET GALA",
+      "line3": "VIP AFTER PARTY."
+    },
+    "meta": "7th April 2026 | 6F HALL HAKU | Main Building",
+    "description": "XRP Tokyo is a global conference focused on the XRP Ledger ecosystem, institutional blockchain adoption, and real-world on-chain use cases."
+  },
+  "highlightsSection": {
+    "kicker": "Highlights",
+    "title": "XRP Tokyo Highlights"
+  },
+  "journeySection": {
+    "heading": "THE JOURNEY BEGINS",
+    "subtext": "Join us in Tokyo for the most influential XRP event of 2026.",
+    "primaryCta": "Register Now",
+    "secondaryCta": "View Agenda"
+  },
   "nextSection": {
     "title": "The journey begins."
   },
