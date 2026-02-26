@@ -35,21 +35,22 @@ export function EventOverview() {
           >
             <CardContent className="p-5 sm:p-6 md:py-8 md:px-8">
               <div className="space-y-4 md:space-y-6">
-                <h3 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold leading-tight md:leading-[1.2] text-foreground">
-                  {t("eventOverview.heading.line1")}
-                  <br className="hidden sm:block" />
-                  <span className="inline-flex flex-wrap items-baseline gap-1 sm:gap-1.5">
-                    <span className="whitespace-nowrap">
-                      {t("eventOverview.heading.line2Before")}
-                    </span>
-                    <GlitchText>
-                      {t("eventOverview.heading.glitchWord")}
-                    </GlitchText>
-                    <span className="whitespace-nowrap">
-                      {t("eventOverview.heading.line2After")}
-                    </span>
-                  </span>
-                </h3>
+                <h3 className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold leading-tight md:leading-[1.2] text-foreground break-words">
+  {t("eventOverview.heading.line1")}
+  <br className="hidden sm:block" />
+
+  <span className="inline-flex flex-wrap items-baseline gap-1 sm:gap-1.5">
+    <span className="whitespace-normal sm:whitespace-nowrap">
+      {t("eventOverview.heading.line2Before")}
+    </span>
+
+    <GlitchText>{t("eventOverview.heading.glitchWord")}</GlitchText>
+
+    <span className="whitespace-normal sm:whitespace-nowrap">
+      {t("eventOverview.heading.line2After")}
+    </span>
+  </span>
+</h3>
                 <p className="text-xs sm:text-sm md:text-base leading-relaxed text-foreground">
                   {t("eventOverview.content.paragraph1")}
                 </p>

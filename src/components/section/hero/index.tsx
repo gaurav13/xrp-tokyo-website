@@ -38,7 +38,7 @@ export function Hero() {
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 424"
   className="w-[160%] h-[160%] md:w-[130%] md:h-[130%]"
-  style={{ opacity: 0.5 }} 
+  style={{ opacity: 0.3 }} 
 >
   <defs>
     <filter id="neonBlur" x="-50%" y="-50%" width="200%" height="200%">
