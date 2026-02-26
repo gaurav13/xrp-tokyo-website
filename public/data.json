@@ -1,15 +1,6 @@
 {
   "speakers": [
-    {
-      "name": "Christina Chan",
-      "role": "Senior Director, Ecosystem Growth Ripple",
-      "company": "Ripple",
-      "bio": "Christina Chan, Senior Director and Ecosystem Growth of Ripple  As the Head of Funding Programs at Ripple, she leads a cross-functional global team that manages a 1 billion XRP fund for builders on the XRP Ledger ecosystem. With over 10 years of experience in web3, blockchain, crypto, and fintech, she fosters strategic collaborations and partnerships to grow and strengthen the web3 ecosystem.",
-      "image": "/Christina-Chan.jpg",
-      "twitter": "https://x.com/ghostfacex_0",
-      "linkedin": "https://www.linkedin.com/in/christinabchan"
-    },
-    {
+     {
       "name": "Markus Infanger",
       "role": "SVP, RippleX",
       "company": "Ripple",
@@ -19,6 +10,16 @@
       "linkedin": "https://www.linkedin.com/in/markus-infanger-8a6ba747/"
     },
     {
+      "name": "Christina Chan",
+      "role": "Senior Director, Ecosystem Growth Ripple",
+      "company": "Ripple",
+      "bio": "Christina Chan, Senior Director and Ecosystem Growth of Ripple  As the Head of Funding Programs at Ripple, she leads a cross-functional global team that manages a 1 billion XRP fund for builders on the XRP Ledger ecosystem. With over 10 years of experience in web3, blockchain, crypto, and fintech, she fosters strategic collaborations and partnerships to grow and strengthen the web3 ecosystem.",
+      "image": "/Christina-Chan.jpg",
+      "twitter": "https://x.com/ghostfacex_0",
+      "linkedin": "https://www.linkedin.com/in/christinabchan"
+    },
+   
+    {
       "name": "Takuya Sugiyama",
       "role": "Vice President",
       "company": "SBI Ripple Asia",
@@ -26,15 +27,6 @@
       "image": "/Takuy-Sugiyama.jpg",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/takuya-sugiyama-aa1b73a"
-    },
-    {
-      "name": "Nihal Maunder",
-      "role": "Partner",
-      "company": "Pantera Capital",
-      "bio": "Nihal Maunder is a partner at Pantera Capital, focusing on growth-stage investments in the digital asset ecosystem.",
-      "image": "/avtarimage.jpg",
-      "twitter": "",
-      "linkedin": ""
     }
   ],
   "sponsors": [
