@@ -85,7 +85,7 @@ export const LogoBox = ({
   const ts = TIER_STYLES[tier];
   const { borderAccent } = TIER_CONFIGS[tier];
   const styles = cn(
-    "relative w-full bg-white border border-white/40 transition-all duration-200 cursor-pointer active:scale-100",
+    "relative w-full bg-black border border-white/40 transition-all duration-200 cursor-pointer active:scale-100",
     ts.padding,
     ts.rounded,
     ts.hover,
@@ -95,15 +95,27 @@ export const LogoBox = ({
   );
 
   const inner = (
-    <div className="relative w-full h-full">
-      <Image
-        src={logo}
-        alt={alt}
-        fill
-        className="object-contain"
-        sizes="(max-width: 768px) 50vw, 200px"
-      />
-    </div>
+ <div
+  className="
+    w-full h-full
+    rounded-xl
+    bg-black/40
+    shadow-[0_10px_30px_rgba(0,0,0,0.6)]
+    p-4
+    flex items-center justify-center
+    backdrop-blur-sm
+  "
+>
+  <div className="relative w-full h-full">
+    <Image
+      src={logo}
+      alt={alt}
+      fill
+      className="object-contain"
+      sizes="(max-width: 768px) 50vw, 200px"
+    />
+  </div>
+</div>
   );
 
   if (website) {

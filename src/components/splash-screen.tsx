@@ -63,7 +63,7 @@ export function SplashScreen() {
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 424"
   className="w-[160%] h-[160%] md:w-[130%] md:h-[130%]"
-  style={{ opacity: 0.5 }} // यहाँ ओपेसिटी को आधा (0.5) किया गया है
+  style={{ opacity: 0.5 }} 
 >
   <defs>
     <filter id="neonBlur" x="-50%" y="-50%" width="200%" height="200%">
@@ -72,7 +72,7 @@ export function SplashScreen() {
     </filter>
   </defs>
 
-  {/* 1. The 'X' Logo Section */}
+ 
   <motion.g
     animate={{ 
       opacity: [1, 1, 0, 0, 1],

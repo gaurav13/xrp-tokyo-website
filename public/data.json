@@ -27,43 +27,52 @@
       "image": "/Takuy-Sugiyama.jpg",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/takuya-sugiyama-aa1b73a"
+    },
+     {
+      "name": "Cody Carbone",
+      "role": "CEO at The Digital Chamber",
+      "company": "The Digital Chamber",
+      "bio": "",
+      "image": "/avtarimage.jpg",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/codycarbone/"
     }
   ],
   "sponsors": [
     {
       "name": "Ripple",
       "tier": "Title",
-      "logo": "/sponsors/title/ripple.png",
+      "logo": "/sponsors/title/ripple1.png",
       "website": "https://ripple.com/"
     },
     {
       "name": "Doppler Finance",
       "tier": "Platinum",
-      "logo": "/sponsors/platinum/doppler-finance.svg",
+      "logo": "/sponsors/platinum/doppler-finance1.png",
       "website": "https://doppler.finance/"
     },
     {
       "name": "anodos",
       "tier": "Gold",
-      "logo": "/sponsors/gold/anodos.png",
+      "logo": "/sponsors/gold/anodos1.png",
       "website": "https://anodos.finance/"
     },
     {
       "name": "XRPCafe",
       "tier": "Silver",
-      "logo": "/sponsors/silver/xrpcafe.svg",
+      "logo": "/sponsors/silver/xrpcafe1.png",
       "website": "https://xrp.cafe"
     },
     {
       "name": "Xaman",
       "tier": "Silver",
-      "logo": "/sponsors/silver/xaman.svg",
+      "logo": "/sponsors/silver/xaman2.png",
       "website": "https://xaman.app/"
     },
     {
       "name": "Giant Gox",
       "tier": "Bronze",
-      "logo": "/sponsors/bronze/giantgox.jpg",
+      "logo": "/sponsors/bronze/giantgox2.png",
       "website": "https://x.com/GiantGox"
     },
     {
@@ -80,12 +89,12 @@
     {
       "name": "New Economy",
       "tier": "Media Partner",
-      "logo": "/partners/media/neweconomy.png"
+      "logo": "/partners/media/neweconomy1.png"
     },
     {
       "name": "News Tagline",
       "tier": "Media Partner",
-      "logo": "/partners/media/news_tagline.png"
+      "logo": "/partners/media/nadanews.png"
     },
     {
       "name": "東大公開講座",
@@ -110,27 +119,27 @@
     {
       "name": "Wavee",
       "tier": "Community Partner",
-      "logo": "/partners/community/wavee.svg"
+      "logo": "/partners/community/wavee1.png"
     },
     {
       "name": "Wave of Innovation",
       "tier": "Community Partner",
-      "logo": "/partners/community/wave-of-innovation.svg"
+      "logo": "/partners/community/wave-of-innovation.png"
     },
     {
       "name": "Web3 Salon",
       "tier": "Community Partner",
-      "logo": "/partners/community/web3-salon.png"
+      "logo": "/partners/community/web3-salon1.png"
     },
     {
       "name": "AI Agent Run",
       "tier": "Community Partner",
-      "logo": "/partners/community/ai-agent-run.png"
+      "logo": "/partners/community/ai-agent-run1.png"
     },
     {
       "name": "XRPL Korea",
       "tier": "Community Partner",
-      "logo": "/partners/community/xrplkorea_v_black.svg"
+      "logo": "/partners/community/xkorea.png"
     },
     {
       "name": "XRPL Africa",
