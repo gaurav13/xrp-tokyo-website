@@ -42,7 +42,7 @@ export function SpeakerCard({
             src={speaker.image}
             alt={name}
             fill
-            className="object-cover object-top grayscale contrast-125 transition duration-500 group-hover:grayscale-0"
+            className="object-cover object-top contrast-125 transition duration-500 group-hover:grayscale-0"
             sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
           />
         ) : (

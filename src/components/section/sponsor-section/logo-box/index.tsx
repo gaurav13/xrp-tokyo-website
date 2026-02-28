@@ -101,8 +101,7 @@ export const LogoBox = ({
     rounded-xl
     bg-black/40
     shadow-[0_10px_30px_rgba(0,0,0,0.6)]
-    p-4
-    flex items-center justify-center
+     flex items-center justify-center
     backdrop-blur-sm
   "
 >

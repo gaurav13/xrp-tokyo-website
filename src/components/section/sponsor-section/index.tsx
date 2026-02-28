@@ -30,7 +30,7 @@ const TIER_DISPLAY_ORDER: {
     tier: Tier.Title,
     containerClass: "flex flex-wrap justify-center gap-6 w-full max-w-md mx-auto",
    
-logoClass: "w-full max-w-xs aspect-[2/1] border-4 border-white rounded-2xl bg-white/10 shadow-[0_0_25px_rgba(255,255,255,0.3)]",
+logoClass: "w-full max-w-xs aspect-[2/1] border-4 border-white rounded-2xl bg-white/5 shadow-[0_0_25px_rgba(255,255,255,0.3)]",
     gap: "mt-0",
     titleGap: "mb-6",
     initialY: 40,
