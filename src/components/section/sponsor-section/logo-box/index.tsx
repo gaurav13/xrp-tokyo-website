@@ -69,7 +69,7 @@ const logoVariants = {
 
 interface LogoBoxProps {
   tier: Tier;
-  logo: string;
+  logo?: string;
   alt: string;
   className?: string;
   website?: string;
@@ -94,27 +94,26 @@ export const LogoBox = ({
     className,
   );
 
-  const inner = (
- <div
-  className="
-    w-full h-full
-    rounded-xl
-    bg-black/40
-    shadow-[0_10px_30px_rgba(0,0,0,0.6)]
-     flex items-center justify-center
-    backdrop-blur-sm
-  "
->
-  <div className="relative w-full h-full">
-    <Image
-      src={logo}
-      alt={alt}
-      fill
-      className="object-contain"
-      sizes="(max-width: 768px) 50vw, 200px"
-    />
-  </div>
-</div>
+  const inner = logo ? (
+    <div
+      className="w-full h-full rounded-xl bg-black/40 shadow-[0_10px_30px_rgba(0,0,0,0.6)] flex items-center justify-center backdrop-blur-sm"
+    >
+      <div className="relative w-full h-full">
+        <Image
+          src={logo}
+          alt={alt}
+          fill
+          className="object-contain"
+          sizes="(max-width: 768px) 50vw, 200px"
+        />
+      </div>
+    </div>
+  ) : (
+    <div className="w-full h-full rounded-xl bg-black/40 flex items-center justify-center backdrop-blur-sm">
+      <span className="text-sm font-medium text-white/90 text-center px-2">
+        {alt}
+      </span>
+    </div>
   );
 
   if (website) {
