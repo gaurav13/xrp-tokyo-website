@@ -103,6 +103,12 @@ export const SPONSORS = [
     website: "https://x.com/mayflower3096",
   },
   {
+    tier: Tier.Bronze,
+    name: "Daikoku",
+    logo: "/partners/community/daikoku.png",
+    website: "https://x.com/daikokunet009",
+  },
+  {
     tier: Tier.MediaPartner,
     name: "CoinPost",
     logo: "/partners/media/coinpost.png",
