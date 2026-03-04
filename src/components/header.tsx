@@ -47,7 +47,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-black/90 text-white backdrop-blur border-b border-white/10">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6 lg:px-8">
+      <div className="w-full flex h-16 items-center justify-between px-4 md:px-6 lg:px-8">
         {/* ブランド */}
         <Link href="/" className="flex items-center" aria-label="XRP Tokyo 2026">
           <Image
@@ -60,8 +60,8 @@ export function Header() {
           />
         </Link>
 
-        {/* デスクトップナビゲーション */}
-        <nav className="hidden items-center gap-2 md:flex">
+        {/* デスクトップナビゲーション（1280px以上で表示、それ未満はハンバーガー） */}
+        <nav className="hidden items-center gap-2 xl:flex">
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -75,21 +75,21 @@ export function Header() {
         </nav>
 
         {/* 右側のアクション */}
-        <div className="flex items-center gap-2 ml-auto md:ml-0">
-          {/* スポンサーボタン（デスクトップのみ） */}
+        <div className="flex items-center gap-2 ml-auto xl:ml-0">
+          {/* スポンサーボタン（1280px以上のみ、それ未満はハンバーガーメニュー内） */}
           <Link
             href={SPONSOR_LINKS.teamz}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 transition-colors hover:bg-white/15"
+            className="hidden xl:flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 transition-colors hover:bg-white/15"
             aria-label={t("header.sponsor")}
           >
             {t("header.sponsor")}
           </Link>
-          {/* ギブアウェイボタン（デスクトップのみ） */}
+          {/* ギブアウェイボタン（1280px以上のみ） */}
           <button
             onClick={openDialog}
-            className="hidden md:flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-2 text-white/80 transition-colors hover:bg-white/15"
+            className="hidden xl:flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-2 text-white/80 transition-colors hover:bg-white/15"
             aria-label={t("header.giveaway")}
           >
             <Gift className="size-5" />
@@ -99,10 +99,10 @@ export function Header() {
           {/* Xアイコンボタン */}
           <XIconButton className="rounded-full border border-white/15 bg-white/5 text-white/80 hover:bg-white/15" />
 
-          {/* チケットボタン */}
+          {/* チケットボタン（1280px以上のみ） */}
           <div
             className={cn(
-              "hidden md:block relative h-9 transition-all duration-300",
+              "hidden xl:block relative h-9 transition-all duration-300",
               isScrolled ? "w-[120px]" : "w-9",
             )}
           >
@@ -165,11 +165,11 @@ export function Header() {
             </motion.div>
           </div>
 
-          {/* モバイルメニューボタン */}
+          {/* ハンバーガーメニューボタン（0〜1279px：モバイル・タブレット共通） */}
           <button
             type="button"
             onClick={toggleMobileMenu}
-            className="flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-2 text-white transition-colors hover:bg-white/15 md:hidden"
+            className="flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-2 text-white transition-colors hover:bg-white/15 xl:hidden"
             aria-label={t("header.openMenu")}
             aria-expanded={isMobileMenuOpen}
           >
@@ -190,9 +190,9 @@ export function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="border-t border-white/10 bg-black md:hidden overflow-hidden"
+            className="border-t border-white/10 bg-black xl:hidden overflow-hidden"
           >
-            <nav className="container mx-auto flex flex-col px-4 py-4 md:px-6 lg:px-8 gap-4 text-white">
+            <nav className="w-full flex flex-col px-4 py-4 md:px-6 lg:px-8 gap-4 text-white">
               {/* モバイル用ナビゲーション */}
               <div className="flex flex-col gap-2">
                 {navItems.map((item) => (
