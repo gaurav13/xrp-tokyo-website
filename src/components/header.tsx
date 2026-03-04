@@ -29,6 +29,12 @@ export function Header() {
   ];
 
   const handleNavClick = (id: string) => {
+    if (id === "about") {
+      // about だけ 100svh の位置に固定してスクロール（スクロール先を安定させる）
+      const scrollTop = typeof window !== "undefined" ? window.innerHeight : 0;
+      window.scrollTo({ top: scrollTop, behavior: "smooth" });
+      return;
+    }
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
