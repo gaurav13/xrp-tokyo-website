@@ -17,7 +17,7 @@ export function NextSection() {
     journeyPrimaryLabel: t("journeySection.primaryCta"),
     journeyPrimaryUrl: "https://luma.com/da2ucul1",
     journeySecondaryLabel: t("journeySection.secondaryCta"),
-    journeySecondaryUrl: "https://luma.com/da2ucul1",
+    journeySecondaryUrl: "https://tickets.teamz.co.jp/?utm_source=xrp",
   };
 
   return (
