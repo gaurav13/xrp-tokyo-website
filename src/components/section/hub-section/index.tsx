@@ -10,8 +10,8 @@ type HubSectionProps = {
 
 const STATS = [
   { value: "3,000+", labelKey: "hubSection.stats.attendees" },
-  { value: "30+", labelKey: "hubSection.stats.sessions" },
-  { value: "100+", labelKey: "hubSection.stats.companies" },
+  { value: "20+", labelKey: "hubSection.stats.sessions" },
+  { value: "30+", labelKey: "hubSection.stats.sponsors" },
 ];
 
 function HubImages() {
