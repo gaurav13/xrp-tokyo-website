@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, Ticket, Gift } from "lucide-react";
+import { Menu, X, Ticket, Gift, Handshake } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { LanguageSelector } from "@/components/ui/language-selector";
 import { Button } from "@/components/animate-ui/components/buttons/button";
@@ -58,13 +58,13 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full bg-black/90 text-white backdrop-blur border-b border-white/10">
       <div className="w-full flex h-16 items-center justify-between px-4 md:px-6 lg:px-8">
         {/* ブランド */}
-        <Link href="/" className="flex items-center" aria-label="XRP Tokyo 2026">
+        <Link href="/" className="flex items-center max-w-[210px] xl:max-w-none shrink-0" aria-label="XRP Tokyo 2026">
           <Image
             src="/logo-dark.svg"
             alt="XRP Tokyo 2026"
             width={140}
             height={24}
-            className="h-6 w-auto"
+            className="h-6 w-auto max-w-full"
             priority
           />
         </Link>
@@ -266,8 +266,9 @@ export function Header() {
                   href={SPONSOR_LINKS.teamz}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-white/80 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors"
                 >
+                  <Handshake className="size-4 shrink-0" />
                   {t("header.sponsor")}
                 </Link>
               </motion.div>
