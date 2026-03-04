@@ -52,7 +52,7 @@ function HubImages() {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[#e81111]/20 blur-2xl" />
+      <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[#e81111]/20 blur-2xl hidden md:block" />
       <div className="pointer-events-none absolute -left-8 -bottom-8 h-24 w-24 rounded-full bg-white/10 blur-2xl" />
     </div>
   );
