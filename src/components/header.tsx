@@ -28,19 +28,18 @@ export function Header() {
     { label: t("header.sponsors"), id: "sponsors" },
   ];
 
-  const handleNavClick = (id: string) => {
-    const el = document.getElementById(id);
-    if (!el) return;
+  /** about セクションへのスクロール位置（決め打ち: ヒーロー高さ + モバイルブラウザUI分の補正） */
+  const ABOUT_SCROLL_TOP = typeof window !== "undefined" ? window.innerHeight + 80 : 0;
 
-    // 概要: モバイルブラウザUI分だけスクロールが足りないため、上方向に余分にスクロール
+  const handleNavClick = (id: string) => {
     if (id === "about" && typeof window !== "undefined") {
-      const top = el.getBoundingClientRect().top + window.scrollY;
-      const extra = 80; // ブラウザUI分の補正（足りない分を上にずらす）
-      window.scrollTo({ top: Math.max(0, top - extra), behavior: "smooth" });
+      window.scrollTo({ top: ABOUT_SCROLL_TOP, behavior: "smooth" });
       return;
     }
-
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   };
 
   const toggleMobileMenu = () => {
