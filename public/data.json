@@ -84,77 +84,92 @@
     {
       "name": "CoinPost",
       "tier": "Media Partner",
-      "logo": "/partners/media/coinpost.png"
+      "logo": "/partners/media/coinpost.png",
+      "website": "https://coinpost.jp/"
     },
     {
-      "name": "New Economy",
+      "name": "あたらしい経済",
       "tier": "Media Partner",
-      "logo": "/partners/media/neweconomy1.png"
+      "logo": "/partners/media/neweconomy1.png",
+      "website": "https://www.neweconomy.jp/"
     },
     {
-      "name": "News Tagline",
+      "name": "NADA NEWS",
       "tier": "Media Partner",
-      "logo": "/partners/media/nadanews.png"
+      "logo": "/partners/media/nadanews.png",
+      "website": "https://www.nadanews.com/"
     },
     {
       "name": "東大公開講座",
       "tier": "Education",
-      "logo": "/partners/education/東大公開講座.png"
+      "logo": "/partners/education/東大公開講座.png",
+      "website": "https://www.blockchain.t.u-tokyo.ac.jp/"
     },
     {
       "name": "渋谷Web3大学",
       "tier": "Community Partner",
-      "logo": "/partners/community/渋谷Web3大学横.jpg"
+      "logo": "/partners/community/渋谷Web3大学横.jpg",
+      "website": "https://www.shibuyaweb3univ.com/"
     },
     {
       "name": "OP Market",
       "tier": "Community Partner",
-      "logo": "/partners/community/opmarket.jpg"
+      "logo": "/partners/community/opmarket.jpg",
+      "website": "https://opmarket.ai/"
     },
     {
-      "name": "Text RP",
+      "name": "TextRP",
       "tier": "Community Partner",
-      "logo": "/partners/community/text-rp.jpg"
+      "logo": "/partners/community/text-rp.jpg",
+      "website": "https://textrp.io/"
     },
     {
       "name": "Wavee",
       "tier": "Community Partner",
-      "logo": "/partners/community/wavee1.png"
+      "logo": "/partners/community/wavee-bg-white.png",
+      "website": "https://wavee.world/"
     },
     {
       "name": "Wave of Innovation",
       "tier": "Community Partner",
-      "logo": "/partners/community/wave-of-innovation.png"
+      "logo": "/partners/community/wave-of-innovation.png",
+      "website": "https://www.waveofinnovation.com/"
     },
     {
       "name": "Web3 Salon",
       "tier": "Community Partner",
-      "logo": "/partners/community/web3-salon1.png"
+      "logo": "/partners/community/web3-salon1.png",
+      "website": "https://web3salon.or.jp/"
     },
     {
       "name": "AI Agent Run",
       "tier": "Community Partner",
-      "logo": "/partners/community/ai-agent-run1.png"
+      "logo": "/partners/community/ai-agent-run1.png",
+      "website": "https://aigent.run/"
     },
     {
       "name": "XRPL Korea",
       "tier": "Community Partner",
-      "logo": "/partners/community/xkorea.png"
+      "logo": "/partners/community/xkorea.png",
+      "website": "https://xrplkorea.org/"
     },
     {
       "name": "XRPL Africa",
       "tier": "Community Partner",
-      "logo": "/partners/community/xrpl-africa.jpg"
+      "logo": "/partners/community/xrpl-africa.jpg",
+      "website": "https://x.com/XRPL_AF"
     },
     {
       "name": "XRPL Canada",
       "tier": "Community Partner",
-      "logo": "/partners/community/xrpl-canada.jpeg"
+      "logo": "/partners/community/xrpl-canada.jpeg",
+      "website": "https://www.xrplcanada.org/"
     },
     {
       "name": "XRPL Malaysia",
       "tier": "Community Partner",
-      "logo": "/partners/community/xrpl-malaysia.jpg"
+      "logo": "/partners/community/xrpl-malaysia.jpg",
+      "website": "https://x.com/xrplmalaysia"
     },
     {
       "name": "Terry Toto",
