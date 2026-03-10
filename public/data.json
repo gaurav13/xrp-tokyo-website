@@ -46,10 +46,24 @@
       "website": "https://ripple.com/"
     },
     {
+      "name": "SBI Group",
+      "tier": "Platinum",
+      "logo": "/sponsors/platinum/sbi-group.png",
+      "website": "https://www.sbigroup.co.jp/",
+      "whiteLogo": true
+    },
+    {
       "name": "Doppler Finance",
       "tier": "Platinum",
       "logo": "/sponsors/platinum/doppler-finance1.png",
       "website": "https://doppler.finance/"
+    },
+    {
+      "name": "SBI Ripple Asia",
+      "tier": "Gold",
+      "logo": "/sponsors/gold/sbi-ripple-asia.png",
+      "website": "https://www.sbigroup.co.jp/company/group/sbirippleasia.html",
+      "whiteLogo": true
     },
     {
       "name": "anodos",

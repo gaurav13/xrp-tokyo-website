@@ -38,7 +38,7 @@ logoClass: "w-full max-w-xs aspect-[2/1] border-4 border-white rounded-2xl bg-wh
   },
   {
     tier: Tier.Platinum,
-    containerClass: "flex flex-wrap justify-center gap-5 w-full max-w-lg mx-auto",
+    containerClass: "grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-0 w-full max-w-2xl mx-auto justify-items-center",
    logoClass: "w-full max-w-[280px] aspect-[1.8/1] border-2 border-slate-300 rounded-xl platinum-blink-card",
     gap: "mt-16 md:mt-20",
     titleGap: "mb-5",
@@ -46,8 +46,8 @@ logoClass: "w-full max-w-xs aspect-[2/1] border-4 border-white rounded-2xl bg-wh
   },
   {
     tier: Tier.Gold,
-    containerClass: "flex flex-wrap justify-center gap-4 w-full max-w-lg mx-auto",
-logoClass: "w-full max-w-[220px] aspect-[1.6/1] border-2 border-[#D4AF37] rounded-lg bg-black/20 shadow-[0_0_10px_rgba(212,175,55,0.2)]",
+    containerClass: "grid grid-cols-2 gap-4 md:gap-6 w-full max-w-lg mx-auto",
+logoClass: "w-full aspect-[1.8/1] border-2 border-[#D4AF37] rounded-lg bg-black/20 shadow-[0_0_10px_rgba(212,175,55,0.2)]",
     gap: "mt-14 md:mt-16",
     titleGap: "mb-4",
     initialY: 32,
@@ -108,6 +108,7 @@ export function SponsorSection() {
       tier: Tier;
       logo?: string;
       website?: string;
+      whiteLogo?: boolean;
     }[]
   >([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -125,6 +126,7 @@ export function SponsorSection() {
             tier?: string;
             logo?: string;
             website?: string;
+            whiteLogo?: boolean;
           }[];
         };
 
@@ -148,6 +150,7 @@ export function SponsorSection() {
             tier: tierMap[sponsor.tier ?? ""] ?? Tier.Community,
             logo: sponsor.logo,
             website: sponsor.website,
+            whiteLogo: sponsor.whiteLogo,
           }));
           // 同一 tier 内で同じ logo パスが重複しないようにする（先頭を残す）。logo なしは name で一意化
           const seen = new Set<string>();
@@ -230,6 +233,7 @@ export function SponsorSection() {
                         logo={sponsor.logo}
                         website={sponsor.website}
                         className={logoClass}
+                        whiteLogo={sponsor.whiteLogo}
                       />
                     ))}
                   </motion.div>
