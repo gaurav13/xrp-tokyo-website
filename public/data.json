@@ -25,7 +25,8 @@
       "bio": "",
       "image": "/speakers/Tatsuya Yamada.png",
       "twitter": "",
-      "linkedin": "https://jp.linkedin.com/in/tatsuya-yamada-7223352a"
+      "linkedin": "https://jp.linkedin.com/in/tatsuya-yamada-7223352a",
+       "website": ""
     },
     {
       "name": "SungMo Park",
@@ -34,7 +35,8 @@
       "bio": "",
       "image": "/speakers/SungMo Park.png",
       "twitter": "",
-      "linkedin": "https://www.linkedin.com/in/smp0910/"
+      "linkedin": "https://www.linkedin.com/in/smp0910/",
+      "website":"https://a16zcrypto.com/team/sungmo-park/"
     },
      {
       "name": "Cody Carbone",
@@ -72,7 +74,8 @@
       "bio": "",
       "image": "/speakers/HashPort Inc.png",
       "twitter": "https://x.com/seihakuyoshida",
-      "linkedin": ""
+      "linkedin": "",
+      "website": "https://hashport.io/"
     },
     {
       "name": "Masahi Okuyama",
@@ -81,7 +84,8 @@
       "bio": "",
       "image": "/speakers/Masahi Okuyama.png",
       "twitter": "",
-      "linkedin": ""
+      "linkedin": "",
+      "website":"https://www.sbigroup.co.jp/english/company/group/sbirippleasia.html"
     },
     {
       "name": "Takafumi Shimoyama",
@@ -117,7 +121,8 @@
       "bio": "",
       "image": "/speakers/Hinza Asif.png",
       "twitter": "https://x.com/thehinza",
-      "linkedin": "https://jp.linkedin.com/in/hinza-asif"
+      "linkedin": "https://jp.linkedin.com/in/hinza-asif",
+      "website":"https://asiaweb3alliance.jp/"
     },
     {
       "name": "Kyohei Shibano",
@@ -365,6 +370,30 @@
       "name": "Trust Authy",
       "tier": "Community",
       "logo": "/partners/community/trust-authy.jpg",
+      "website": ""
+    },
+    {
+      "name": "collection logo",
+      "tier": "Community",
+      "logo": "/partners/community/collection logo.png",
+      "website": ""
+    },
+    {
+      "name": "49 - OHAGIさん",
+      "tier": "Community",
+      "logo": "/partners/community/49 - OHAGIさん.jpg",
+      "website": ""
+    },
+    {
+      "name": "ciana",
+      "tier": "Community",
+      "logo": "/partners/community/ciana.png",
+      "website": ""
+    },
+    {
+      "name": "crunk cat collection_2026022502 - はむ",
+      "tier": "Community",
+      "logo": "/partners/community/crunk cat collection_2026022502 - はむ.png",
       "website": ""
     }
   ]

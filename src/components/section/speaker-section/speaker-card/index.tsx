@@ -2,7 +2,7 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import type { Speaker } from "@/config/speakers";
-
+import { Globe } from "lucide-react";
 const cardVariants = {
   hidden: { opacity: 0, y: 20, scale: 0.97 },
   visible: { opacity: 1, y: 0, scale: 1 },
@@ -53,50 +53,57 @@ export function SpeakerCard({
           </div>
         )}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-        <div className="absolute bottom-3 right-3 flex items-center gap-2">
-          {speaker.twitter ? (
-            <a
-              href={speaker.twitter}
-              target="_blank"
-              rel="noreferrer"
-              onClick={(event) => event.stopPropagation()}
-              aria-label={`${name} on X`}
-              className="flex h-11 w-11 items-center justify-center rounded-sm bg-white/90 text-[10px] font-semibold text-black shadow-sm transition hover:bg-white md:h-7 md:w-7"
-            >
-              X
-            </a>
-          ) : (
-            <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-white/40 text-[10px] font-semibold text-black/60 shadow-sm md:h-7 md:w-7">
-              X
-            </span>
-          )}
-          {speaker.linkedin ? (
-            <a
-              href={speaker.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              onClick={(event) => event.stopPropagation()}
-              aria-label={`${name} on LinkedIn`}
-              className="flex h-11 w-11 items-center justify-center rounded-sm bg-white/90 text-[10px] font-semibold text-black shadow-sm transition hover:bg-white md:h-7 md:w-7"
-            >
-              in
-            </a>
-          ) : (
-            <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-white/40 text-[10px] font-semibold text-black/60 shadow-sm md:h-7 md:w-7">
-              in
-            </span>
-          )}
-        </div>
-      </div>
+
+<div className="absolute bottom-3 right-3 flex items-center gap-2">
+  {speaker.twitter && (
+    <a
+      href={speaker.twitter}
+      target="_blank"
+      rel="noreferrer"
+      onClick={(event) => event.stopPropagation()}
+      aria-label={`${name} on X`}
+      className="pointer-events-auto flex h-8 w-8 md:h-7 md:w-7 items-center justify-center rounded-sm bg-white/90 text-[14px] md:text-[14px] font-semibold text-black shadow-sm transition hover:bg-white"
+    >
+      X
+    </a>
+  )}
+
+  {speaker.linkedin && (
+    <a
+      href={speaker.linkedin}
+      target="_blank"
+      rel="noreferrer"
+      onClick={(event) => event.stopPropagation()}
+      aria-label={`${name} on LinkedIn`}
+      className="pointer-events-auto flex h-8 w-8 md:h-7 md:w-7 items-center justify-center rounded-sm bg-white/90 text-[14px] md:text-[14px] font-semibold text-black shadow-sm transition hover:bg-white"
+    >
+      in
+    </a>
+  )}
+
+  {speaker.website && (
+    <a
+      href={speaker.website}
+      target="_blank"
+      rel="noreferrer"
+      onClick={(event) => event.stopPropagation()}
+      aria-label={`${name} website`}
+      className="pointer-events-auto flex h-8 w-8 md:h-7 md:w-7 items-center justify-center rounded-sm bg-white/90 text-[14px] md:text-[14px] font-semibold text-black shadow-sm transition hover:bg-white"
+    >
+    <Globe className="h-4 w-4" />
+    </a>
+  )}
+</div></div>
 
       {/* Info */}
       <div className="px-1 pt-4 pb-2 text-left">
-        <p className="text-white text-base md:text-xl font-bold leading-snug">
-          {name}
-        </p>
-        <p className="mt-1 text-xs md:text-sm text-[#fbc500] leading-snug">
-          {role}
-        </p>
+      <p className="text-white text-base md:text-xl font-bold leading-snug min-h-[40px] md:min-h-0 line-clamp-2 md:line-clamp-none">
+    {name}
+  </p>
+
+  <p className="mt-1 text-xs md:text-sm text-[#fbc500] leading-snug min-h-[32px] md:min-h-0 line-clamp-2 md:line-clamp-none">
+    {role}
+  </p>
         <p className="text-[11px] md:text-base text-white/60 leading-snug">
           {company}
         </p>
