@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useLayoutEffect } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
 import {
@@ -19,11 +19,34 @@ import { EventInfo } from "../../hero/event-info";
 import { CTAButtons } from "../../hero/cta-buttons";
 import Image from "next/image";
 import Link from "next/link";
+const SVG_VIEWBOX_HEIGHT = 424;
+
 export function Hero() {
   const t = useTranslations();
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const { isSplashComplete } = useSplash();
   const logoAnimation = getFadeInAnimation("immediate");
+  const svgRef = useRef<SVGSVGElement>(null);
+  // calc(83% + 40px) を viewBox 座標で再現（SVG の y は calc() 非対応のため JS で計算）
+  const [textY, setTextY] = useState(SVG_VIEWBOX_HEIGHT * 0.83);
+
+  useLayoutEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    const update = () => {
+      const { width, height } = svg.getBoundingClientRect();
+      if (height <= 0) return;
+      const isMobile = width < 768;
+      const y = isMobile
+        ? SVG_VIEWBOX_HEIGHT * 0.5
+        : SVG_VIEWBOX_HEIGHT * 0.83 + 40 * (SVG_VIEWBOX_HEIGHT / height);
+      setTextY(y);
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(svg);
+    return () => ro.disconnect();
+  }, []);
 
   return (
     <section
@@ -35,10 +58,11 @@ export function Hero() {
  <div className="absolute inset-0 z-0 bg-[url('/herobackground.png')] bg-cover bg-center bg-no-repeat opacity-40" />
       <div className="absolute inset-0 z-0 flex items-center justify-center">
    <svg
+  ref={svgRef}
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 424"
   className="w-[160%] h-[160%] md:w-[130%] md:h-[130%]"
-  style={{ opacity: 0.3 }} 
+  style={{ opacity: 0.3 }}
 >
   <defs>
     <filter id="neonBlur" x="-50%" y="-50%" width="200%" height="200%">
@@ -74,9 +98,7 @@ export function Hero() {
   {/* 2. The "JOIN THE FUTURE" Text Section */}
   <motion.text
   x="50%"
-  y={typeof window !== 'undefined' && window.innerWidth < 768 
-    ? "50%" 
-    : "calc(83% + 40px)"} 
+  y={textY}
   dominantBaseline="middle"
   textAnchor="middle"
   fill="none"

@@ -9,10 +9,9 @@ type HubSectionProps = {
 };
 
 const STATS = [
-  { value: "40+", labelKey: "hubSection.stats.countries" },
   { value: "3,000+", labelKey: "hubSection.stats.attendees" },
-  { value: "100+", labelKey: "hubSection.stats.speakers" },
-  { value: "3", labelKey: "hubSection.stats.days" },
+  { value: "20+", labelKey: "hubSection.stats.sessions" },
+  { value: "30+", labelKey: "hubSection.stats.sponsors" },
 ];
 
 function HubImages() {
@@ -53,7 +52,7 @@ function HubImages() {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[#e81111]/20 blur-2xl" />
+      <div className="pointer-events-none absolute -right-6 -top-6 h-20 w-20 rounded-full bg-[#e81111]/20 blur-2xl hidden md:block" />
       <div className="pointer-events-none absolute -left-8 -bottom-8 h-24 w-24 rounded-full bg-white/10 blur-2xl" />
     </div>
   );
@@ -82,11 +81,16 @@ function HubText() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-6 sm:gap-8 max-w-md">
+      <div className="grid grid-cols-3 gap-6 sm:gap-8 w-full max-w-lg">
         {STATS.map((stat) => (
-          <div key={stat.labelKey} className="space-y-1">
-            <p className="text-3xl sm:text-4xl font-semibold">{stat.value}</p>
-            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#fbc500]">
+          <div
+            key={stat.labelKey}
+            className="space-y-1.5 text-center min-w-0"
+          >
+            <p className="text-2xl sm:text-3xl md:text-4xl font-semibold tabular-nums">
+              {stat.value}
+            </p>
+            <p className="text-xs sm:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[#fbc500]">
               {t(stat.labelKey)}
             </p>
           </div>

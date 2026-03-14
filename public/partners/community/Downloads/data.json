@@ -1,0 +1,166 @@
+{
+  "speakers": [
+     {
+      "name": "Markus Infanger",
+      "role": "SVP, RippleX",
+      "company": "Ripple",
+      "bio": "Markus Infanger, SVP of RippleX at Ripple.  He leads product development, strategic partnerships, and the expansion of the XRP Ledger developer ecosystem.  Bringing 20+ years of experience in global Foreign Exchange leadership at top-tier financial institutions, he bridges the worlds of traditional finance and blockchain innovation.",
+      "image": "/Markus-Infanger.jpg",
+      "twitter": "https://x.com/markusinfanger",
+      "linkedin": "https://www.linkedin.com/in/markus-infanger-8a6ba747/"
+    },
+    {
+      "name": "Christina Chan",
+      "role": "Senior Director, Ecosystem Growth Ripple",
+      "company": "Ripple",
+      "bio": "Christina Chan, Senior Director and Ecosystem Growth of Ripple  As the Head of Funding Programs at Ripple, she leads a cross-functional global team that manages a 1 billion XRP fund for builders on the XRP Ledger ecosystem. With over 10 years of experience in web3, blockchain, crypto, and fintech, she fosters strategic collaborations and partnerships to grow and strengthen the web3 ecosystem.",
+      "image": "/Christina-Chan.jpg",
+      "twitter": "https://x.com/ghostfacex_0",
+      "linkedin": "https://www.linkedin.com/in/christinabchan"
+    },
+   
+    {
+      "name": "Takuya Sugiyama",
+      "role": "Vice President",
+      "company": "SBI Ripple Asia",
+      "bio": "Takuya Sugiyama is the Vice President of SBI Ripple Asia and General Manager of the Digital Space Department at SBI Holdings, where he leads the development of innovative blockchain-based payment solutions and digital asset infrastructure. With over 20 years of experience in the financial services industry, he now focuses on decentralized finance (DeFi), tokenized assets, and cross-border settlement systems.",
+      "image": "/Takuy-Sugiyama.jpg",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/takuya-sugiyama-aa1b73a"
+    },
+     {
+      "name": "Cody Carbone",
+      "role": "CEO at The Digital Chamber",
+      "company": "The Digital Chamber",
+      "bio": "",
+      "image": "/speakers/cody-carbone1.jpg",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/codycarbone/"
+    }
+  ],
+  "sponsors": [
+    {
+      "name": "Ripple",
+      "tier": "Title",
+      "logo": "/sponsors/title/ripple1.png",
+      "website": "https://ripple.com/"
+    },
+    {
+      "name": "Doppler Finance",
+      "tier": "Platinum",
+      "logo": "/sponsors/platinum/doppler-finance1.png",
+      "website": "https://doppler.finance/"
+    },
+    {
+      "name": "anodos",
+      "tier": "Gold",
+      "logo": "/sponsors/gold/anodos1.png",
+      "website": "https://anodos.finance/"
+    },
+    {
+      "name": "XRPCafe",
+      "tier": "Silver",
+      "logo": "/sponsors/silver/xrpcafe1.png",
+      "website": "https://xrp.cafe"
+    },
+    {
+      "name": "Xaman",
+      "tier": "Silver",
+      "logo": "/sponsors/silver/xaman2.png",
+      "website": "https://xaman.app/"
+    },
+    {
+      "name": "Giant Gox",
+      "tier": "Bronze",
+      "logo": "/sponsors/bronze/giantgox2.png",
+      "website": "https://x.com/GiantGox"
+    },
+    {
+      "name": "メイフラちゃん",
+      "tier": "Bronze",
+      "logo": "/sponsors/bronze/mayflower3096.jpg",
+      "website": "https://x.com/mayflower3096"
+    },
+    {
+      "name": "CoinPost",
+      "tier": "Media Partner",
+      "logo": "/partners/media/coinpost.png"
+    },
+    {
+      "name": "New Economy",
+      "tier": "Media Partner",
+      "logo": "/partners/media/neweconomy1.png"
+    },
+    {
+      "name": "News Tagline",
+      "tier": "Media Partner",
+      "logo": "/partners/media/nadanews.png"
+    },
+    {
+      "name": "東大公開講座",
+      "tier": "Education",
+      "logo": "/partners/education/東大公開講座.png"
+    },
+    {
+      "name": "渋谷Web3大学",
+      "tier": "Community Partner",
+      "logo": "/partners/community/渋谷Web3大学横.jpg"
+    },
+    {
+      "name": "OP Market",
+      "tier": "Community Partner",
+      "logo": "/partners/community/opmarket.jpg"
+    },
+    {
+      "name": "Text RP",
+      "tier": "Community Partner",
+      "logo": "/partners/community/text-rp.jpg"
+    },
+    {
+      "name": "Wavee",
+      "tier": "Community Partner",
+      "logo": "/partners/community/wavee1.png"
+    },
+    {
+      "name": "Wave of Innovation",
+      "tier": "Community Partner",
+      "logo": "/partners/community/wave-of-innovation.png"
+    },
+    {
+      "name": "Web3 Salon",
+      "tier": "Community Partner",
+      "logo": "/partners/community/web3-salon1.png"
+    },
+    {
+      "name": "AI Agent Run",
+      "tier": "Community Partner",
+      "logo": "/partners/community/ai-agent-run1.png"
+    },
+    {
+      "name": "XRPL Korea",
+      "tier": "Community Partner",
+      "logo": "/partners/community/xkorea.png"
+    },
+    {
+      "name": "XRPL Africa",
+      "tier": "Community Partner",
+      "logo": "/partners/community/xrpl-africa.jpg"
+    },
+    {
+      "name": "XRPL Canada",
+      "tier": "Community Partner",
+      "logo": "/partners/community/xrpl-canada.jpeg"
+    },
+    {
+      "name": "XRPL Malaysia",
+      "tier": "Community Partner",
+      "logo": "/partners/community/xrpl-malaysia.jpg"
+    },
+    {
+      "name": "Terry Toto",
+      "tier": "Community Partner",
+      "logo": "/partners/community/terry-toto.svg",
+      "website": "https://terrytoto.com/"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "speakers": [
-     {
+    {
       "name": "Markus Infanger",
       "role": "SVP, RippleX",
       "company": "Ripple",
@@ -18,7 +18,35 @@
       "twitter": "https://x.com/ghostfacex_0",
       "linkedin": "https://www.linkedin.com/in/christinabchan"
     },
-   
+    {
+      "name": "Tatsuya Yamada",
+      "role": "President",
+      "company": "Rakuten Wallet, Inc.",
+      "bio": "",
+      "image": "/speakers/Tatsuya Yamada.png",
+      "twitter": "",
+      "linkedin": "https://jp.linkedin.com/in/tatsuya-yamada-7223352a",
+       "website": ""
+    },
+    {
+      "name": "SungMo Park",
+      "role": "Partner, Head of APAC GTM",
+      "company": "A16z Crypto",
+      "bio": "",
+      "image": "/speakers/SungMo Park.png",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/smp0910/",
+      "website":"https://a16zcrypto.com/team/sungmo-park/"
+    },
+    {
+      "name": "Cody Carbone",
+      "role": "CEO at The Digital Chamber",
+      "company": "The Digital Chamber",
+      "bio": "",
+      "image": "/speakers/cody-carbone1.jpg",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/codycarbone/"
+    },
     {
       "name": "Takuya Sugiyama",
       "role": "Vice President",
@@ -28,14 +56,106 @@
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/takuya-sugiyama-aa1b73a"
     },
-     {
-      "name": "Cody Carbone",
-      "role": "CEO at The Digital Chamber",
-      "company": "The Digital Chamber",
+    {
+      "name": "Tomohiko Kondo",
+      "role": "CEO",
+      "company": "SBI VC Trade Co., Ltd",
       "bio": "",
-      "image": "/speakers/cody-carbone1.jpg",
+      "image": "/speakers/Tomohiko Kondo.png",
+      "twitter": "https://x.com/tomohiko_kondo",
+      "linkedin": "https://jp.linkedin.com/in/tomohiko-kondo-78748bab"
+    },
+    {
+      "name": "Seihaku Yoshida",
+      "role": "CEO",
+      "company": "HashPort Inc",
+      "bio": "",
+      "image": "/speakers/HashPort Inc.png",
+      "twitter": "https://x.com/seihakuyoshida",
+      "linkedin": "",
+      "website": "https://hashport.io/"
+    },
+    {
+      "name": "Takafumi Shimoyama",
+      "role": "General Manager, Head of Business Development",
+      "company": "SBI Ripple Asia",
+      "bio": "",
+      "image": "/speakers/Takafumi Shimoyama.png",
       "twitter": "",
-      "linkedin": "https://www.linkedin.com/in/codycarbone/"
+      "linkedin": "https://jp.linkedin.com/in/takafumi-shimoyama-43b949207"
+    },
+    {
+      "name": "Meg Nakamura",
+      "role": "Chief Operating Officer",
+      "company": "Evernorth",
+      "bio": "",
+      "image": "/speakers/Meg Nakamura.png",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/megnakamura"
+    },
+    {
+      "name": "Mai Furukawa",
+      "role": "Co-founder of XRPL Japan",
+      "company": "XRPL Labs",
+      "bio": "",
+      "image": "/speakers/Mai Furukawa1.png",
+      "twitter": "https://x.com/Mai_XRPLJapan",
+      "linkedin": "https://www.linkedin.com/in/mai-furukawa-b26079281/"
+    },
+    {
+      "name": "Hinza Asif",
+      "role": "President",
+      "company": "Asia Web3 Alliance Japan",
+      "bio": "",
+      "image": "/speakers/Hinza Asif.png",
+      "twitter": "https://x.com/thehinza",
+      "linkedin": "https://jp.linkedin.com/in/hinza-asif",
+      "website":"https://asiaweb3alliance.jp/"
+    },
+    {
+      "name": "Kyohei Shibano",
+      "role": "Blockchain Education program",
+      "company": "Tokyo University",
+      "bio": "",
+      "image": "/speakers/Tokyo University.png",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/kyohei-shibano-0a5165251"
+    },
+    {
+      "name": "Rox Park",
+      "role": "Head of Institutions",
+      "company": "Doppler Finance",
+      "bio": "",
+      "image": "/speakers/Doppler.png",
+      "twitter": "",
+      "linkedin": ""
+    },
+    {
+      "name": "Panos Mekras",
+      "role": "Co-Founder & CEO",
+      "company": "Anodos Labs",
+      "bio": "",
+      "image": "/speakers/Anodos Finance.png",
+      "twitter": "https://x.com/panosmek",
+      "linkedin": "https://www.linkedin.com/in/panos-mekras/"
+    },
+    {
+      "name": "Robert Kiuru",
+      "role": "COO",
+      "company": "Xaman",
+      "bio": "",
+      "image": "/speakers/Xaman.png",
+      "twitter": "https://x.com/robertkiuru",
+      "linkedin": "https://www.linkedin.com/in/kiuru1/"
+    },
+    {
+      "name": "Alexis Sirkia",
+      "role": "Executive Chairman & Founder ",
+      "company": "Yellow",
+      "bio": "",
+      "image": "/speakers/Alexis Sirkia.png",
+      "twitter": "https://x.com/AlexisYellow",
+      "linkedin": "https://www.linkedin.com/in/sirkia/"
     }
   ],
   "sponsors": [
@@ -46,10 +166,24 @@
       "website": "https://ripple.com/"
     },
     {
+      "name": "SBI Group",
+      "tier": "Platinum",
+      "logo": "/sponsors/platinum/sbi-group.png",
+      "website": "https://www.sbigroup.co.jp/",
+      "whiteLogo": true
+    },
+    {
       "name": "Doppler Finance",
       "tier": "Platinum",
       "logo": "/sponsors/platinum/doppler-finance1.png",
       "website": "https://doppler.finance/"
+    },
+    {
+      "name": "SBI Ripple Asia",
+      "tier": "Gold",
+      "logo": "/sponsors/gold/sbi-ripple-asia.png",
+      "website": "https://www.sbigroup.co.jp/company/group/sbirippleasia.html",
+      "whiteLogo": true
     },
     {
       "name": "anodos",
@@ -70,97 +204,220 @@
       "website": "https://xaman.app/"
     },
     {
+      "name": "Levtech",
+      "tier": "Bronze",
+      "logo": "/sponsors/bronze/levtech_wh_2.png",
+      "website": "https://levtech.jp/",
+      "type": "corporate"
+    },
+    {
       "name": "Giant Gox",
       "tier": "Bronze",
       "logo": "/sponsors/bronze/giantgox2.png",
-      "website": "https://x.com/GiantGox"
+      "website": "https://x.com/GiantGox",
+      "type": "individual"
     },
     {
       "name": "メイフラちゃん",
       "tier": "Bronze",
       "logo": "/sponsors/bronze/mayflower3096.jpg",
-      "website": "https://x.com/mayflower3096"
+      "website": "https://x.com/mayflower3096",
+      "type": "individual"
+    },
+    {
+      "name": "Daikoku",
+      "tier": "Bronze",
+      "logo": "/partners/community/daikoku.png",
+      "website": "https://x.com/daikokunet009",
+      "type": "individual"
+    },
+    {
+      "name": "Hotei",
+      "tier": "Bronze",
+      "logo": "/sponsors/bronze/hotei.png",
+      "website": "https://x.com/5porter5",
+      "type": "individual"
     },
     {
       "name": "CoinPost",
-      "tier": "Media Partner",
-      "logo": "/partners/media/coinpost.png"
+      "tier": "Media",
+      "logo": "/partners/media/coinpost.png",
+      "website": "https://coinpost.jp/"
     },
     {
-      "name": "New Economy",
-      "tier": "Media Partner",
-      "logo": "/partners/media/neweconomy1.png"
+      "name": "あたらしい経済",
+      "tier": "Media",
+      "logo": "/partners/media/neweconomy1.png",
+      "website": "https://www.neweconomy.jp/"
     },
     {
-      "name": "News Tagline",
-      "tier": "Media Partner",
-      "logo": "/partners/media/nadanews.png"
+      "name": "NADA NEWS",
+      "tier": "Media",
+      "logo": "/partners/media/nadanews.png",
+      "website": "https://www.nadanews.com/"
     },
     {
       "name": "東大公開講座",
       "tier": "Education",
-      "logo": "/partners/education/東大公開講座.png"
+      "logo": "/partners/education/東大公開講座.png",
+      "website": "https://www.blockchain.t.u-tokyo.ac.jp/"
     },
     {
-      "name": "渋谷Web3大学",
-      "tier": "Community Partner",
-      "logo": "/partners/community/渋谷Web3大学横.jpg"
+      "name": " AKINDO",
+      "tier": "Community",
+      "logo": "/partners/community/akindo_logo_white.png",
+      "website": "https://x.com/akindo_io/"
     },
     {
-      "name": "OP Market",
-      "tier": "Community Partner",
-      "logo": "/partners/community/opmarket.jpg"
-    },
-    {
-      "name": "Text RP",
-      "tier": "Community Partner",
-      "logo": "/partners/community/text-rp.jpg"
-    },
-    {
-      "name": "Wavee",
-      "tier": "Community Partner",
-      "logo": "/partners/community/wavee1.png"
-    },
-    {
-      "name": "Wave of Innovation",
-      "tier": "Community Partner",
-      "logo": "/partners/community/wave-of-innovation.png"
+      "name": "OffChain Tokyo",
+      "tier": "Community",
+      "logo": "/partners/community/offchain-tokyo.png",
+      "website": "https://luma.com/web3tokyo"
     },
     {
       "name": "Web3 Salon",
-      "tier": "Community Partner",
-      "logo": "/partners/community/web3-salon1.png"
+      "tier": "Community",
+      "logo": "/partners/community/web3-salon1.png",
+      "website": "https://web3salon.or.jp/"
     },
     {
-      "name": "AI Agent Run",
-      "tier": "Community Partner",
-      "logo": "/partners/community/ai-agent-run1.png"
+      "name": "渋谷Web3大学",
+      "tier": "Community",
+      "logo": "/partners/community/渋谷Web3大学横.jpg",
+      "website": "https://www.shibuyaweb3univ.com/"
+    },
+    {
+      "name": "Wave of Innovation",
+      "tier": "Community",
+      "logo": "/partners/community/wave-of-innovation.png",
+      "website": "https://www.waveofinnovation.com/"
     },
     {
       "name": "XRPL Korea",
-      "tier": "Community Partner",
-      "logo": "/partners/community/xkorea.png"
+      "tier": "Community",
+      "logo": "/partners/community/xkorea.png",
+      "website": "https://xrplkorea.org/"
     },
     {
       "name": "XRPL Africa",
-      "tier": "Community Partner",
-      "logo": "/partners/community/xrpl-africa.jpg"
+      "tier": "Community",
+      "logo": "/partners/community/xrpl-africa.jpg",
+      "website": "https://x.com/XRPL_AF"
     },
     {
       "name": "XRPL Canada",
-      "tier": "Community Partner",
-      "logo": "/partners/community/xrpl-canada.jpeg"
+      "tier": "Community",
+      "logo": "/partners/community/xrpl-canada.jpeg",
+      "website": "https://www.xrplcanada.org/"
     },
     {
       "name": "XRPL Malaysia",
-      "tier": "Community Partner",
-      "logo": "/partners/community/xrpl-malaysia.jpg"
+      "tier": "Community",
+      "logo": "/partners/community/xrpl-malaysia.jpg",
+      "website": "https://x.com/xrplmalaysia"
+    },
+    {
+      "name": "OP Market",
+      "tier": "Community",
+      "logo": "/partners/community/opmarket.jpg",
+      "website": "https://opmarket.ai/"
+    },
+    {
+      "name": "YTTLINKS",
+      "tier": "Community",
+      "logo": "/partners/community/YTTLINKS_logo_square.png",
+      "website": "https://www.yttlinks.co.jp/"
+    },
+    {
+      "name": "Found",
+      "tier": "Community",
+      "logo": "/partners/community/Found.jpg",
+      "website": "https://www.dotfound.co.jp/"
+    },
+    {
+      "name": "0xConsultingGroup",
+      "tier": "Community",
+      "logo": "/partners/community/0xConsultingGroup_square_white.png",
+      "website": "https://zero-x.com/en/home-en/"
+    },
+    {
+      "name": "ciana",
+      "tier": "Community",
+      "logo": "/partners/community/ciana_logo_dark.png",
+      "website": "https://x.com/coinciana"
+    },
+    {
+      "name": "collection logo",
+      "tier": "Community",
+      "logo": "/partners/community/collection logo.png",
+      "website": ""
+    },
+    {
+      "name": "piyoneko",
+      "tier": "Community",
+      "logo": "/partners/community/piyoko_piyoneko(D) - piyoneko.png",
+      "website": ""
+    },
+    {
+      "name": "Crunk Cat collection",
+      "tier": "Community",
+      "logo": "/partners/community/crunk_cat_collection_light.png",
+      "website": ""
+    },
+    {
+      "name": "OHAGI",
+      "tier": "Community",
+      "logo": "/partners/community/ohagi.jpg",
+      "website": ""
+    },
+    {
+      "name": "AI Agent Run",
+      "tier": "Community",
+      "logo": "/partners/community/ai-agent-run1.png",
+      "website": "https://aigent.run/",
+      "whiteBackground": true
+    },
+    {
+      "name": "TextRP",
+      "tier": "Community",
+      "logo": "/partners/community/text-rp.jpg",
+      "website": "https://textrp.io/",
+      "whiteBackground": true
+    },
+    {
+      "name": "Wavee",
+      "tier": "Community",
+      "logo": "/partners/community/wavee-bg-white.png",
+      "website": "https://wavee.world/",
+      "whiteBackground": true
     },
     {
       "name": "Terry Toto",
-      "tier": "Community Partner",
+      "tier": "Community",
       "logo": "/partners/community/terry-toto.svg",
-      "website": "https://terrytoto.com/"
+      "website": "https://terrytoto.com/",
+      "whiteBackground": true
+    },
+    {
+      "name": "jupyter.org",
+      "tier": "Community",
+      "logo": "/partners/community/jupyter_logo_100kb.jpg",
+      "website": "https://www.jupyter.co.jp/",
+      "whiteBackground": true
+    },
+    {
+      "name": "Trust Authy",
+      "tier": "Community",
+      "logo": "/partners/community/trust-authy.jpg",
+      "website": "",
+      "whiteBackground": true
+    },
+    {
+      "name": "The Best Event",
+      "tier": "Community",
+      "logo": "/partners/community/TBV_logo.svg",
+      "website": "",
+      "whiteBackground": true
     }
   ]
 }

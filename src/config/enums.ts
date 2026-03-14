@@ -4,7 +4,7 @@ export enum Tier {
   Gold = "gold",
   Silver = "silver",
   Bronze = "bronze",
-  MediaPartner = "mediaPartner",
+  Media = "media",
   Education = "education",
-  CommunityPartner = "communityPartner",
+  Community = "community",
 }
