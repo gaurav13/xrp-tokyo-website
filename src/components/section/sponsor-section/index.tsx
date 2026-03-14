@@ -253,7 +253,7 @@ export function SponsorSection() {
                     )}
                     {individual.length > 0 && (
                       <div>
-                        <p className="text-xs text-amber-600/70 uppercase tracking-widest mb-2 text-center">Individual</p>
+                        <p className="text-xs text-amber-600/70 uppercase tracking-widest mb-2 text-center">Heroes</p>
                         <motion.div
                           className={containerClass}
                           initial="hidden"
