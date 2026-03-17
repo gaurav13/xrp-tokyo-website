@@ -1,6 +1,6 @@
 {
   "speakers": [
-     {
+    {
       "name": "Markus Infanger",
       "role": "SVP, RippleX",
       "company": "Ripple",
@@ -38,7 +38,7 @@
       "linkedin": "https://www.linkedin.com/in/smp0910/",
       "website":"https://a16zcrypto.com/team/sungmo-park/"
     },
-     {
+    {
       "name": "Cody Carbone",
       "role": "CEO at The Digital Chamber",
       "company": "The Digital Chamber",
@@ -47,17 +47,15 @@
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/codycarbone/"
     },
-   
     {
       "name": "Takuya Sugiyama",
-      "role": "Vice President",
-      "company": "SBI Ripple Asia",
+      "role": "Vice President, SBI Ripple Asia",
+      "company": "SBI Holdings",
       "bio": "Takuya Sugiyama is the Vice President of SBI Ripple Asia and General Manager of the Digital Space Department at SBI Holdings, where he leads the development of innovative blockchain-based payment solutions and digital asset infrastructure. With over 20 years of experience in the financial services industry, he now focuses on decentralized finance (DeFi), tokenized assets, and cross-border settlement systems.",
       "image": "/Takuy-Sugiyama.jpg",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/takuya-sugiyama-aa1b73a"
     },
-	
     {
       "name": "Tomohiko Kondo",
       "role": "CEO",
@@ -67,7 +65,7 @@
       "twitter": "https://x.com/tomohiko_kondo",
       "linkedin": "https://jp.linkedin.com/in/tomohiko-kondo-78748bab"
     },
-	{
+    {
       "name": "Seihaku Yoshida",
       "role": "CEO",
       "company": "HashPort Inc",
@@ -239,7 +237,6 @@
       "twitter": "https://x.com/AlexisYellow",
       "linkedin": "https://www.linkedin.com/in/sirkia/"
     }
-    
   ],
   "sponsors": [
     {
@@ -287,22 +284,39 @@
       "website": "https://xaman.app/"
     },
     {
+      "name": "Levtech",
+      "tier": "Bronze",
+      "logo": "/sponsors/bronze/levtech_wh_2.png",
+      "website": "https://levtech.jp/",
+      "type": "corporate"
+    },
+    {
       "name": "Giant Gox",
       "tier": "Bronze",
       "logo": "/sponsors/bronze/giantgox2.png",
-      "website": "https://x.com/GiantGox"
+      "website": "https://x.com/GiantGox",
+      "type": "individual"
     },
     {
       "name": "メイフラちゃん",
       "tier": "Bronze",
       "logo": "/sponsors/bronze/mayflower3096.jpg",
-      "website": "https://x.com/mayflower3096"
+      "website": "https://x.com/mayflower3096",
+      "type": "individual"
     },
     {
       "name": "Daikoku",
       "tier": "Bronze",
       "logo": "/partners/community/daikoku.png",
-      "website": "https://x.com/daikokunet009"
+      "website": "https://x.com/daikokunet009",
+      "type": "individual"
+    },
+    {
+      "name": "Hotei",
+      "tier": "Bronze",
+      "logo": "/sponsors/bronze/hotei.png",
+      "website": "https://x.com/5porter5",
+      "type": "individual"
     },
     {
       "name": "CoinPost",
@@ -323,16 +337,23 @@
       "website": "https://www.nadanews.com/"
     },
     {
+      "name": "IOLITE",
+      "tier": "Media",
+      "logo": "/partners/media/iolite.png",
+      "website": "https://iolite.net/",
+      "whiteLogo": true
+    },
+    {
       "name": "東大公開講座",
       "tier": "Education",
       "logo": "/partners/education/東大公開講座.png",
       "website": "https://www.blockchain.t.u-tokyo.ac.jp/"
     },
     {
-      "name": "渋谷Web3大学",
+      "name": " AKINDO",
       "tier": "Community",
-      "logo": "/partners/community/渋谷Web3大学横.jpg",
-      "website": "https://www.shibuyaweb3univ.com/"
+      "logo": "/partners/community/akindo_logo_white.png",
+      "website": "https://x.com/akindo_io/"
     },
     {
       "name": "OffChain Tokyo",
@@ -341,40 +362,22 @@
       "website": "https://luma.com/web3tokyo"
     },
     {
-      "name": "OP Market",
-      "tier": "Community",
-      "logo": "/partners/community/opmarket.jpg",
-      "website": "https://opmarket.ai/"
-    },
-    {
-      "name": "TextRP",
-      "tier": "Community",
-      "logo": "/partners/community/text-rp.jpg",
-      "website": "https://textrp.io/"
-    },
-    {
-      "name": "Wavee",
-      "tier": "Community",
-      "logo": "/partners/community/wavee-bg-white.png",
-      "website": "https://wavee.world/"
-    },
-    {
-      "name": "Wave of Innovation",
-      "tier": "Community",
-      "logo": "/partners/community/wave-of-innovation.png",
-      "website": "https://www.waveofinnovation.com/"
-    },
-    {
       "name": "Web3 Salon",
       "tier": "Community",
       "logo": "/partners/community/web3-salon1.png",
       "website": "https://web3salon.or.jp/"
     },
     {
-      "name": "AI Agent Run",
+      "name": "渋谷Web3大学",
       "tier": "Community",
-      "logo": "/partners/community/ai-agent-run1.png",
-      "website": "https://aigent.run/"
+      "logo": "/partners/community/渋谷Web3大学横.jpg",
+      "website": "https://www.shibuyaweb3univ.com/"
+    },
+    {
+      "name": "Wave of Innovation",
+      "tier": "Community",
+      "logo": "/partners/community/wave-of-innovation.png",
+      "website": "https://www.waveofinnovation.com/"
     },
     {
       "name": "XRPL Korea",
@@ -401,10 +404,10 @@
       "website": "https://x.com/xrplmalaysia"
     },
     {
-      "name": "Terry Toto",
+      "name": "OP Market",
       "tier": "Community",
-      "logo": "/partners/community/terry-toto.svg",
-      "website": "https://terrytoto.com/"
+      "logo": "/partners/community/opmarket.jpg",
+      "website": "https://opmarket.ai/"
     },
     {
       "name": "YTTLINKS",
@@ -416,7 +419,7 @@
       "name": "Found",
       "tier": "Community",
       "logo": "/partners/community/Found.jpg",
-      "website": "https://found.com/"
+      "website": "https://www.dotfound.co.jp/"
     },
     {
       "name": "0xConsultingGroup",
@@ -425,22 +428,10 @@
       "website": "https://zero-x.com/en/home-en/"
     },
     {
-      "name": "jupyter.org",
+      "name": "ciana",
       "tier": "Community",
-      "logo": "/partners/community/jupyter_logo_100kb.jpg",
-      "website": "https://jupyter.org/"
-    },
-    {
-      "name": "piyoneko",
-      "tier": "Community",
-      "logo": "/partners/community/piyoko_piyoneko(D) - piyoneko.png",
-      "website": ""
-    },
-    {
-      "name": "Trust Authy",
-      "tier": "Community",
-      "logo": "/partners/community/trust-authy.jpg",
-      "website": ""
+      "logo": "/partners/community/ciana_logo_dark.png",
+      "website": "https://x.com/coinciana"
     },
     {
       "name": "collection logo",
@@ -449,22 +440,71 @@
       "website": ""
     },
     {
-      "name": "49 - OHAGIさん",
+      "name": "piyoneko",
       "tier": "Community",
-      "logo": "/partners/community/49 - OHAGIさん.jpg",
+      "logo": "/partners/community/piyoko_piyoneko(D) - piyoneko.png",
       "website": ""
     },
     {
-      "name": "ciana",
+      "name": "Crunk Cat collection",
       "tier": "Community",
-      "logo": "/partners/community/ciana.png",
+      "logo": "/partners/community/crunk_cat_collection_light.png",
       "website": ""
     },
     {
-      "name": "crunk cat collection_2026022502 - はむ",
+      "name": "OHAGI",
       "tier": "Community",
-      "logo": "/partners/community/crunk cat collection_2026022502 - はむ.png",
+      "logo": "/partners/community/ohagi.jpg",
       "website": ""
+    },
+    {
+      "name": "AI Agent Run",
+      "tier": "Community",
+      "logo": "/partners/community/ai-agent-run1.png",
+      "website": "https://aigent.run/",
+      "whiteBackground": true
+    },
+    {
+      "name": "TextRP",
+      "tier": "Community",
+      "logo": "/partners/community/text-rp.jpg",
+      "website": "https://textrp.io/",
+      "whiteBackground": true
+    },
+    {
+      "name": "Wavee",
+      "tier": "Community",
+      "logo": "/partners/community/wavee-bg-white.png",
+      "website": "https://wavee.world/",
+      "whiteBackground": true
+    },
+    {
+      "name": "Terry Toto",
+      "tier": "Community",
+      "logo": "/partners/community/terry-toto.svg",
+      "website": "https://terrytoto.com/",
+      "whiteBackground": true
+    },
+    {
+      "name": "jupyter.org",
+      "tier": "Community",
+      "logo": "/partners/community/jupyter_logo_100kb.jpg",
+      "website": "https://www.jupyter.co.jp/",
+      "whiteBackground": true
+    },
+    {
+      "name": "Trust Authy",
+      "tier": "Community",
+      "logo": "/partners/community/trust-authy.jpg",
+      "website": "",
+      "whiteBackground": true
+    },
+    {
+      "name": "The Best Event",
+      "tier": "Community",
+      "logo": "/partners/community/TBV_logo.svg",
+      "website": "",
+      "whiteBackground": true
     }
   ]
 }

@@ -74,6 +74,7 @@ interface LogoBoxProps {
   className?: string;
   website?: string;
   whiteLogo?: boolean;
+  whiteBackground?: boolean;
 }
 
 export const LogoBox = ({
@@ -83,6 +84,7 @@ export const LogoBox = ({
   website,
   className,
   whiteLogo,
+  whiteBackground,
 }: LogoBoxProps) => {
   const ts = TIER_STYLES[tier];
   const { borderAccent } = TIER_CONFIGS[tier];
@@ -98,9 +100,12 @@ export const LogoBox = ({
 
   const inner = logo ? (
     <div
-      className="w-full flex-1 min-h-0 rounded-xl bg-black/40 shadow-[0_10px_30px_rgba(0,0,0,0.6)] flex items-center justify-center backdrop-blur-sm"
+      className={cn(
+        "w-full flex-1 min-h-0 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.6)] flex items-center justify-center backdrop-blur-sm overflow-hidden",
+        whiteBackground ? "bg-gray-50" : "bg-black/40",
+      )}
     >
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-full overflow-hidden rounded-xl">
         <Image
             src={logo}
             alt={alt}

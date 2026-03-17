@@ -140,12 +140,6 @@ export const SPONSORS = [
   },
   {
     tier: Tier.Community,
-    name: "OP Market",
-    logo: "/partners/community/opmarket.jpg",
-    website: "https://opmarket.ai/",
-  },
-  {
-    tier: Tier.Community,
     name: "TextRP",
     logo: "/partners/community/text-rp.jpg",
     website: "https://textrp.io/",
@@ -197,6 +191,12 @@ export const SPONSORS = [
     name: "XRPL Malaysia",
     logo: "/partners/community/xrpl-malaysia.jpg",
     website: "https://x.com/xrplmalaysia",
+  },
+  {
+    tier: Tier.Community,
+    name: "OP Market",
+    logo: "/partners/community/opmarket.jpg",
+    website: "https://opmarket.ai/",
   },
   {
     tier: Tier.Community,
