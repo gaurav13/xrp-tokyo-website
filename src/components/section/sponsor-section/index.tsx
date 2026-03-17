@@ -69,6 +69,24 @@ logoClass: "w-[calc(50%-0.375rem)] md:w-[calc(33.333%-0.5rem)] max-w-[180px] asp
     initialY: 24,
   },
   {
+    tier: Tier.Research,
+    containerClass:
+      "flex flex-wrap justify-center items-start gap-3 w-full max-w-lg mx-auto",
+logoClass: "w-[calc(50%-0.375rem)] md:w-[calc(33.333%-0.5rem)] max-w-[180px] aspect-[1.5/1] border border-cyan-300/40 rounded-md bg-white/5 shadow-sm",
+    gap: "mt-10 md:mt-12",
+    titleGap: "mb-3",
+    initialY: 24,
+  },
+  {
+    tier: Tier.Supporter,
+    containerClass:
+      "flex flex-wrap justify-center items-start gap-3 w-full max-w-lg mx-auto",
+logoClass: "w-[calc(50%-0.375rem)] md:w-[calc(33.333%-0.5rem)] max-w-[180px] aspect-[1.5/1] border border-indigo-300/40 rounded-md bg-white/5 shadow-sm",
+    gap: "mt-10 md:mt-12",
+    titleGap: "mb-3",
+    initialY: 24,
+  },
+  {
     tier: Tier.Media,
     containerClass:
       "flex flex-wrap justify-center items-start gap-3 w-full max-w-lg mx-auto",
@@ -135,6 +153,9 @@ export function SponsorSection() {
           Gold: Tier.Gold,
           Silver: Tier.Silver,
           Bronze: Tier.Bronze,
+          Research: Tier.Research,
+          "Research Partner": Tier.Research,
+          Supporter: Tier.Supporter,
           Media: Tier.Media,
           "Media Partner": Tier.Media,
           Education: Tier.Education,

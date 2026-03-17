@@ -344,6 +344,20 @@
       "whiteLogo": true
     },
     {
+      "name": "HashHub",
+      "tier": "Research Partner",
+      "logo": "/partners/supporter/hashhub_logo_white.png",
+      "website": "https://hashhub.tokyo/",
+      "whiteLogo": true
+    },
+    {
+      "name": "TDC",
+      "tier": "Supporter",
+      "logo": "/partners/supporter/TDCLogo-PosWhite.png",
+      "website": "https://digitalchamber.org/",
+      "whiteLogo": true
+    },
+    {
       "name": "東大公開講座",
       "tier": "Education",
       "logo": "/partners/education/東大公開講座.png",

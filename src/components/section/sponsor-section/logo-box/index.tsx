@@ -42,6 +42,18 @@ const TIER_STYLES: Record<
     hover: "hover:shadow-sm hover:scale-105",
     shadow: "",
   },
+  [Tier.Research]: {
+    padding: "p-3 md:p-4",
+    rounded: "rounded-lg",
+    hover: "hover:shadow-sm hover:scale-105",
+    shadow: "",
+  },
+  [Tier.Supporter]: {
+    padding: "p-3 md:p-4",
+    rounded: "rounded-lg",
+    hover: "hover:shadow-sm hover:scale-105",
+    shadow: "",
+  },
   [Tier.Media]: {
     padding: "p-3 md:p-4",
     rounded: "rounded-lg",

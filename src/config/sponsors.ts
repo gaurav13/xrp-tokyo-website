@@ -39,6 +39,18 @@ export const TIER_CONFIGS: Record<
     textColor: "text-amber-600",
     borderAccent: "",
   },
+  [Tier.Research]: {
+    name: "Research Partner",
+    color: "border-cyan-300",
+    textColor: "text-cyan-300",
+    borderAccent: "",
+  },
+  [Tier.Supporter]: {
+    name: "Supporter",
+    color: "border-indigo-300",
+    textColor: "text-indigo-300",
+    borderAccent: "",
+  },
   [Tier.Media]: {
     name: "Media Partner",
     color: "border-gray-300",

@@ -4,6 +4,8 @@ export enum Tier {
   Gold = "gold",
   Silver = "silver",
   Bronze = "bronze",
+  Research = "research",
+  Supporter = "supporter",
   Media = "media",
   Education = "education",
   Community = "community",
