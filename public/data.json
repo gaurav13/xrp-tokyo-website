@@ -310,6 +310,13 @@
       "type": "corporate"
     },
     {
+      "name": "XRP Cloud",
+      "tier": "Bronze",
+      "logo": "/sponsors/bronze/xrp-cloud.png",
+      "website": "https://xrp-cloud.xyz/en",
+      "type": "corporate"
+    },
+    {
       "name": "Giant Gox",
       "tier": "Bronze",
       "logo": "/sponsors/bronze/giantgox2.png",

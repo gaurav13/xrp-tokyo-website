@@ -128,6 +128,8 @@ export function SponsorSection() {
       logo?: string;
       website?: string;
       whiteLogo?: boolean;
+      /** Bronze: "corporate" (企業) vs default / "individual" → Heroes */
+      type?: string;
     }[]
   >([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -146,6 +148,7 @@ export function SponsorSection() {
             logo?: string;
             website?: string;
             whiteLogo?: boolean;
+            type?: string;
           }[];
         };
 
@@ -173,6 +176,7 @@ export function SponsorSection() {
             logo: sponsor.logo,
             website: sponsor.website,
             whiteLogo: sponsor.whiteLogo,
+            type: sponsor.type,
           }));
           // 同一 tier 内で同じ logo パスが重複しないようにする（先頭を残す）。logo なしは name で一意化
           const seen = new Set<string>();
@@ -228,6 +232,31 @@ export function SponsorSection() {
               const sponsors = sponsorsByTier.filter((s) => s.tier === tier);
               if (sponsors.length === 0) return null;
 
+              const bronzeSubLabelClass =
+                "text-xs text-amber-600/70 uppercase tracking-widest mb-2 text-center";
+
+              const renderLogoGrid = (list: typeof sponsors) => (
+                <motion.div
+                  className={containerClass}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-80px" }}
+                  transition={{ staggerChildren: 0.06 }}
+                >
+                  {list.map((sponsor) => (
+                    <LogoBox
+                      key={sponsor.name}
+                      tier={tier}
+                      alt={sponsor.name}
+                      logo={sponsor.logo}
+                      website={sponsor.website}
+                      className={logoClass}
+                      whiteLogo={sponsor.whiteLogo}
+                    />
+                  ))}
+                </motion.div>
+              );
+
               return (
                 <motion.div
                   key={tier}
@@ -240,25 +269,38 @@ export function SponsorSection() {
                   <div className={titleGap}>
                     <TierTitle tier={tier} />
                   </div>
-                  <motion.div
-                    className={containerClass}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-80px" }}
-                    transition={{ staggerChildren: 0.06 }}
-                  >
-                    {sponsors.map((sponsor) => (
-                      <LogoBox
-                        key={sponsor.name}
-                        tier={tier}
-                        alt={sponsor.name}
-                        logo={sponsor.logo}
-                        website={sponsor.website}
-                        className={logoClass}
-                        whiteLogo={sponsor.whiteLogo}
-                      />
-                    ))}
-                  </motion.div>
+                  {tier === Tier.Bronze ? (
+                    <div className="flex flex-col w-full gap-8">
+                      {(() => {
+                        const corporate = sponsors.filter(
+                          (s) => s.type === "corporate",
+                        );
+                        const heroes = sponsors.filter(
+                          (s) => s.type !== "corporate",
+                        );
+                        return (
+                          <>
+                            {corporate.length > 0 && (
+                              <div className="w-full">
+                                <p className={bronzeSubLabelClass}>
+                                  Corporate
+                                </p>
+                                {renderLogoGrid(corporate)}
+                              </div>
+                            )}
+                            {heroes.length > 0 && (
+                              <div className="w-full">
+                                <p className={bronzeSubLabelClass}>Heroes</p>
+                                {renderLogoGrid(heroes)}
+                              </div>
+                            )}
+                          </>
+                        );
+                      })()}
+                    </div>
+                  ) : (
+                    renderLogoGrid(sponsors)
+                  )}
                 </motion.div>
               );
             },
