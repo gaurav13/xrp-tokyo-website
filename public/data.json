@@ -545,6 +545,13 @@
       "logo": "/partners/community/TBV_logo.svg",
       "website": "",
       "whiteBackground": true
+    },
+    {
+      "name": "TAKUMI",
+      "tier": "Community",
+      "logo": "/partners/community/chain-block-summit.png",
+      "website": "",
+      "whiteBackground": true
     }
   ]
 }
