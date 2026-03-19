@@ -47,9 +47,9 @@ logoClass: "w-full max-w-xs aspect-[2/1] border-4 border-white rounded-2xl bg-wh
   {
     tier: Tier.Gold,
     containerClass:
-      "flex flex-wrap justify-center items-start gap-4 md:gap-6 w-full max-w-xl mx-auto",
+      "grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 w-full max-w-4xl mx-auto justify-items-center items-start",
     logoClass:
-      "w-[calc(50%-0.5rem)] max-w-[240px] aspect-[1.8/1] border-2 border-[#D4AF37] rounded-lg bg-black/20 shadow-[0_0_10px_rgba(212,175,55,0.2)]",
+      "w-full max-w-[240px] md:max-w-[200px] aspect-[1.8/1] border-2 border-[#D4AF37] rounded-lg bg-black/20 shadow-[0_0_10px_rgba(212,175,55,0.2)]",
     gap: "mt-14 md:mt-16",
     titleGap: "mb-4",
     initialY: 32,
