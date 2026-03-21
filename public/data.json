@@ -22,7 +22,7 @@
       "name": "Tatsuya Yamada",
       "role": "President",
       "company": "Rakuten Wallet, Inc.",
-      "bio": "",
+      "bio": "Has been engaged in financial services, including securities, commodities, and FX, for approximately 30 years. Primarily involved in fund formation and domestic and international derivative transactions. Joined Newedge Group from Société Générale in 2008, where they were responsible for derivative transactions. From 2013, after joining Rakuten Securities, they promoted new service planning in corporate transactions, equity finance, and the FinTech division. In 2018, they were appointed President of Rakuten Wallet, Inc., where they spearheaded the launch of Rakuten Group's crypto asset exchange business and web3 initiatives. Serves as a Director of the Japan Crypto Asset Business Association.",
       "image": "/speakers/Tatsuya Yamada.png",
       "twitter": "",
       "linkedin": "https://jp.linkedin.com/in/tatsuya-yamada-7223352a",
@@ -477,25 +477,25 @@
       "name": "collection logo",
       "tier": "Community",
       "logo": "/partners/community/collection logo.png",
-      "website": ""
+      "website": "https://x.com/pokemaru06"
     },
     {
       "name": "piyoneko",
       "tier": "Community",
       "logo": "/partners/community/piyoko_piyoneko(D) - piyoneko.png",
-      "website": ""
+      "website": "https://x.com/jewelrycherry"
     },
     {
       "name": "Crunk Cat collection",
       "tier": "Community",
       "logo": "/partners/community/crunk_cat_collection_light.png",
-      "website": ""
+      "website": "https://x.com/Hammmnft"
     },
     {
       "name": "OHAGI",
       "tier": "Community",
       "logo": "/partners/community/ohagi.jpg",
-      "website": ""
+      "website": "https://x.com/IKEMEN_KITA_san"
     },
     {
       "name": "AI Agent Run",
@@ -536,21 +536,21 @@
       "name": "Trust Authy",
       "tier": "Community",
       "logo": "/partners/community/trust-authy.jpg",
-      "website": "",
+      "website": "https://trustauthy.jp/",
       "whiteBackground": true
     },
     {
-      "name": "The Best Event",
+      "name": "TBV",
       "tier": "Community",
       "logo": "/partners/community/TBV_logo.svg",
-      "website": "",
+      "website": "https://www.tbv.xyz/",
       "whiteBackground": true
     },
     {
       "name": "TAKUMI",
       "tier": "Community",
       "logo": "/partners/community/chain-block-summit.png",
-      "website": "",
+      "website": "https://chainofblockssummit.com/",
       "whiteBackground": true
     }
   ]
