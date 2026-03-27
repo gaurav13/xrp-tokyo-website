@@ -84,7 +84,7 @@ export function Header() {
         {/* デスクトップナビゲーション（1280px以上で表示、それ未満はハンバーガー） */}
         <nav className="hidden items-center gap-2 xl:flex">
           {navItems.map((item) => (
-            item.href ? (
+            "href" in item ? (
               <Link
                 key={item.href}
                 href={item.href}
@@ -227,7 +227,7 @@ export function Header() {
               {/* モバイル用ナビゲーション */}
               <div className="flex flex-col gap-2">
                 {navItems.map((item) => (
-                  item.href ? (
+                  "href" in item ? (
                     <Link
                       key={item.href}
                       href={item.href}
