@@ -84,10 +84,10 @@ export function Header() {
         {/* デスクトップナビゲーション（1280px以上で表示、それ未満はハンバーガー） */}
         <nav className="hidden items-center gap-2 xl:flex">
           {navItems.map((item) => (
-            item.href ? (
+            "href" in item ? (
               <Link
-                key={item.href}
-                href={item.href}
+                key={item.href!}
+                href={item.href!}
                 className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/20"
               >
                 {item.label}
@@ -227,10 +227,10 @@ export function Header() {
               {/* モバイル用ナビゲーション */}
               <div className="flex flex-col gap-2">
                 {navItems.map((item) => (
-                  item.href ? (
+                  "href" in item ? (
                     <Link
-                      key={item.href}
-                      href={item.href}
+                      key={item.href!}
+                      href={item.href!}
                       onClick={() => setIsMobileMenuOpen(false)}
                       className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/15 text-left"
                     >
