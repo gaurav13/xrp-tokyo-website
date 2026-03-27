@@ -16,10 +16,10 @@ export default function AgendaPage() {
       return (
         <div
           key={`${itemTitle}-${personName}-${tag ?? "speaker"}`}
-          className="rounded-xl border border-[#E81111]/50 bg-[#0A0A0A] p-3"
+          className="rounded-xl border border-[#D4AF37]/50 bg-[#0A0A0A] p-3"
         >
           {tag ? (
-            <p className="mb-2 inline-flex rounded-full border border-[#E81111] bg-black px-2 py-0.5 text-[10px] font-bold tracking-[0.1em] text-white uppercase">
+            <p className="mb-2 inline-flex rounded-full border border-[#D4AF37] bg-black px-2 py-0.5 text-[10px] font-bold tracking-[0.1em] text-white uppercase">
               {tag}
             </p>
           ) : null}
@@ -38,9 +38,9 @@ export default function AgendaPage() {
     return (
       <div
         key={`${itemTitle}-${speaker.name}-${tag ?? "speaker"}`}
-        className="flex items-start gap-3 rounded-xl border border-[#E81111]/50 bg-[#0A0A0A] p-3"
+        className="flex items-start gap-3 rounded-xl border border-[#D4AF37]/50 bg-[#0A0A0A] p-3"
       >
-        <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full border border-[#E81111]/50 bg-black sm:h-14 sm:w-14">
+        <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full border border-[#D4AF37]/50 bg-black sm:h-14 sm:w-14">
           {speaker.image ? (
             // biome-ignore lint/performance/noImgElement: static agenda avatar with graceful 404 fallback
             <img
@@ -57,7 +57,7 @@ export default function AgendaPage() {
 
         <div>
           {tag ? (
-            <p className="mb-1 inline-flex rounded-full border border-[#E81111] bg-black px-2 py-0.5 text-[10px] font-bold tracking-[0.1em] text-white uppercase">
+            <p className="mb-1 inline-flex rounded-full border border-[#D4AF37] bg-black px-2 py-0.5 text-[10px] font-bold tracking-[0.1em] text-white uppercase">
               {tag}
             </p>
           ) : null}
@@ -78,11 +78,11 @@ export default function AgendaPage() {
   return (
     <main className="min-h-screen bg-[#000000] px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-6 rounded-2xl border border-[#E81111] bg-[#0A0A0A] px-5 py-6 text-center shadow-[0_10px_28px_rgba(232,17,17,0.22)] sm:px-8">
+        <div className="mb-6 rounded-2xl border border-[#D4AF37] bg-[#0A0A0A] px-5 py-6 text-center shadow-[0_10px_28px_rgba(212,175,55,0.24)] sm:px-8">
           <h1 className="text-3xl font-semibold tracking-[0.08em] text-white sm:text-4xl">
             XRP TOKYO
           </h1>
-          <p className="mt-2 text-xs font-semibold tracking-[0.2em] text-[#E81111] uppercase sm:text-sm">
+          <p className="mt-2 text-xs font-semibold tracking-[0.2em] text-[#D4AF37] uppercase sm:text-sm">
             Agenda & Session Lineup
           </p>
           <p className="mt-3 text-xs text-[#A0A0A0] sm:text-sm">
@@ -97,23 +97,23 @@ export default function AgendaPage() {
               key={`${item.time}-${item.title}-${itemIndex}`}
               className="relative grid items-start gap-3 sm:gap-4 lg:grid-cols-[220px_1fr] lg:gap-6"
             >
-              <div className="pointer-events-none absolute top-0 bottom-0 left-[220px] hidden w-px bg-gradient-to-b from-[#E81111] via-[#ff4d4d] to-transparent lg:block" />
+              <div className="pointer-events-none absolute top-0 bottom-0 left-[220px] hidden w-px bg-gradient-to-b from-[#D4AF37] via-[#f1d17a] to-transparent lg:block" />
 
-              <div className="rounded-xl border border-[#E81111]/60 bg-[#0A0A0A] px-3 py-3 text-base leading-none font-semibold tracking-tight text-[#E81111] sm:text-lg lg:text-xl">
+              <div className="rounded-xl border border-[#D4AF37]/60 bg-[#0A0A0A] px-3 py-3 text-base leading-none font-semibold tracking-tight text-[#D4AF37] sm:text-lg lg:text-xl">
                 <span className="inline-block whitespace-nowrap">
                   {item.time}
                 </span>
-                <span className="mt-2 block h-[2px] w-full bg-gradient-to-r from-[#E81111] to-transparent" />
+                <span className="mt-2 block h-[2px] w-full bg-gradient-to-r from-[#D4AF37] to-transparent" />
               </div>
 
-              <article className="rounded-xl border border-[#E81111]/60 bg-[#0A0A0A] px-4 py-4 shadow-[0_8px_20px_rgba(0,0,0,0.35)] transition-shadow duration-300 hover:shadow-[0_0_22px_rgba(232,17,17,0.35)] sm:px-5 sm:py-5 lg:px-6">
+              <article className="rounded-xl border border-[#D4AF37]/60 bg-[#0A0A0A] px-4 py-4 shadow-[0_8px_20px_rgba(0,0,0,0.35)] transition-shadow duration-300 hover:shadow-[0_0_22px_rgba(212,175,55,0.32)] sm:px-5 sm:py-5 lg:px-6">
                 {item.track ? (
-                  <p className="mb-2 inline-flex rounded-full border border-[#E81111] bg-black px-2 py-0.5 text-[11px] font-semibold tracking-[0.14em] text-white uppercase sm:text-xs">
+                  <p className="mb-2 inline-flex rounded-full border border-[#D4AF37] bg-black px-2 py-0.5 text-[11px] font-semibold tracking-[0.14em] text-white uppercase sm:text-xs">
                     {item.track}
                   </p>
                 ) : null}
 
-                <h2 className="text-xl leading-tight font-semibold tracking-tight text-white sm:text-2xl lg:text-[28px]">
+                <h2 className="text-xl leading-tight font-semibold tracking-tight text-white sm:text-2xl lg:text-[26px]">
                   {item.title}
                 </h2>
 
