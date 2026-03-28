@@ -337,6 +337,15 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     twitter: "https://x.com/AlexisYellow",
     linkedin: "https://www.linkedin.com/in/sirkia/",
   },
+  {
+    name: "VIP After Party",
+    role: "Limited attendance. VIP or prior approval required.",
+    company: "https://luma.com/da2ucul1",
+    bio: "",
+    image: "/speakers/partyimg.png",
+    twitter: "",
+    linkedin: "",
+  },
    {
       "name": "Fumihiro Arasawa",
       "role": "CEO, XWIN Group Chair, DeFi Committee",
@@ -370,10 +379,16 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
 ];
 
 export const AGENDA_ITEMS: AgendaItem[] = [
+   {
+    time: "09:00 AM",
+    title: "Registration & Exhibition Booths Open",
+    track: "Opening",
+    speakerNames: ["Register, grab your kit, and dive into our exhibitor booths!"],
+  },
   {
     time: "10:30 AM - 10:35 AM",
-    title: "Opening",
-    track: "Opening",
+    title: "Welcome Note: Building the Future of Finance with XRP Tokyo",
+    track: "Keynote",
     speakerNames: ["Mai Furukawa"],
   },
   {
@@ -519,8 +534,14 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   },
   {
     time: "5:18 PM - 5:30 PM",
-    title: "Closing",
-    track: "Closing",
+    title: "XRP Tokyo 2026: Our Journey Ahead",
+    track: "Closing Remarks",
     speakerNames: ["Mai Furukawa", "Hinza Asif"],
+  },
+  {
+    time: "7:00 PM - 9:00 PM",
+    title: "VIP After Party at 6th Floor, Happo-en",
+    track: "Private Event",
+    speakerNames: ["VIP After Party"],
   },
 ];

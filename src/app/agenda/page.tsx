@@ -81,31 +81,44 @@ export default function AgendaPage() {
       <div className="mx-auto max-w-6xl">
        <section className="relative overflow-hidden">
   <div className="mx-auto flex flex-col items-center px-4 py-0 text-center sm:px-6 lg:px-10">
-    <div className="grid w-full max-w-[520px] grid-cols-[1.2fr_0.9fr_1.1fr] items-stretch overflow-hidden rounded-2xl border border-white/20 bg-black/72 backdrop-blur-sm">
-      <div className="flex items-center justify-center gap-2 border-r border-white/10 px-4 py-4 sm:px-5">
-        <span className="text-4xl leading-none font-extrabold text-white sm:text-5xl">
-          5,6
-        </span>
-        <span className="text-left text-xl font-semibold text-white/92 sm:text-2xl">
-          Floor
-        </span>
-      </div>
+    <div className="grid w-full max-w-[700px] grid-cols-2 sm:grid-cols-4 items-center overflow-hidden rounded-2xl border border-white/20 bg-black/72 backdrop-blur-sm">
 
-      <div className="flex items-center justify-center border-r border-white/10 px-3 text-center text-sm font-semibold leading-tight text-white/85 sm:px-4 sm:text-base">
-        Day
-        <br />
-        Time
-      </div>
+  {/* Floor */}
+  <div className="flex items-center justify-center gap-2 border-r border-white/10 px-4 py-5">
+    <span className="text-4xl sm:text-5xl font-extrabold text-white">
+      5,6
+    </span>
+    <span className="text-lg sm:text-2xl font-semibold text-white/90">
+      Floor
+    </span>
+  </div>
 
-      <div className="flex flex-col justify-center px-4 py-4 text-left sm:px-5">
-        <span className="text-sm font-extrabold text-white sm:text-base">
-          April 7th
-        </span>
-        <span className="text-sm font-extrabold text-white sm:text-base">
-          09:00 ~ 18:00
-        </span>
-      </div>
-    </div>
+  {/* Day Time */}
+  <div className="flex items-center justify-center border-r border-white/10 px-3 text-center text-sm sm:text-base font-semibold text-white/85">
+    Day<br />Time
+  </div>
+
+  {/* Date */}
+  <div className="flex flex-col justify-center border-r border-white/10 px-4 py-5 text-center sm:text-left">
+    <span className="text-sm sm:text-base font-extrabold text-white">
+      April 7th
+    </span>
+    <span className="text-sm sm:text-base font-extrabold text-white">
+      09:00 ~ 17:30
+    </span>
+  </div>
+
+  {/* VIP After Party */}
+  <div className="flex flex-col justify-center px-4 py-5 text-center sm:text-left">
+    <span className="text-sm sm:text-base font-extrabold text-[#D4AF37]">
+      VIP After Party
+    </span>
+    <span className="text-sm sm:text-base font-extrabold text-white">
+      19:00 ~ 21:00
+    </span>
+  </div>
+
+</div>
 
     <div className="mt-2 h-px w-24 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
     <p className="mt-2 text-xl font-extrabold tracking-[0.28em] text-[#D4AF37] uppercase sm:text-2xl">
