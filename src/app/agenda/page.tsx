@@ -84,7 +84,7 @@ export default function AgendaPage() {
     <div className="grid w-full max-w-[520px] grid-cols-[1.2fr_0.9fr_1.1fr] items-stretch overflow-hidden rounded-2xl border border-white/20 bg-black/72 backdrop-blur-sm">
       <div className="flex items-center justify-center gap-2 border-r border-white/10 px-4 py-4 sm:px-5">
         <span className="text-4xl leading-none font-extrabold text-white sm:text-5xl">
-          5
+          5,6
         </span>
         <span className="text-left text-xl font-semibold text-white/92 sm:text-2xl">
           Floor

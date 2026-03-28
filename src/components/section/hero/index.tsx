@@ -28,25 +28,28 @@ export function Hero() {
   const logoAnimation = getFadeInAnimation("immediate");
   const svgRef = useRef<SVGSVGElement>(null);
   // calc(83% + 40px) を viewBox 座標で再現（SVG の y は calc() 非対応のため JS で計算）
-  const [textY, setTextY] = useState(SVG_VIEWBOX_HEIGHT * 0.83);
+ const [textY, setTextY] = useState(SVG_VIEWBOX_HEIGHT * 0.70);
 
   useLayoutEffect(() => {
-    const svg = svgRef.current;
-    if (!svg) return;
-    const update = () => {
-      const { width, height } = svg.getBoundingClientRect();
-      if (height <= 0) return;
-      const isMobile = width < 768;
-      const y = isMobile
-        ? SVG_VIEWBOX_HEIGHT * 0.5
-        : SVG_VIEWBOX_HEIGHT * 0.83 + 40 * (SVG_VIEWBOX_HEIGHT / height);
-      setTextY(y);
-    };
-    update();
-    const ro = new ResizeObserver(update);
-    ro.observe(svg);
-    return () => ro.disconnect();
-  }, []);
+  const svg = svgRef.current;
+  if (!svg) return;
+
+  const update = () => {
+    const { width } = svg.getBoundingClientRect();
+    const isMobile = width < 768;
+
+    const y = isMobile
+      ? SVG_VIEWBOX_HEIGHT * 0.42
+      : SVG_VIEWBOX_HEIGHT * 0.82;
+
+    setTextY(y);
+  };
+
+  update();
+  const ro = new ResizeObserver(update);
+  ro.observe(svg);
+  return () => ro.disconnect();
+}, []);
 
   return (
     <section
@@ -104,7 +107,7 @@ export function Hero() {
   fill="none"
   stroke="#e81111"
   strokeWidth="2"
-  className="text-[26px] md:text-[35px] font-bold"
+  className="text-[18px] md:text-[20px] font-bold"
   style={{ 
     letterSpacing: "3px", 
     filter: "drop-shadow(0 0 8px rgba(232, 17, 17, 0.8))",
