@@ -227,8 +227,8 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
   },
   {
     name: "Ryo Sakai",
-    role: "Head of Business Development & CO",
-    company: "CoinPost,Webx",
+    role: "Head of Business Development & CEO",
+    company: "CoinPost, WebX",
     bio: "",
     image: "/speakers/Ryo Sakai.png",
   },
