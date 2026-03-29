@@ -8,7 +8,8 @@
       "bio_en": "Markus Infanger, SVP of RippleX at Ripple.  He leads product development, strategic partnerships, and the expansion of the XRP Ledger developer ecosystem.  Bringing 20+ years of experience in global Foreign Exchange leadership at top-tier financial institutions, he bridges the worlds of traditional finance and blockchain innovation.",
       "image": "/Markus-Infanger.jpg",
       "twitter": "https://x.com/markusinfanger",
-      "linkedin": "https://www.linkedin.com/in/markus-infanger-8a6ba747/"
+      "linkedin": "https://www.linkedin.com/in/markus-infanger-8a6ba747/",
+      "website": "https://ripple.com/"
     },
     {
       "name": "Christina Chan",
@@ -18,7 +19,8 @@
       "bio_en": "Christina Chan, Senior Director and Ecosystem Growth of Ripple  As the Head of Funding Programs at Ripple, she leads a cross-functional global team that manages a 1 billion XRP fund for builders on the XRP Ledger ecosystem. With over 10 years of experience in web3, blockchain, crypto, and fintech, she fosters strategic collaborations and partnerships to grow and strengthen the web3 ecosystem.",
       "image": "/Christina-Chan.jpg",
       "twitter": "https://x.com/ghostfacex_0",
-      "linkedin": "https://www.linkedin.com/in/christinabchan"
+      "linkedin": "https://www.linkedin.com/in/christinabchan",
+      "website": "https://ripple.com/"
     },
     {
       "name": "Tatsuya Yamada",
@@ -29,7 +31,7 @@
       "image": "/speakers/Tatsuya Yamada.png",
       "twitter": "",
       "linkedin": "https://jp.linkedin.com/in/tatsuya-yamada-7223352a",
-      "website": ""
+      "website": "https://www.rakuten-wallet.co.jp/"
     },
     {
       "name": "SungMo Park",
@@ -50,7 +52,8 @@
       "bio_en": "Cody Carbone is CEO of The Digital Chamber, specializing in digital asset and blockchain policy and regulation.\n\nHe leads policy advocacy and engagement with the U.S. Congress and regulatory authorities, serving as a bridge between the industry and government.\n\nHis prior experience includes roles at Ernst & Young (EY)'s public policy division and the U.S. Congress, contributing to policy development in the finance and technology sectors.",
       "image": "/speakers/cody-carbone1.jpg",
       "twitter": "",
-      "linkedin": "https://www.linkedin.com/in/codycarbone/"
+      "linkedin": "https://www.linkedin.com/in/codycarbone/",
+      "website": "https://digitalchamber.org/"
     },
     {
       "name": "Takuya Sugiyama",
@@ -60,7 +63,8 @@
       "bio_en": "Takuya Sugiyama is the Vice President of SBI Ripple Asia and General Manager of the Digital Space Department at SBI Holdings, where he leads the development of innovative blockchain-based payment solutions and digital asset infrastructure. With over 20 years of experience in the financial services industry, he now focuses on decentralized finance (DeFi), tokenized assets, and cross-border settlement systems.",
       "image": "/Takuy-Sugiyama.jpg",
       "twitter": "",
-      "linkedin": "https://www.linkedin.com/in/takuya-sugiyama-aa1b73a"
+      "linkedin": "https://www.linkedin.com/in/takuya-sugiyama-aa1b73a",
+      "website": "https://www.sbigroup.co.jp/"
     },
     {
       "name": "Tomohiko Kondo",
@@ -123,7 +127,8 @@
       "bio_en": "Meg Nakamura is involved in business operations at Evernorth, working on initiatives in the blockchain and digital asset space. Through her activities at the intersection of finance and Web3, she contributes to the development of practical use cases.",
       "image": "/speakers/Meg Nakamura.png",
       "twitter": "",
-      "linkedin": "https://www.linkedin.com/in/megnakamura"
+      "linkedin": "https://www.linkedin.com/in/megnakamura",
+      "website": "https://www.evernorth.xyz/"
     },
     {
       "name": "Mai Furukawa",
@@ -177,7 +182,7 @@
       "image": "/speakers/Fumihiro Arasawa.png",
       "twitter": "",
       "linkedin": "",
-      "website": ""
+      "website": "https://bccc.global/"
     },
     {
       "name": "Nathaniel T. Bradley",
@@ -199,7 +204,7 @@
       "image": "/speakers/Steven Zeiler.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/stevenzeiler/",
-      "website": ""
+      "website": "https://yellow.com/"
     },
     {
       "name": "Go Makino",
@@ -221,7 +226,7 @@
       "image": "/speakers/Taisuke Isono.png",
       "twitter": "",
       "linkedin": "",
-      "website": ""
+      "website": "https://www.smbcnikko.co.jp/"
     },
     {
       "name": "Eiji Kobayashi",
@@ -264,7 +269,8 @@
       "bio_en": "Tatsuya Kohrogi serves as Senior Ecosystem Growth Manager at Ripple, driving the expansion and development of the XRP Ledger ecosystem.\n\nHe has built his career at Web3 Ventures, Meta, and SoftBank, contributing to technology and ecosystem growth from a global perspective.\n\nWith extensive experience across blockchain, fintech, and digital innovation, he is a global tech operator and ecosystem builder leading the development of the Web3 ecosystem through strategic initiatives and partnerships.\n\nHe currently spearheads ecosystem growth at Ripple.",
       "image": "/speakers/Tatsuya Kohrogi.png",
       "twitter": "https://x.com/tatsuya_kohrogi",
-      "linkedin": "https://sg.linkedin.com/in/tatsuya-kohrogi"
+      "linkedin": "https://sg.linkedin.com/in/tatsuya-kohrogi",
+      "website": "https://ripple.com/"
     },
     {
       "name": "Yoshimasa Satoh",
@@ -274,8 +280,8 @@
       "bio_en": "Alpaca is a leading global securities infrastructure company with a mission of opening financial services to everyone.\n\nYoshimasa Satoh brings extensive experience across global multi-asset trading, portfolio management, technology and data science development, business development, and client relations.\n\nHe previously served as COO of IG Securities and held client-facing roles covering the Asia-Pacific region at Bloomberg and Nasdaq. At Goldman Sachs Asset Management, he served as a quantitative portfolio manager.\n\nEarly in his career, he led the development of equity trading and portfolio management systems for Nomura Securities at Nomura Research Institute.\n\nHe served as Director and Secretary General of CFA Society Japan from 2018 to 2022. He holds bachelor's and master's degrees in engineering from the University of Tsukuba and the ESG Investing Certificate from CFA Institute.",
       "image": "/speakers/Yoshimasa Satoh.png",
       "twitter": "",
-      "linkedin": "",
-      "website": ""
+      "linkedin": "https://www.linkedin.com/in/yoshimasa-satoh-cfa-84b6b92b/",
+      "website": "https://alpaca.markets/"
     },
     {
       "name": "Masa Kikuchi",
@@ -286,7 +292,7 @@
       "image": "/speakers/Masa Kikuchi.png",
       "twitter": "",
       "linkedin": "https://www.linkedin.com/in/masa-senshi-kikuchi-55185a23/",
-      "website": ""
+      "website": "https://secured.finance/"
     },
     {
       "name": "Noriaki Yagi",
@@ -297,7 +303,7 @@
       "image": "/speakers/Noriaki Yagi.png",
       "twitter": "",
       "linkedin": "",
-      "website": ""
+      "website": "https://iolite.net/magazine"
     },
     {
       "name": "Ryo Sakai",
@@ -319,7 +325,7 @@
       "image": "/speakers/Ayo Akinyele.png",
       "twitter": "https://x.com/ja_akinyele",
       "linkedin": "",
-      "website": ""
+      "website": "https://ripple.com/"
     },
     {
       "name": "Cyrus Cruz",
@@ -352,7 +358,7 @@
       "image": "/speakers/Ai Kosuke.png",
       "twitter": "",
       "linkedin": "",
-      "website": ""
+      "website": "https://suzupay.com/"
     },
     {
       "name": "Matsuda Ikkei",
@@ -373,7 +379,7 @@
       "bio_en": "Jean Zhu is the Co-Founder of NexBridge Inc. Drawing on product management experience at Amazon and in Silicon Valley, along with an MBA from the Kellogg School of Management, she bridges traditional finance and blockchain.\n\nNexBridge Inc. was founded in El Salvador in 2023 as a regulation-compliant digital asset issuer. Leveraging Bitcoin's Liquid Network, it tokenizes real-world assets (RWA) such as U.S. Treasury Bills. The company builds Bitcoin-Fi infrastructure that enables efficient asset issuance on blockchain while maintaining the transparency and regulatory compliance of traditional finance.",
       "image": "/speakers/Jean Zhu.png",
       "twitter": "",
-      "linkedin": "",
+      "linkedin": "https://www.linkedin.com/in/jean-zhu-966b7754/",
       "website": ""
     },
     {
@@ -439,7 +445,8 @@
       "bio_en": "Panos Mekras is the Co-Founder and CEO of Anodos Labs, a fintech leader with a background in finance and accounting and over 10 years of experience in the crypto asset industry.\n\nKnown as the author of \"Understanding the Crypto Economy,\" he has provided advisory services to numerous crypto asset startups.\n\nHe drives innovation in the financial sector through blockchain, bringing a global perspective and wealth of experience.",
       "image": "/speakers/Anodos Finance.png",
       "twitter": "https://x.com/panosmek",
-      "linkedin": "https://www.linkedin.com/in/panos-mekras/"
+      "linkedin": "https://www.linkedin.com/in/panos-mekras/",
+      "website": "https://anodos.finance/"
     },
     {
       "name": "Robert Kiuru",
@@ -449,7 +456,8 @@
       "bio_en": "Robert Kiuru serves as Chief Operating Officer (COO) of XRPL Labs, playing a central role in the operations of the company that develops \"Xaman,\" the leading self-custodial wallet for XRP Ledger (XRPL).\n\n\"Xaman\" is used by millions of users worldwide and serves as key infrastructure supporting billions of dollars in transactions within the XRPL ecosystem.\n\nHe currently oversees operations, partnerships, and growth while driving the expansion of the XRPL ecosystem and strengthening its infrastructure and integrations.",
       "image": "/speakers/Xaman.png",
       "twitter": "https://x.com/robertkiuru",
-      "linkedin": "https://www.linkedin.com/in/kiuru1/"
+      "linkedin": "https://www.linkedin.com/in/kiuru1/",
+      "website": "https://xaman.app/"
     },
     {
       "name": "Alexis Sirkia",
@@ -459,7 +467,8 @@
       "bio_en": "Alexis Sirkia is the Co-Founder and Chairman (\"Captain\") of Yellow Network. A DeFi pioneer, he leverages his experience as a co-founder of GSR to lead the unification of blockchain liquidity and the resolution of cross-chain trading challenges.\n\nYellow Network is a Web3 infrastructure company providing Layer 3 mesh network and SDK solutions. Through decentralized clearing and settlement using state channel technology, it enables real-time cross-chain trading and liquidity aggregation, aiming to simplify dApp development and enhance user experience.",
       "image": "/speakers/Alexis Sirkia.png",
       "twitter": "https://x.com/AlexisYellow",
-      "linkedin": "https://www.linkedin.com/in/sirkia/"
+      "linkedin": "https://www.linkedin.com/in/sirkia/",
+      "website": "https://yellow.com/"
     }
   ],
   "sponsors": [
