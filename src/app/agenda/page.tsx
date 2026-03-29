@@ -81,43 +81,47 @@ export default function AgendaPage() {
       <div className="mx-auto max-w-6xl">
        <section className="relative overflow-hidden">
   <div className="mx-auto flex flex-col items-center px-4 py-0 text-center sm:px-6 lg:px-10">
-    <div className="grid w-full max-w-[700px] grid-cols-2 sm:grid-cols-4 items-center overflow-hidden rounded-2xl border border-white/20 bg-black/72 backdrop-blur-sm">
-
-  {/* Floor */}
-  <div className="flex items-center justify-center gap-2 border-r border-white/10 px-4 py-5">
-    <span className="text-4xl sm:text-5xl font-extrabold text-white">
+     <div className="mt-8 grid w-full max-w-[700px] grid-cols-2 items-stretch overflow-hidden rounded-2xl border border-white/20 bg-black/72 backdrop-blur-sm sm:grid-cols-4">
+  <div className="flex items-center justify-center gap-2 border-r border-b border-white/10 px-4 py-5 sm:border-b-0 sm:py-6">
+    <span className="text-4xl font-extrabold text-white sm:text-5xl">
       5,6
     </span>
-    <span className="text-lg sm:text-2xl font-semibold text-white/90">
+    <span className="text-lg font-semibold text-white/90 sm:text-2xl">
       Floor
     </span>
   </div>
 
-  {/* Day Time */}
-  <div className="flex items-center justify-center border-r border-white/10 px-3 text-center text-sm sm:text-base font-semibold text-white/85">
-    Day<br />Time
+  <div className="flex items-center justify-center border-b border-white/10 px-3 py-5 text-center text-sm font-semibold text-white/85 sm:border-b-0 sm:border-r sm:py-6 sm:text-base">
+    Day
+    <br />
+    Time
   </div>
 
-  {/* Date */}
-  <div className="flex flex-col justify-center border-r border-white/10 px-4 py-5 text-center sm:text-left">
-    <span className="text-sm sm:text-base font-extrabold text-white">
+  <div className="flex flex-col justify-center border-r border-white/10 px-4 py-5 text-center sm:text-left sm:py-6">
+    <span className="text-sm font-extrabold text-white sm:text-base">
       April 7th
     </span>
-    <span className="text-sm sm:text-base font-extrabold text-white">
+    <span className="text-sm font-extrabold text-white sm:text-base">
       09:00 ~ 17:30
     </span>
   </div>
 
-  {/* VIP After Party */}
-  <div className="flex flex-col justify-center px-4 py-5 text-center sm:text-left">
-    <span className="text-sm sm:text-base font-extrabold text-[#D4AF37]">
+  <div className="flex flex-col justify-center px-4 py-5 text-center sm:text-left sm:py-6">
+    <span className="text-sm font-extrabold text-[#D4AF37] sm:text-base">
       VIP After Party
     </span>
-    <span className="text-sm sm:text-base font-extrabold text-white">
+    <span className="text-sm font-extrabold text-white sm:text-base">
       19:00 ~ 21:00
     </span>
+    <a
+      href="https://luma.com/da2ucul1"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mt-1 inline-block text-[9px] font-semibold text-[#D4AF37] underline decoration-[#D4AF37]/80 underline-offset-2 whitespace-nowrap sm:text-xs"
+    >
+      https://luma.com/da2ucul1
+    </a>
   </div>
-
 </div>
 
     <div className="mt-2 h-px w-24 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
