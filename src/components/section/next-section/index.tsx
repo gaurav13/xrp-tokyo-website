@@ -17,7 +17,7 @@ export function NextSection() {
     journeyPrimaryLabel: t("journeySection.primaryCta"),
     journeyPrimaryUrl: "https://luma.com/da2ucul1",
     journeySecondaryLabel: t("journeySection.secondaryCta"),
-    journeySecondaryUrl: "https://luma.com/da2ucul1",
+    journeySecondaryUrl: "https://tickets.teamz.co.jp/?utm_source=xrp",
   };
 
   return (
@@ -40,27 +40,29 @@ export function NextSection() {
 
   {/* Content */}
   <div className="relative z-10">
-    <motion.h2
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="text-white font-extrabold text-5xl md:text-7xl uppercase tracking-tight"
-    >
-      {content.journeyHeading}
-    </motion.h2>
+    <div className="inner px-4 md:px-6 lg:px-8">
+      <motion.h2
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="text-white font-extrabold text-5xl md:text-7xl sm:text-4xl uppercase tracking-tight"
+      >
+        {content.journeyHeading}
+      </motion.h2>
 
-    <motion.p
-      variants={fadeInUp}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-      className="mt-4 text-gray-400 text-lg"
-    >
-      {content.journeySubtext}
-    </motion.p>
+      <motion.p
+        variants={fadeInUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+        className="mt-4 text-gray-400 text-lg sm:text-base"
+      >
+        {content.journeySubtext}
+      </motion.p>
+    </div>
 
     <motion.div
       variants={fadeInUp}
@@ -75,6 +77,8 @@ export function NextSection() {
   {/* VIP Dinner Pass */}
   <a
     href={content.journeyPrimaryUrl}
+    target="_blank"
+    rel="noopener noreferrer"
     className="
       px-8 py-3 rounded-full
       font-semibold
@@ -89,9 +93,11 @@ export function NextSection() {
    {content.journeyPrimaryLabel}
   </a>
 
-  {/* General Pass */}
+  {/* チケット購入 */}
   <a
     href={content.journeySecondaryUrl}
+    target="_blank"
+    rel="noopener noreferrer"
     className="
       px-8 py-3 rounded-full
       font-semibold

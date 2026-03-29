@@ -6,7 +6,7 @@ export interface Speaker {
   company: string;
   companyJa?: string;
   bio: string;
-  bioJa?: string;
+  bio_en?: string;
   image?: string;
   twitter?: string;
   linkedin?: string;

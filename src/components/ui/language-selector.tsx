@@ -19,6 +19,7 @@ type LanguageSelectorProps = {
 export function LanguageSelector({ className }: LanguageSelectorProps) {
   const t = useTranslations();
   const [currentLocale, setCurrentLocale] = useState<Locale>("ja");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     // Cookieから現在のロケールを読み込む（サーバー側と同期）
@@ -41,6 +42,8 @@ export function LanguageSelector({ className }: LanguageSelectorProps) {
         document.cookie = `locale=${savedLocale}; path=/; max-age=31536000`;
       }
     }
+
+    setMounted(true);
   }, []);
 
   const handleLocaleChange = async (locale: Locale) => {
@@ -54,15 +57,30 @@ export function LanguageSelector({ className }: LanguageSelectorProps) {
     window.location.reload();
   };
 
+  const triggerClassName = cn(
+    "flex items-center justify-center rounded-md p-2 text-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+    className,
+  );
+
+  if (!mounted) {
+    return (
+      <button
+        type="button"
+        className={triggerClassName}
+        aria-label={t("header.selectLanguage")}
+        disabled
+      >
+        <Globe className="size-5" />
+      </button>
+    );
+  }
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button
           type="button"
-          className={cn(
-            "flex items-center justify-center rounded-md p-2 text-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-            className,
-          )}
+          className={triggerClassName}
           aria-label={t("header.selectLanguage")}
         >
           <Globe className="size-5" />

@@ -10,9 +10,11 @@ const TIER_TEXT_SIZE: Record<Tier, string> = {
   [Tier.Gold]: "text-xl md:text-2xl font-medium",
   [Tier.Silver]: "text-lg md:text-xl font-medium",
   [Tier.Bronze]: "text-base md:text-lg font-medium",
-  [Tier.MediaPartner]: "text-base md:text-lg font-medium",
+  [Tier.Research]: "text-base md:text-lg font-medium",
+  [Tier.Supporter]: "text-base md:text-lg font-medium",
+  [Tier.Media]: "text-base md:text-lg font-medium",
   [Tier.Education]: "text-base md:text-lg font-medium",
-  [Tier.CommunityPartner]: "text-base md:text-lg font-medium",
+  [Tier.Community]: "text-base md:text-lg font-medium",
 };
 
 const UPPER_TIERS = new Set([Tier.Title, Tier.Platinum]);
