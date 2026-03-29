@@ -2,9 +2,10 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { type NextRequest, NextResponse } from "next/server";
 
-/** TEAMZ 本番オリジン + ローカル開発（http://localhost:3000）。パスはオリジンに含まれないためホストのみ一致で許可。 */
+/** TEAMZ 本番・Webflow プレビュー + ローカル開発。パスはオリジンに含まれないためホストのみ一致で許可。 */
 const DEFAULT_ALLOWED_ORIGINS = [
   "https://www.teamz.co.jp",
+  "https://web3-summit-3a4ae8.webflow.io",
   "http://localhost:3000",
 ] as const;
 
