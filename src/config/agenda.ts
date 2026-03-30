@@ -445,7 +445,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   {
     time: "1:25 PM - 1:35 PM",
     title:
-      "TBA",
+      "The Future of RLUSD as Envisioned by SBI VC Trade",
     track: "Keynote",
     speakerNames: ["Tomohiko Kondo"],
     
