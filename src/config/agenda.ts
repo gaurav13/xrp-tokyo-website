@@ -112,7 +112,7 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     linkedin: "https://jp.linkedin.com/in/takafumi-shimoyama-43b949207",
   },
   {
-    name: "Toshinari SHINOHARA",
+    name: "Toshinari Shinohara",
     role: "Director, Future Co-Creation Lab, General Management Division",
     company: "TOBU TOP TOURS",
     bio: "",
@@ -448,7 +448,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     title:
       "Tokenized Payments for the Tourism Economy: Real-World Implementation",
     track: "Panel",
-    speakerNames: ["Takafumi Shimoyama"],
+    speakerNames: ["Takafumi Shimoyama", "Toshinari Shinohara"],
     moderatorNames: ["Mai Furukawa"],
   },
   {
