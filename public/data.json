@@ -611,6 +611,13 @@
       "whiteLogo": false
     },
     {
+      "name": "JBA",
+      "tier": "Supporter",
+      "logo": "/partners/supporter/jba.png",
+      "website": "https://jba-web.jp/",
+      "whiteLogo": false
+    },
+    {
       "name": "東大公開講座",
       "tier": "Education",
       "logo": "/partners/education/東大公開講座.png",
