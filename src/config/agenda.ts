@@ -112,6 +112,14 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     linkedin: "https://jp.linkedin.com/in/takafumi-shimoyama-43b949207",
   },
   {
+    name: "Toshinari SHINOHARA",
+    role: "Director, Future Co-Creation Lab, General Management Division",
+    company: "TOBU TOP TOURS",
+    bio: "",
+    image: "/speakers/Toshinari Shinohara.png",
+    website: "https://www.tobutoptours.co.jp/",
+  },
+  {
     name: "Meg Nakamura",
     role: "Chief Operating Officer",
     company: "Evernorth",
