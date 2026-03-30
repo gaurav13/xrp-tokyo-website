@@ -1,11 +1,13 @@
 import { AGENDA_ITEMS, AGENDA_SPEAKERS } from "@/config/agenda";
-import Image from "next/image";
+import type { Locale } from "@/lib/constants";
+import { getLocale } from "next-intl/server";
 
 const speakerMap = new Map(
   AGENDA_SPEAKERS.map((speaker) => [speaker.name, speaker]),
 );
 
-export default function AgendaPage() {
+export default async function AgendaPage() {
+  const locale = (await getLocale()) as Locale;
   const renderPersonCard = (
     itemTitle: string,
     personName: string,
@@ -137,7 +139,11 @@ export default function AgendaPage() {
         </p>
 
         <div className="space-y-4 sm:space-y-5 lg:space-y-6">
-          {AGENDA_ITEMS.map((item, itemIndex) => (
+          {AGENDA_ITEMS.map((item, itemIndex) => {
+            const sessionTitle =
+              locale === "ja" && item.titleJa ? item.titleJa : item.title;
+
+            return (
             <section
               key={`${item.time}-${item.title}-${itemIndex}`}
               className="relative grid items-start gap-3 sm:gap-4 lg:grid-cols-[220px_1fr] lg:gap-6"
@@ -158,24 +164,33 @@ export default function AgendaPage() {
                   </p>
                 ) : null}
 
-                <h2 className="text-xl leading-tight font-semibold tracking-tight text-white sm:text-2xl lg:text-[26px]">
-                  {item.title}
+                <h2
+                  className={`text-xl font-semibold tracking-tight text-white sm:text-2xl lg:text-[26px] ${
+                    locale === "ja" ? "leading-relaxed" : "leading-tight"
+                  }`}
+                >
+                  {sessionTitle}
                 </h2>
 
                 {item.speakerNames.length > 0 ||
                 (item.moderatorNames?.length ?? 0) > 0 ? (
                   <div className="mt-4 grid gap-3 sm:mt-5 sm:grid-cols-2 xl:grid-cols-3">
                     {item.speakerNames.map((speakerName) =>
-                      renderPersonCard(item.title, speakerName),
+                      renderPersonCard(sessionTitle, speakerName),
                     )}
                     {item.moderatorNames?.map((moderatorName) =>
-                      renderPersonCard(item.title, moderatorName, "Moderator"),
+                      renderPersonCard(
+                        sessionTitle,
+                        moderatorName,
+                        "Moderator",
+                      ),
                     )}
                   </div>
                 ) : null}
               </article>
             </section>
-          ))}
+            );
+          })}
         </div>
       </div>
     </main>

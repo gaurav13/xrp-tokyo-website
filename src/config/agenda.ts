@@ -12,6 +12,7 @@ export interface AgendaSpeaker {
 export interface AgendaItem {
   time: string;
   title: string;
+  titleJa?: string;
   track?: string;
   speakerNames: string[];
   moderatorNames?: string[];
@@ -446,9 +447,9 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     time: "1:25 PM - 1:35 PM",
     title:
       "The Future of RLUSD as Envisioned by SBI VC Trade",
+    titleJa: "SBIVCトレードが描くRLUSDの未来",
     track: "Keynote",
     speakerNames: ["Tomohiko Kondo"],
-    
   },
   {
     time: "1:35 PM - 1:45 PM",
