@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "motion/react";
 import { useLocale, useTranslations } from "next-intl";
+import { useLenis } from "lenis/react";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   Dialog,
@@ -24,8 +25,26 @@ export function SpeakerSection() {
   const [speakers, setSpeakers] = useState<Speaker[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const modalBodyRef = useRef<HTMLDivElement>(null);
+  const lenis = useLenis();
+  const lenisRef = useRef(lenis);
+  lenisRef.current = lenis;
+  /** モーダル表示前のスクロール（Headless UI の lock と body:fixed の競合で 0 保存されるのを防ぐ） */
+  const savedScrollYRef = useRef(0);
+  const wasModalOpenRef = useRef(false);
 
   const activeSpeaker = activeIndex >= 0 ? speakers[activeIndex] : null;
+
+  const captureScrollAndOpen = useCallback((index: number) => {
+    const l = lenisRef.current;
+    const y =
+      l?.scroll ??
+      window.scrollY ??
+      document.documentElement.scrollTop ??
+      window.pageYOffset ??
+      0;
+    savedScrollYRef.current = y;
+    setActiveIndex(index);
+  }, []);
 
   useLayoutEffect(() => {
     if (activeIndex < 0) return;
@@ -57,22 +76,39 @@ export function SpeakerSection() {
 
   useEffect(() => {
     if (activeIndex >= 0) {
-      const scrollY = window.scrollY;
-      document.body.style.position = "fixed";
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.left = "0";
-      document.body.style.right = "0";
-      document.body.style.overflow = "hidden";
-      return () => {
-        document.body.style.position = "";
-        document.body.style.top = "";
-        document.body.style.left = "";
-        document.body.style.right = "";
-        document.body.style.overflow = "";
-        window.scrollTo(0, scrollY);
-      };
+      wasModalOpenRef.current = true;
+      return;
     }
-  }, [activeIndex >= 0]);
+    if (!wasModalOpenRef.current) return;
+    wasModalOpenRef.current = false;
+
+    const y = savedScrollYRef.current;
+    const restore = () => {
+      const lenisNow = lenisRef.current;
+      lenisNow?.scrollTo(y, { immediate: true, force: true });
+      window.scrollTo(0, y);
+      document.documentElement.scrollTop = y;
+      document.body.scrollTop = y;
+    };
+
+    restore();
+    let raf2 = 0;
+    const raf1 = requestAnimationFrame(() => {
+      restore();
+      raf2 = requestAnimationFrame(restore);
+    });
+    const t0 = window.setTimeout(restore,       0);
+    const t1 = window.setTimeout(restore,     100);
+    const t2 = window.setTimeout(restore,     300);
+
+    return () => {
+      cancelAnimationFrame(raf1);
+      cancelAnimationFrame(raf2);
+      window.clearTimeout(t0);
+      window.clearTimeout(t1);
+      window.clearTimeout(t2);
+    };
+  }, [activeIndex]);
 
   useEffect(() => {
     let isMounted = true;
@@ -158,7 +194,7 @@ export function SpeakerSection() {
                   key={speaker.name}
                   speaker={speaker}
                   locale={locale}
-                  onSelect={() => setActiveIndex(index)}
+                  onSelect={() => captureScrollAndOpen(index)}
                 />
               ))}
             </motion.div>
