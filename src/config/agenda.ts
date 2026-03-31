@@ -128,6 +128,15 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     linkedin: "https://www.linkedin.com/in/megnakamura",
   },
   {
+    name: "Yusuke Takezawa",
+    role: "Independent Advisor on Cross-Border Finance and Institutional Design",
+    company: "Former VP at Progmat",
+    bio: "",
+    image: "/speakers/Yusuke Takezawa.jpg",
+    linkedin: "https://www.linkedin.com/in/yusuke-takezawa-327720156/",
+    website: "https://progmat.co.jp/",
+  },
+  {
     name: "Mai Furukawa",
     role: "Director of XRPL Japan Association and Support at XRPL Labs",
     company: "XRPL Japan/XRPL Labs",
@@ -441,7 +450,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
       "Connecting Japan and Global Capital: The Future of Web3 Investment and Expansion",
     track: "Panel",
     speakerNames: ["SungMo Park", "Meg Nakamura", "Takuya Sugiyama"],
-    moderatorNames: ["Hinza Asif"],
+    moderatorNames: ["Yusuke Takezawa"],
   },
   {
     time: "1:00 PM - 1:25 PM",

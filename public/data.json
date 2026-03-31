@@ -306,6 +306,17 @@
       "website": "https://secured.finance/"
     },
     {
+      "name": "Yusuke Takezawa",
+      "role": "Independent Advisor on Cross-Border Finance and Institutional Design, Former VP at Progmat",
+      "company": "",
+      "bio": "三井住友銀行で約6年間勤務した後、2018年にボストン・コンサルティング・グループに入社。プロジェクトリーダーとして主に金融・パブリックセクターを担当し、中期経営計画の策定、デジタル施策を通じた業務改革・高度化、政策立案、政府プロジェクトの推進等に従事。\n\n2023年、創業メンバー兼最高戦略責任者（CSO）としてProgmat株式会社に参画。その後、SWIFTと共同でProject Paxを立ち上げ、ステーブルコイン決済インフラおよび法域間インターオペラビリティに関するグローバルイニシアチブを主導。\n\n2026年4月より、越境金融・制度設計に関する独立アドバイザーとして活動。国際連携における構造的課題への取り組みや、日本とグローバル市場をつなぐ越境エコシステム構築の新たなフレームワークの推進に注力している。",
+      "bio_en": "After six years at SMBC, I joined Boston Consulting Group in 2018. As a Project Leader, I worked primarily in the financial and public sectors, supporting clients on mid-term business planning, business and operational transformation through digital initiatives, policy design, and public-sector project management.\n\nIn 2023, I joined Progmat Co., Ltd. as a founding member and Chief Strategy Officer. I later launched Project Pax with SWIFT and led global initiatives focused on stablecoin settlement infrastructure and interoperability across jurisdictions.\n\nSince April 2026, I have been working as an Independent Advisor on Cross-Border Finance and Institutional Design, focusing on addressing structural challenges in international collaboration and advancing new frameworks for cross-border ecosystem development, particularly between Japan and global markets.",
+      "image": "/speakers/Yusuke Takezawa.jpg",
+      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/yusuke-takezawa-327720156/",
+      "website": ""
+    },
+    {
       "name": "Noriaki Yagi",
       "role": "Editor-in-chief",
       "company": "Iolite Magazine",
@@ -326,17 +337,6 @@
       "twitter": "https://x.com/RyosCoinPost",
       "linkedin": "",
       "website": ""
-    },
-    {
-      "name": "J. Ayo Akinyele",
-      "role": "Head of Engineering",
-      "company": "RippleX",
-      "bio": "J. Ayo Akinyele氏は、RippleXのHead of Engineeringとして、XRP Ledgerのインフラおよび開発者向けツールを手がけるビルダーチームを率いています。\n\nこれまでに、MPCを活用したウォレットを開発するセキュリティ・プライバシースタートアップ「Bolt Labs」のCEO兼共同創業者を務めたほか、Bitcoin CoreやHandshakeを含むブロックチェーンプロジェクトに対し、暗号技術およびセキュリティ監査を提供する「YeleTech Security」を共同創業しています。",
-      "bio_en": "J. Ayo Akinyele is the Head of Engineering at RippleX, leading a builder team that develops XRP Ledger infrastructure and developer tools.\n\nHe previously served as CEO and Co-Founder of Bolt Labs, a security and privacy startup that developed MPC-based wallets. He also co-founded YeleTech Security, which provided cryptographic and security audits for blockchain projects including Bitcoin Core and Handshake.",
-      "image": "/speakers/Ayo Akinyele.png",
-      "twitter": "https://x.com/ja_akinyele",
-      "linkedin": "",
-      "website": "https://ripple.com/"
     },
     {
       "name": "Cyrus Cruz",
@@ -458,6 +458,17 @@
       "twitter": "https://x.com/panosmek",
       "linkedin": "https://www.linkedin.com/in/panos-mekras/",
       "website": "https://anodos.finance/"
+    },
+    {
+      "name": "J. Ayo Akinyele",
+      "role": "Head of Engineering",
+      "company": "RippleX",
+      "bio": "J. Ayo Akinyele氏は、RippleXのHead of Engineeringとして、XRP Ledgerのインフラおよび開発者向けツールを手がけるビルダーチームを率いています。\n\nこれまでに、MPCを活用したウォレットを開発するセキュリティ・プライバシースタートアップ「Bolt Labs」のCEO兼共同創業者を務めたほか、Bitcoin CoreやHandshakeを含むブロックチェーンプロジェクトに対し、暗号技術およびセキュリティ監査を提供する「YeleTech Security」を共同創業しています。",
+      "bio_en": "J. Ayo Akinyele is the Head of Engineering at RippleX, leading a builder team that develops XRP Ledger infrastructure and developer tools.\n\nHe previously served as CEO and Co-Founder of Bolt Labs, a security and privacy startup that developed MPC-based wallets. He also co-founded YeleTech Security, which provided cryptographic and security audits for blockchain projects including Bitcoin Core and Handshake.",
+      "image": "/speakers/Ayo Akinyele.png",
+      "twitter": "https://x.com/ja_akinyele",
+      "linkedin": "",
+      "website": "https://ripple.com/"
     },
     {
       "name": "Robert Kiuru",

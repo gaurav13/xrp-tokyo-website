@@ -265,18 +265,20 @@ export function SpeakerSection() {
                       />
                     </div>
 
-                    <div className="mt-4">
+                    <div className="mt-4 w-full max-w-2xl px-1">
                       <h3 className="text-2xl sm:text-3xl font-semibold">
                         {name}
                       </h3>
-                      <p className="mt-1 text-sm sm:text-base text-black/70">
+                      <p className="mt-1 text-sm sm:text-base text-black/70 leading-snug break-words whitespace-normal">
                         {role}
                       </p>
                     </div>
 
-                    <div className="mt-3 inline-flex items-center rounded-full bg-black px-4 py-2 text-white text-sm font-semibold">
-                      {company}
-                    </div>
+                    {company?.trim() ? (
+                      <div className="mt-3 inline-flex max-w-full items-center justify-center rounded-full bg-black px-4 py-2 text-center text-white text-sm font-semibold break-words">
+                        {company}
+                      </div>
+                    ) : null}
 
                     {(activeSpeaker.twitter ||
                       activeSpeaker.linkedin ||
