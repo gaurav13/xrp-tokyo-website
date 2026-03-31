@@ -88,11 +88,11 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     image: "/speakers/Dave-McComb.png",
   },
   {
-    name: "Hiroshi Onozawa",
+    name: "Hirokuni Onozawa",
     role: "Executive Officer",
     company: "GMO Aozora Net Bank, Ltd",
     bio: "",
-    image: "/speakers/Hiroshi Onozawa.png",
+    image: "/speakers/Hirokuni Onozawa.png",
   },
   {
     name: "Seihaku Yoshida",
@@ -432,7 +432,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     title:
       "Institutional Blockchain Adoption : From Pilot to Production: How Banks Are Building the Next Financial Infrastructure with Blockchain",
     track: "Panel",
-    speakerNames: ["Hiroshi Onozawa", "Ryo Kato", "Go Makino"],
+    speakerNames: ["Hirokuni Onozawa", "Ryo Kato", "Go Makino"],
     moderatorNames: ["Noriaki Yagi"],
   },
   {
