@@ -279,11 +279,11 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     image: "/speakers/Ai Kosuke.png",
   },
   {
-    name: "Matsuda Ikkei",
+    name: "Ikkei Matsuda",
     role: "Representative Director & CEO",
     company: "Digital Platformer Co., Ltd.",
     bio: "",
-    image: "/speakers/Matsuda Ikkei.png",
+    image: "/speakers/Ikkei Matsuda.png",
   },
   {
     name: "Jean Zhu",
@@ -536,7 +536,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     track: "Panel",
     speakerNames: [
       "Ai Kosuke",
-      "Matsuda Ikkei",
+      "Ikkei Matsuda",
       "Sojun Katsura",
       "Jean Zhu",
       "Yusuke Hirota",
