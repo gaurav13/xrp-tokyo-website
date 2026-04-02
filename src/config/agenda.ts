@@ -510,13 +510,13 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     moderatorNames: ["Cyrus Cruz"],
   },
   {
-    time: "3:30 PM - 3:40 PM",
+    time: "3:35 PM - 3:45 PM",
     title: "Doppler Finance - Keynote",
     track: "Keynote",
     speakerNames: ["Rox Park"],
   },
   {
-    time: "3:45 PM - 4:15 PM",
+    time: "3:50 PM - 4:20 PM",
     title:
       "From Real Assets to Digital Infrastructure: How Institutions Are Building the Next Financial System",
     track: "Panel",
@@ -524,14 +524,14 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     moderatorNames: ["Fumihiro Arasawa"],
   },
   {
-    time: "4:20 PM - 4:30 PM",
+    time: "4:25 PM - 4:35 PM",
     title:
       "Clearing the Path: How Yellow Enables the Internet of Value",
     track: "Keynote",
     speakerNames: ["Alexis Sirkia","Steven Zeiler"],
   },
   {
-    time: "4:35 PM - 5:05 PM",
+    time: "4:40 PM - 5:10 PM",
     title: "Japan’s XRPL Ecosystem: Local Innovation and Global Opportunities",
     track: "Panel",
     speakerNames: [
@@ -544,14 +544,14 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     moderatorNames: ["Tatsuya Kohrogi"],
   },
   {
-    time: "5:10 PM - 5:18 PM",
+    time: "5:15 PM - 5:23 PM",
     title:
       "Introducing the Endowed Chair for Blockchain Innovation at the University of Tokyo",
     track: "Keynote",
     speakerNames: ["Kyohei Shibano"],
   },
   {
-    time: "5:18 PM - 5:30 PM",
+    time: "5:23 PM - 5:35 PM",
     title: "XRP Tokyo 2026: Our Journey Ahead",
     track: "Closing Remarks",
     speakerNames: ["Mai Furukawa", "Hinza Asif"],
