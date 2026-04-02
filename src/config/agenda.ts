@@ -92,7 +92,7 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     role: "Executive Officer",
     company: "GMO Aozora Net Bank, Ltd",
     bio: "",
-    image: "/speakers/Hirokuni Onozawa.png",
+    image: "/speakers/hirokuni_onozawa.png",
   },
   {
     name: "Seihaku Yoshida",
