@@ -405,7 +405,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   },
   {
     time: "10:30 AM - 10:35 AM",
-    title: "Welcome Note: Building the Future of Finance with XRP Tokyo",
+    title: "Welcome Note",
     track: "Keynote",
     speakerNames: ["Mai Furukawa"],
   },
