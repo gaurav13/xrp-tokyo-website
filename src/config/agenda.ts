@@ -283,7 +283,7 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     role: "Representative Director & CEO",
     company: "Digital Platformer Co., Ltd.",
     bio: "",
-    image: "/speakers/Ikkei Matsuda.png",
+    image: "/speakers/Matsuda Ikkei.png",
   },
   {
     name: "Jean Zhu",
