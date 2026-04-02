@@ -540,6 +540,18 @@
       "website": "https://www.rakuten-wallet.co.jp/"
     },
     {
+      "name": "yellow",
+      "tier": "Silver",
+      "logo": "/sponsors/silver/yellow.png",
+      "website": "https://yellow.com/"
+    },
+    {
+      "name": "RedotPay",
+      "tier": "Silver",
+      "logo": "/sponsors/silver/redotpay.png",
+      "website": "https://www.redotpay.com/"
+    },
+    {
       "name": "XRPCafe",
       "tier": "Silver",
       "logo": "/sponsors/silver/xrpcafe1.png",

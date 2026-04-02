@@ -92,6 +92,18 @@ export const SPONSORS = [
   },
   {
     tier: Tier.Silver,
+    name: "yellow",
+    logo: "/sponsors/silver/yellow.png",
+    website: "https://yellow.com/",
+  },
+  {
+    tier: Tier.Silver,
+    name: "RedotPay",
+    logo: "/sponsors/silver/redotpay.png",
+    website: "https://www.redotpay.com/",
+  },
+  {
+    tier: Tier.Silver,
     name: "XRPCafe",
     logo: "/sponsors/silver/xrpcafe.svg",
     website: "https://xrp.cafe",
