@@ -827,6 +827,12 @@
       "logo": "/partners/community/chain-block-summit.png",
       "website": "https://chainofblockssummit.com/",
       "whiteBackground": true
+    },
+    {
+      "name": "XRP Army JP",
+      "tier": "Community",
+      "logo": "/partners/community/xrp-army-jp.jpeg",
+      "website": "https://x.com/i/communities/2026168382178132057"
     }
   ]
 }
