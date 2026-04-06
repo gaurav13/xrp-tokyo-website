@@ -526,7 +526,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   {
     time: "4:25 PM - 4:35 PM",
     title:
-      "Clearing the Path: How Yellow Enables the Internet of Value",
+      "The Internet of Value for the Agentic Economy",
     track: "Keynote",
     speakerNames: ["Alexis Sirkia","Steven Zeiler"],
   },
