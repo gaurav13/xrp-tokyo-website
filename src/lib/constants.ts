@@ -15,6 +15,7 @@ export const EVENT_INFO = {
 
 export const SOCIAL_LINKS = {
   x: "https://x.com/XRPLJapan",
+  linkedin: "https://www.linkedin.com/company/xrpl-japan",
 } as const;
 
 export const SPONSOR_LINKS = {

@@ -10,6 +10,8 @@ import { SponsorSection } from "@/components/section/sponsor-section";
 import { SpeakerSection } from "@/components/section/speaker-section";
 import { MobileTicketButton } from "@/components/mobile-ticket-button";
 import { useScrollPosition } from "@/hooks/use-scroll-position";
+import { XLogoIcon, LinkedInLogoIcon } from "@/components/icons/social";
+import { SOCIAL_LINKS } from "@/lib/constants";
 import Image from "next/image";
 export default function Home() {
   const t = useTranslations();
@@ -67,34 +69,23 @@ export default function Home() {
 
           <div className="flex items-center gap-3">
             <a
-  href="https://x.com/XRPLJapan"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-white/10 text-white text-sm">
-    X
-  </span>
-</a>
-
-<a
-  href="#"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-white/10 text-white text-sm">
-    in
-  </span>
-</a>
-
-<a
-  href="#"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-white/10 text-white text-sm">
-    tg
-  </span>
-</a>
+              href={SOCIAL_LINKS.x}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-sm bg-white/10 text-white transition-colors hover:bg-white/20"
+              aria-label="X (Twitter) でフォロー"
+            >
+              <XLogoIcon className="text-white" />
+            </a>
+            <a
+              href={SOCIAL_LINKS.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-sm bg-white/10 text-white transition-colors hover:bg-white/20"
+              aria-label="LinkedIn でフォロー"
+            >
+              <LinkedInLogoIcon className="text-white" />
+            </a>
           </div>
         </div>
 

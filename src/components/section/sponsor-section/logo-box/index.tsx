@@ -42,7 +42,19 @@ const TIER_STYLES: Record<
     hover: "hover:shadow-sm hover:scale-105",
     shadow: "",
   },
-  [Tier.MediaPartner]: {
+  [Tier.Research]: {
+    padding: "p-3 md:p-4",
+    rounded: "rounded-lg",
+    hover: "hover:shadow-sm hover:scale-105",
+    shadow: "",
+  },
+  [Tier.Supporter]: {
+    padding: "p-3 md:p-4",
+    rounded: "rounded-lg",
+    hover: "hover:shadow-sm hover:scale-105",
+    shadow: "",
+  },
+  [Tier.Media]: {
     padding: "p-3 md:p-4",
     rounded: "rounded-lg",
     hover: "hover:shadow-sm hover:scale-105",
@@ -54,7 +66,7 @@ const TIER_STYLES: Record<
     hover: "hover:shadow-sm hover:scale-105",
     shadow: "",
   },
-  [Tier.CommunityPartner]: {
+  [Tier.Community]: {
     padding: "p-2.5 md:p-3",
     rounded: "rounded-md",
     hover: "hover:shadow-sm hover:scale-105",
@@ -69,10 +81,14 @@ const logoVariants = {
 
 interface LogoBoxProps {
   tier: Tier;
-  logo: string;
+  logo?: string;
   alt: string;
   className?: string;
   website?: string;
+  whiteLogo?: boolean;
+  whiteBackground?: boolean;
+  /** Extra padding inside the logo area so the mark reads smaller with breathing room */
+  logoInset?: boolean;
 }
 
 export const LogoBox = ({
@@ -81,11 +97,14 @@ export const LogoBox = ({
   alt,
   website,
   className,
+  whiteLogo,
+  whiteBackground,
+  logoInset,
 }: LogoBoxProps) => {
   const ts = TIER_STYLES[tier];
   const { borderAccent } = TIER_CONFIGS[tier];
   const styles = cn(
-    "relative w-full bg-black border border-white/40 transition-all duration-200 cursor-pointer active:scale-100",
+    "relative w-full bg-black border border-white/40 transition-all duration-200 cursor-pointer active:scale-100 flex flex-col overflow-hidden",
     ts.padding,
     ts.rounded,
     ts.hover,
@@ -94,27 +113,37 @@ export const LogoBox = ({
     className,
   );
 
-  const inner = (
- <div
-  className="
-    w-full h-full
-    rounded-xl
-    bg-black/40
-    shadow-[0_10px_30px_rgba(0,0,0,0.6)]
-     flex items-center justify-center
-    backdrop-blur-sm
-  "
->
-  <div className="relative w-full h-full">
-    <Image
-      src={logo}
-      alt={alt}
-      fill
-      className="object-contain"
-      sizes="(max-width: 768px) 50vw, 200px"
-    />
-  </div>
-</div>
+  const inner = logo ? (
+    <div
+      className={cn(
+        "w-full flex-1 min-h-0 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.6)] flex items-center justify-center backdrop-blur-sm overflow-hidden",
+        whiteBackground ? "bg-gray-50" : "bg-black/40",
+      )}
+    >
+      <div
+        className={cn(
+          "relative w-full h-full overflow-hidden rounded-xl",
+          logoInset && "p-2.5 md:p-3",
+        )}
+      >
+        <Image
+            src={logo}
+            alt={alt}
+            fill
+            className={cn(
+              "object-contain",
+              whiteLogo && "brightness-0 invert",
+            )}
+            sizes="(max-width: 768px) 50vw, 200px"
+          />
+      </div>
+    </div>
+  ) : (
+    <div className="w-full flex-1 min-h-0 rounded-xl bg-black/40 flex items-center justify-center backdrop-blur-sm">
+      <span className="text-sm font-medium text-white/90 text-center px-2">
+        {alt}
+      </span>
+    </div>
   );
 
   if (website) {

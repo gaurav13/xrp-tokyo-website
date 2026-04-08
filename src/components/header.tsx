@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, Ticket, Gift } from "lucide-react";
+import { Menu, X, Ticket, Heart, Handshake } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { LanguageSelector } from "@/components/ui/language-selector";
 import { Button } from "@/components/animate-ui/components/buttons/button";
@@ -18,17 +19,35 @@ import { useGiveawayDialog } from "@/components/giveaway-dialog";
 export function Header() {
   const t = useTranslations();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
   const isScrolled = useScrolled();
   const { openDialog } = useGiveawayDialog();
+  const hideGiveawayUi = pathname === "/agenda";
 
-  const navItems = [
+  const navItems: Array<
+    { label: string; id: string; href?: never } | { label: string; href: string; id?: never }
+  > = [
     { label: t("header.about"), id: "about" },
     { label: t("header.highlights"), id: "highlights" },
     { label: t("header.speakers"), id: "speakers" },
     { label: t("header.sponsors"), id: "sponsors" },
+    { label: t("header.agenda"), href: "/agenda" },
   ];
 
+  /** about セクションへのスクロール位置（決め打ち: ヒーロー高さ + モバイルブラウザUI分の補正） */
+  const ABOUT_SCROLL_TOP = typeof window !== "undefined" ? window.innerHeight + 80 : 0;
+
   const handleNavClick = (id: string) => {
+    if (pathname !== "/") {
+      router.push(`/#${id}`);
+      return;
+    }
+
+    if (id === "about" && typeof window !== "undefined") {
+      window.scrollTo({ top: ABOUT_SCROLL_TOP, behavior: "smooth" });
+      return;
+    }
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -39,64 +58,85 @@ export function Header() {
     setIsMobileMenuOpen((prev) => !prev);
   };
 
+  /** モバイル: メニューを閉じてからアニメーション完了後にスクロール（位置ずれ防止） */
+  const MOBILE_MENU_CLOSE_MS = 320;
+  const handleMobileNavClick = (id: string) => {
+    setIsMobileMenuOpen(false);
+    setTimeout(() => {
+      handleNavClick(id);
+    }, MOBILE_MENU_CLOSE_MS);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full bg-black/90 text-white backdrop-blur border-b border-white/10">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6 lg:px-8">
+      <div className="w-full flex h-16 items-center justify-between px-4 md:px-6 lg:px-8">
         {/* ブランド */}
-        <Link href="/" className="flex items-center" aria-label="XRP Tokyo 2026">
+        <Link href="/" className="flex items-center max-w-[210px] xl:max-w-none shrink-0" aria-label="XRP Tokyo 2026">
           <Image
             src="/logo-dark.svg"
             alt="XRP Tokyo 2026"
             width={140}
             height={24}
-            className="h-6 w-auto"
+            className="h-6 w-auto max-w-full"
             priority
           />
         </Link>
 
-        {/* デスクトップナビゲーション */}
-        <nav className="hidden items-center gap-2 md:flex">
+        {/* デスクトップナビゲーション（1280px以上で表示、それ未満はハンバーガー） */}
+        <nav className="hidden items-center gap-2 xl:flex">
           {navItems.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => handleNavClick(item.id)}
-              className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/20"
-            >
-              {item.label}
-            </button>
+            "href" in item ? (
+              <Link
+                key={item.href!}
+                href={item.href!}
+                className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/20"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => handleNavClick(item.id)}
+                className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/20"
+              >
+                {item.label}
+              </button>
+            )
           ))}
         </nav>
 
         {/* 右側のアクション */}
-        <div className="flex items-center gap-2 ml-auto md:ml-0">
-          {/* スポンサーボタン（デスクトップのみ） */}
+        <div className="flex items-center gap-2 ml-auto xl:ml-0">
+          {/* スポンサーボタン（1280px以上のみ、それ未満はハンバーガーメニュー内） */}
           <Link
             href={SPONSOR_LINKS.teamz}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 transition-colors hover:bg-white/15"
+            className="hidden xl:flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 transition-colors hover:bg-white/15"
             aria-label={t("header.sponsor")}
           >
             {t("header.sponsor")}
           </Link>
-          {/* ギブアウェイボタン（デスクトップのみ） */}
-          <button
-            onClick={openDialog}
-            className="hidden md:flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-2 text-white/80 transition-colors hover:bg-white/15"
-            aria-label={t("header.giveaway")}
-          >
-            <Gift className="size-5" />
-          </button>
+          {/* ギブアウェイボタン（1280px以上のみ。アジェンダページでは非表示） */}
+          {hideGiveawayUi ? null : (
+            <button
+              onClick={openDialog}
+              className="hidden xl:flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-2 text-white/80 transition-colors hover:bg-white/15"
+              aria-label={t("header.giveaway")}
+            >
+              <Heart className="size-5" />
+            </button>
+          )}
           {/* 言語選択 */}
           <LanguageSelector className="rounded-full border border-white/15 bg-white/5 text-white/80 hover:bg-white/15" />
           {/* Xアイコンボタン */}
           <XIconButton className="rounded-full border border-white/15 bg-white/5 text-white/80 hover:bg-white/15" />
 
-          {/* チケットボタン */}
+          {/* チケットボタン（1280px以上のみ） */}
           <div
             className={cn(
-              "hidden md:block relative h-9 transition-all duration-300",
+              "hidden xl:block relative h-9 transition-all duration-300",
               isScrolled ? "w-[120px]" : "w-9",
             )}
           >
@@ -159,11 +199,11 @@ export function Header() {
             </motion.div>
           </div>
 
-          {/* モバイルメニューボタン */}
+          {/* ハンバーガーメニューボタン（0〜1279px：モバイル・タブレット共通） */}
           <button
             type="button"
             onClick={toggleMobileMenu}
-            className="flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-2 text-white transition-colors hover:bg-white/15 md:hidden"
+            className="flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-2 text-white transition-colors hover:bg-white/15 xl:hidden"
             aria-label={t("header.openMenu")}
             aria-expanded={isMobileMenuOpen}
           >
@@ -184,23 +224,31 @@ export function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="border-t border-white/10 bg-black md:hidden overflow-hidden"
+            className="border-t border-white/10 bg-black xl:hidden overflow-hidden"
           >
-            <nav className="container mx-auto flex flex-col px-4 py-4 md:px-6 lg:px-8 gap-4 text-white">
+            <nav className="w-full flex flex-col px-4 py-4 md:px-6 lg:px-8 gap-4 text-white">
               {/* モバイル用ナビゲーション */}
               <div className="flex flex-col gap-2">
                 {navItems.map((item) => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    onClick={() => {
-                      handleNavClick(item.id);
-                      setIsMobileMenuOpen(false);
-                    }}
-                    className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/15 text-left"
-                  >
-                    {item.label}
-                  </button>
+                  "href" in item ? (
+                    <Link
+                      key={item.href!}
+                      href={item.href!}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/15 text-left"
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <button
+                      key={item.id}
+                      type="button"
+                      onClick={() => handleMobileNavClick(item.id)}
+                      className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/90 transition-colors hover:bg-white/15 text-left"
+                    >
+                      {item.label}
+                    </button>
+                  )
                 ))}
               </div>
               {/* モバイル用チケットボタン */}
@@ -225,24 +273,26 @@ export function Header() {
                   </Link>
                 </Button>
               </motion.div>
-              {/* ギブアウェイボタン（モバイル） */}
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
-              >
-                <button
-                  onClick={() => {
-                    openDialog();
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors w-full text-left"
+              {/* ギブアウェイボタン（モバイル。アジェンダページでは非表示） */}
+              {hideGiveawayUi ? null : (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
                 >
-                  <Gift className="size-4" />
-                  {t("header.giveaway")}
-                </button>
-              </motion.div>
+                  <button
+                    onClick={() => {
+                      openDialog();
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors w-full text-left"
+                  >
+                    <Heart className="size-4" />
+                    {t("header.giveaway")}
+                  </button>
+                </motion.div>
+              )}
               {/* スポンサーリンク */}
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
@@ -254,8 +304,9 @@ export function Header() {
                   href={SPONSOR_LINKS.teamz}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-white/80 hover:text-white transition-colors"
+                  className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors"
                 >
+                  <Handshake className="size-4 shrink-0" />
                   {t("header.sponsor")}
                 </Link>
               </motion.div>

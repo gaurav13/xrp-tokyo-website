@@ -39,148 +39,34 @@ export const TIER_CONFIGS: Record<
     textColor: "text-amber-600",
     borderAccent: "",
   },
-  [Tier.MediaPartner]: {
+  [Tier.Research]: {
+    name: "Research Partner",
+    color: "border-cyan-300",
+    textColor: "text-cyan-300",
+    borderAccent: "",
+  },
+  [Tier.Supporter]: {
+    name: "Supporter",
+    color: "border-indigo-300",
+    textColor: "text-indigo-300",
+    borderAccent: "",
+  },
+  [Tier.Media]: {
     name: "Media Partner",
     color: "border-gray-300",
     textColor: "text-gray-300",
     borderAccent: "",
   },
   [Tier.Education]: {
-    name: "Education",
+    name: "Education Partner",
     color: "border-gray-300",
     textColor: "text-gray-300",
     borderAccent: "",
   },
-  [Tier.CommunityPartner]: {
+  [Tier.Community]: {
     name: "Community Partner",
     color: "border-gray-400",
     textColor: "text-gray-400",
     borderAccent: "",
   },
 };
-
-export const SPONSORS = [
-  {
-    tier: Tier.Title,
-    name: "Ripple",
-    logo: "/sponsors/title/ripple.png",
-    website: "https://ripple.com/",
-  },
-  {
-    tier: Tier.Platinum,
-    name: "Doppler Finance",
-    logo: "/sponsors/platinum/doppler-finance.svg",
-    website: "https://doppler.finance/",
-  },
-  {
-    tier: Tier.Gold,
-    name: "anodos",
-    logo: "/sponsors/gold/anodos.png",
-    website: "https://anodos.finance/",
-  },
-  {
-    tier: Tier.Silver,
-    name: "XRPCafe",
-    logo: "/sponsors/silver/xrpcafe.svg",
-    website: "https://xrp.cafe",
-  },
-  {
-    tier: Tier.Silver,
-    name: "Xaman",
-    logo: "/sponsors/silver/xaman.svg",
-    website: "https://xaman.app/",
-  },
-  {
-    tier: Tier.Bronze,
-    name: "Giant Gox",
-    logo: "/sponsors/bronze/giantgox.jpg",
-    website: "https://x.com/GiantGox",
-  },
-  {
-    tier: Tier.Bronze,
-    name: "メイフラちゃん",
-    logo: "/sponsors/bronze/mayflower3096.jpg",
-    website: "https://x.com/mayflower3096",
-  },
-  {
-    tier: Tier.MediaPartner,
-    name: "CoinPost",
-    logo: "/partners/media/coinpost.png",
-  },
-  {
-    tier: Tier.MediaPartner,
-    name: "New Economy",
-    logo: "/partners/media/neweconomy.png",
-  },
-  {
-    tier: Tier.MediaPartner,
-    name: "News Tagline",
-    logo: "/partners/media/news_tagline.png",
-  },
-  {
-    tier: Tier.CommunityPartner,
-    name: "東大公開講座",
-    logo: "/partners/education/東大公開講座.png",
-  },
-  {
-    tier: Tier.CommunityPartner,
-    name: "渋谷Web3大学",
-    logo: "/partners/community/渋谷Web3大学横.jpg",
-  },
-  {
-    tier: Tier.CommunityPartner,
-    name: "OP Market",
-    logo: "/partners/community/opmarket.jpg",
-  },
-  {
-    tier: Tier.CommunityPartner,
-    name: "Text RP",
-    logo: "/partners/community/text-rp.jpg",
-  },
-  {
-    tier: Tier.CommunityPartner,
-    name: "Wavee",
-    logo: "/partners/community/wavee.svg",
-  },
-  {
-    tier: Tier.CommunityPartner,
-    name: "Wave of Innovation",
-    logo: "/partners/community/wave-of-innovation.svg",
-  },
-  {
-    tier: Tier.CommunityPartner,
-    name: "Web3 Salon",
-    logo: "/partners/community/web3-salon.png",
-  },
-  {
-    tier: Tier.CommunityPartner,
-    name: "AI Agent Run",
-    logo: "/partners/community/ai-agent-run.png",
-  },
-  {
-    tier: Tier.CommunityPartner,
-    name: "XRPL Korea",
-    logo: "/partners/community/xrplkorea_v_black.svg",
-  },
-  {
-    tier: Tier.CommunityPartner,
-    name: "XRPL Africa",
-    logo: "/partners/community/xrpl-africa.jpg",
-  },
-  {
-    tier: Tier.CommunityPartner,
-    name: "XRPL Canada",
-    logo: "/partners/community/xrpl-canada.jpeg",
-  },
-  {
-    tier: Tier.CommunityPartner,
-    name: "XRPL Malaysia",
-    logo: "/partners/community/xrpl-malaysia.jpg",
-  },
-  {
-    tier: Tier.CommunityPartner,
-    name: "Terry Toto",
-    logo: "/partners/community/terry-toto.svg",
-    website: "https://terrytoto.com/",
-  },
-];

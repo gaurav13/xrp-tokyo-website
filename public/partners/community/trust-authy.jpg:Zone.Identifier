@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://cloudconvert.com/
+HostUrl=https://eu-central.storage.cloudconvert.com/tasks/ecc22359-d9c2-431f-96bb-bb3f976e2df7/trust-authy.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20260312%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20260312T072439Z&X-Amz-Expires=86400&X-Amz-Signature=02212c564e5168dad695b43634122f8f41674912176720328ed5fe152fc91ee6&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22trust-authy.jpg%22&response-content-type=image%2Fjpeg&x-id=GetObject
