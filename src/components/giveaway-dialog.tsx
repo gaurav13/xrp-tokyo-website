@@ -6,8 +6,6 @@ import { AnimatePresence, motion } from "motion/react";
 import { useSplash } from "@/contexts/splash-context";
 import { cn } from "@/lib/utils";
 
-const STORAGE_KEY = "giveaway-dialog-dismissed";
-
 type GiveawayDialogContextType = {
   openDialog: () => void;
 };
@@ -30,18 +28,8 @@ export function GiveawayDialogProvider({ children }: { children: React.ReactNode
 
   useEffect(() => {
     if (!isSplashComplete || suppressGiveawayOnThisPage) return;
-
-    try {
-      const dismissed = localStorage.getItem(STORAGE_KEY);
-      const isDev = process.env.NODE_ENV === "development";
-      if (isDev || dismissed !== "true") {
-        const timer = setTimeout(() => setIsOpen(true), 500);
-        return () => clearTimeout(timer);
-      }
-    } catch {
-      const timer = setTimeout(() => setIsOpen(true), 500);
-      return () => clearTimeout(timer);
-    }
+    const timer = setTimeout(() => setIsOpen(true), 500);
+    return () => clearTimeout(timer);
   }, [isSplashComplete, suppressGiveawayOnThisPage]);
 
   const openDialog = useCallback(() => {
@@ -50,7 +38,6 @@ export function GiveawayDialogProvider({ children }: { children: React.ReactNode
   }, [suppressGiveawayOnThisPage]);
   const handleClose = useCallback(() => {
     setIsOpen(false);
-    localStorage.setItem(STORAGE_KEY, "true");
   }, []);
 
   return (

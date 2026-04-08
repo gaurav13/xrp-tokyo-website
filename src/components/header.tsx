@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, Ticket, Gift, Handshake } from "lucide-react";
+import { Menu, X, Ticket, Heart, Handshake } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { LanguageSelector } from "@/components/ui/language-selector";
 import { Button } from "@/components/animate-ui/components/buttons/button";
@@ -125,7 +125,7 @@ export function Header() {
               className="hidden xl:flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-2 text-white/80 transition-colors hover:bg-white/15"
               aria-label={t("header.giveaway")}
             >
-              <Gift className="size-5" />
+              <Heart className="size-5" />
             </button>
           )}
           {/* 言語選択 */}
@@ -288,7 +288,7 @@ export function Header() {
                     }}
                     className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors w-full text-left"
                   >
-                    <Gift className="size-4" />
+                    <Heart className="size-4" />
                     {t("header.giveaway")}
                   </button>
                 </motion.div>
