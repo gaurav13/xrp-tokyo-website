@@ -23,6 +23,7 @@ export function Header() {
   const router = useRouter();
   const isScrolled = useScrolled();
   const { openDialog } = useGiveawayDialog();
+  const hideGiveawayUi = pathname === "/agenda";
 
   const navItems: Array<
     { label: string; id: string; href?: never } | { label: string; href: string; id?: never }
@@ -117,14 +118,16 @@ export function Header() {
           >
             {t("header.sponsor")}
           </Link>
-          {/* ギブアウェイボタン（1280px以上のみ） */}
-          <button
-            onClick={openDialog}
-            className="hidden xl:flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-2 text-white/80 transition-colors hover:bg-white/15"
-            aria-label={t("header.giveaway")}
-          >
-            <Gift className="size-5" />
-          </button>
+          {/* ギブアウェイボタン（1280px以上のみ。アジェンダページでは非表示） */}
+          {hideGiveawayUi ? null : (
+            <button
+              onClick={openDialog}
+              className="hidden xl:flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-2 text-white/80 transition-colors hover:bg-white/15"
+              aria-label={t("header.giveaway")}
+            >
+              <Gift className="size-5" />
+            </button>
+          )}
           {/* 言語選択 */}
           <LanguageSelector className="rounded-full border border-white/15 bg-white/5 text-white/80 hover:bg-white/15" />
           {/* Xアイコンボタン */}
@@ -270,24 +273,26 @@ export function Header() {
                   </Link>
                 </Button>
               </motion.div>
-              {/* ギブアウェイボタン（モバイル） */}
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
-              >
-                <button
-                  onClick={() => {
-                    openDialog();
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors w-full text-left"
+              {/* ギブアウェイボタン（モバイル。アジェンダページでは非表示） */}
+              {hideGiveawayUi ? null : (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3, delay: 0.15, ease: "easeOut" }}
                 >
-                  <Gift className="size-4" />
-                  {t("header.giveaway")}
-                </button>
-              </motion.div>
+                  <button
+                    onClick={() => {
+                      openDialog();
+                      setIsMobileMenuOpen(false);
+                    }}
+                    className="flex items-center gap-2 text-sm text-white/80 hover:text-white transition-colors w-full text-left"
+                  >
+                    <Gift className="size-4" />
+                    {t("header.giveaway")}
+                  </button>
+                </motion.div>
+              )}
               {/* スポンサーリンク */}
               <motion.div
                 initial={{ opacity: 0, y: -10 }}

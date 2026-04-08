@@ -47,17 +47,17 @@ logoClass: "w-full max-w-xs aspect-[2/1] border-4 border-white rounded-2xl bg-wh
   {
     tier: Tier.Gold,
     containerClass:
-      "grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 w-full max-w-lg lg:max-w-5xl mx-auto justify-items-center items-start",
+      "flex flex-wrap justify-center items-start gap-x-5 gap-y-6 w-full max-w-3xl mx-auto",
     logoClass:
-      "w-full max-w-[260px] aspect-[1.6/1] lg:aspect-[1.8/1] border-2 border-[#D4AF37] rounded-lg bg-black/20 shadow-[0_0_10px_rgba(212,175,55,0.2)]",
+      "w-full max-w-[280px] md:max-w-[260px] aspect-[1.8/1] border-2 border-[#D4AF37] rounded-lg bg-black/20 shadow-[0_0_10px_rgba(212,175,55,0.2)]",
     gap: "mt-14 md:mt-16",
     titleGap: "mb-4",
     initialY: 32,
   },
   {
     tier: Tier.Silver,
-    containerClass: "flex flex-wrap md:flex-nowrap justify-center items-start gap-4 w-full max-w-lg md:max-w-4xl mx-auto",
-   logoClass: "w-[calc(50%-0.5rem)] md:w-auto md:flex-1 md:max-w-[220px] aspect-[1.5/1] border-[1.5px] border-[#C0C0C0] rounded-md bg-black/10 shadow-[0_0_8px_rgba(192,192,192,0.15)]",
+    containerClass: "flex flex-wrap justify-center items-start gap-4 w-full max-w-3xl mx-auto",
+   logoClass: "w-[calc(33.333%-1rem)] min-w-[160px] aspect-[1.5/1] border-[1.5px] border-[#C0C0C0] rounded-md bg-black/10 shadow-[0_0_8px_rgba(192,192,192,0.15)]",
     gap: "mt-12 md:mt-14",
     titleGap: "mb-4",
     initialY: 28,
@@ -128,6 +128,8 @@ export function SponsorSection() {
       logo?: string;
       website?: string;
       whiteLogo?: boolean;
+      forceWhiteBackground?: boolean;
+      logoInset?: boolean;
       /** Bronze: "corporate" (企業) vs default / "individual" → Heroes */
       type?: string;
     }[]
@@ -148,6 +150,8 @@ export function SponsorSection() {
             logo?: string;
             website?: string;
             whiteLogo?: boolean;
+            forceWhiteBackground?: boolean;
+            logoInset?: boolean;
             type?: string;
           }[];
         };
@@ -176,6 +180,8 @@ export function SponsorSection() {
             logo: sponsor.logo,
             website: sponsor.website,
             whiteLogo: sponsor.whiteLogo,
+            forceWhiteBackground: sponsor.forceWhiteBackground,
+            logoInset: sponsor.logoInset,
             type: sponsor.type,
           }));
           // 同一 tier 内で同じ logo パスが重複しないようにする（先頭を残す）。logo なしは name で一意化
@@ -236,14 +242,9 @@ export function SponsorSection() {
                 "text-xs text-amber-600/70 uppercase tracking-widest mb-2 text-center";
 
               const renderLogoGrid = (list: typeof sponsors) => {
-                const resolvedContainerClass =
-                  tier === Tier.Gold && list.length === 2
-                    ? "grid grid-cols-2 gap-4 lg:gap-6 w-full max-w-lg mx-auto justify-items-center items-start lg:flex lg:flex-wrap lg:justify-center lg:max-w-5xl"
-                    : containerClass;
-
                 return (
                 <motion.div
-                  className={resolvedContainerClass}
+                  className={containerClass}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, margin: "-80px" }}
@@ -258,6 +259,8 @@ export function SponsorSection() {
                       website={sponsor.website}
                       className={logoClass}
                       whiteLogo={sponsor.whiteLogo}
+                      whiteBackground={sponsor.forceWhiteBackground}
+                      logoInset={sponsor.logoInset}
                     />
                   ))}
                 </motion.div>

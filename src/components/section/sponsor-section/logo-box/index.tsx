@@ -87,6 +87,8 @@ interface LogoBoxProps {
   website?: string;
   whiteLogo?: boolean;
   whiteBackground?: boolean;
+  /** Extra padding inside the logo area so the mark reads smaller with breathing room */
+  logoInset?: boolean;
 }
 
 export const LogoBox = ({
@@ -97,6 +99,7 @@ export const LogoBox = ({
   className,
   whiteLogo,
   whiteBackground,
+  logoInset,
 }: LogoBoxProps) => {
   const ts = TIER_STYLES[tier];
   const { borderAccent } = TIER_CONFIGS[tier];
@@ -117,7 +120,12 @@ export const LogoBox = ({
         whiteBackground ? "bg-gray-50" : "bg-black/40",
       )}
     >
-      <div className="relative w-full h-full overflow-hidden rounded-xl">
+      <div
+        className={cn(
+          "relative w-full h-full overflow-hidden rounded-xl",
+          logoInset && "p-2.5 md:p-3",
+        )}
+      >
         <Image
             src={logo}
             alt={alt}

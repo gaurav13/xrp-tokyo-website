@@ -12,6 +12,7 @@ export interface AgendaSpeaker {
 export interface AgendaItem {
   time: string;
   title: string;
+  titleJa?: string;
   track?: string;
   speakerNames: string[];
   moderatorNames?: string[];
@@ -80,18 +81,18 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     linkedin: "https://jp.linkedin.com/in/tomohiko-kondo-78748bab",
   },
   {
-    name: "Dave McComb",
+    name: "Dave McCombs",
     role: "Senior Re-Writer",
     company: "NHK World Japan",
     bio: "Former President, Foreign Correspondents’ Club of Japan (FCCJ)",
-    image: "/speakers/Dave McComb.png",
+    image: "/speakers/Dave-McComb.png",
   },
   {
-    name: "Hiroshi Onozawa",
+    name: "Hirokuni Onozawa",
     role: "Executive Officer",
     company: "GMO Aozora Net Bank, Ltd",
     bio: "",
-    image: "/speakers/Hiroshi Onozawa.png",
+    image: "/speakers/hirokuni_onozawa.png",
   },
   {
     name: "Seihaku Yoshida",
@@ -111,12 +112,29 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     linkedin: "https://jp.linkedin.com/in/takafumi-shimoyama-43b949207",
   },
   {
+    name: "Toshinari Shinohara",
+    role: "Director, Future Co-Creation Lab, General Management Division",
+    company: "TOBU TOP TOURS",
+    bio: "",
+    image: "/speakers/Toshinari Shinohara.png",
+    website: "https://www.tobutoptours.co.jp/",
+  },
+  {
     name: "Meg Nakamura",
     role: "Chief Operating Officer",
     company: "Evernorth",
     bio: "",
     image: "/speakers/Meg Nakamura.png",
     linkedin: "https://www.linkedin.com/in/megnakamura",
+  },
+  {
+    name: "Yusuke Takezawa",
+    role: "Independent Advisor on Cross-Border Finance and Institutional Design, Former VP at Progmat",
+    company: "",
+    bio: "",
+    image: "/speakers/Yusuke Takezawa.jpg",
+    linkedin: "https://www.linkedin.com/in/yusuke-takezawa-327720156/",
+    website: "",
   },
   {
     name: "Mai Furukawa",
@@ -227,8 +245,8 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
   },
   {
     name: "Ryo Sakai",
-    role: "Head of Business Development & CO",
-    company: "CoinPost,Webx",
+    role: "Head of Business Development & CEO",
+    company: "CoinPost, WebX",
     bio: "",
     image: "/speakers/Ryo Sakai.png",
   },
@@ -261,7 +279,7 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
     image: "/speakers/Ai Kosuke.png",
   },
   {
-    name: "Matsuda Ikkei",
+    name: "Ikkei Matsuda",
     role: "Representative Director & CEO",
     company: "Digital Platformer Co., Ltd.",
     bio: "",
@@ -297,7 +315,7 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
   },
   {
     name: "Kyohei Shibano",
-    role: "Blockchain Education program",
+    role: "Project Researcher",
     company: "The University of Tokyo",
     bio: "",
     image: "/speakers/Tokyo University.png",
@@ -339,7 +357,7 @@ export const AGENDA_SPEAKERS: AgendaSpeaker[] = [
   },
   {
     name: "VIP After Party",
-    role: "Limited attendance. VIP or prior approval required.",
+    role: "Limited attendance. Prior approval required.",
     company: "https://luma.com/da2ucul1",
     bio: "",
     image: "/speakers/partyimg.png",
@@ -387,17 +405,17 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   },
   {
     time: "10:30 AM - 10:35 AM",
-    title: "Welcome Note: Building the Future of Finance with XRP Tokyo",
+    title: "Welcome Note",
     track: "Keynote",
     speakerNames: ["Mai Furukawa"],
   },
   {
     time: "10:35 AM - 11:00 AM",
     title:
-      "Firechat: Scaling the Internet of Value with XRP: Building the Next Global Financial Infrastructure",
+      "Scaling the Internet of Value with XRP: Building the Next Global Financial Infrastructure",
     track: "Fireside",
     speakerNames: ["Markus Infanger"],
-    moderatorNames: ["Dave McComb"],
+    moderatorNames: ["Dave McCombs"],
   },
   {
     time: "11:05 AM - 11:35 AM",
@@ -414,7 +432,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   },
   {
     time: "11:40 AM - 11:55 AM",
-    title: "When Capital Commits: Why Institutions Are Moving On-Chain Now",
+    title: "When Capital Commits",
     track: "Keynote",
     speakerNames: ["Meg Nakamura"],
   },
@@ -423,7 +441,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     title:
       "Institutional Blockchain Adoption : From Pilot to Production: How Banks Are Building the Next Financial Infrastructure with Blockchain",
     track: "Panel",
-    speakerNames: ["Hiroshi Onozawa", "Ryo Kato", "Go Makino"],
+    speakerNames: ["Hirokuni Onozawa", "Ryo Kato", "Go Makino"],
     moderatorNames: ["Noriaki Yagi"],
   },
   {
@@ -432,23 +450,23 @@ export const AGENDA_ITEMS: AgendaItem[] = [
       "Connecting Japan and Global Capital: The Future of Web3 Investment and Expansion",
     track: "Panel",
     speakerNames: ["SungMo Park", "Meg Nakamura", "Takuya Sugiyama"],
-    moderatorNames: ["Hinza Asif"],
+    moderatorNames: ["Yusuke Takezawa"],
   },
   {
     time: "1:00 PM - 1:25 PM",
     title:
       "Tokenized Payments for the Tourism Economy: Real-World Implementation",
     track: "Panel",
-    speakerNames: ["Takafumi Shimoyama"],
+    speakerNames: ["Takafumi Shimoyama", "Toshinari Shinohara"],
     moderatorNames: ["Mai Furukawa"],
   },
   {
     time: "1:25 PM - 1:35 PM",
     title:
-      "TBA",
+      "The Future of RLUSD as Envisioned by SBI VC Trade",
+    titleJa: "SBIVCトレードが描くRLUSDの未来",
     track: "Keynote",
     speakerNames: ["Tomohiko Kondo"],
-    
   },
   {
     time: "1:35 PM - 1:45 PM",
@@ -460,7 +478,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   },
   {
     time: "1:50 PM - 2:10 PM",
-    title: "How to License Your Reputation Like a Pro Athlete: Unlocking the Power of Name, Image & Likeness with Datavault AI",
+    title: "International Element Exchange: A Datavault AI Technology",
     track: "Keynote",
     speakerNames: ["Nathaniel T. Bradley"],
   },
@@ -474,7 +492,7 @@ export const AGENDA_ITEMS: AgendaItem[] = [
   },
   {
     time: "2:50 PM - 3:00 PM",
-    title: "Ripple APAC Ecosystem Announcement - TBA",
+    title: "Growing the XRPL Ecosystem",
     track: "Keynote",
     speakerNames: ["Christina Chan"],
   },
@@ -492,13 +510,13 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     moderatorNames: ["Cyrus Cruz"],
   },
   {
-    time: "3:30 PM - 3:40 PM",
-    title: "Doppler Finance - Keynote",
+    time: "3:35 PM - 3:45 PM",
+    title: "Doppler Finance: Powering Institutional Adoption on XRPL",
     track: "Keynote",
     speakerNames: ["Rox Park"],
   },
   {
-    time: "3:45 PM - 4:15 PM",
+    time: "3:50 PM - 4:20 PM",
     title:
       "From Real Assets to Digital Infrastructure: How Institutions Are Building the Next Financial System",
     track: "Panel",
@@ -506,19 +524,19 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     moderatorNames: ["Fumihiro Arasawa"],
   },
   {
-    time: "4:20 PM - 4:30 PM",
+    time: "4:25 PM - 4:35 PM",
     title:
-      "Building the Future of Web3 Infrastructure: The Yellow Network Layer-3 Vision",
+      "The Internet of Value for the Agentic Economy",
     track: "Keynote",
     speakerNames: ["Alexis Sirkia","Steven Zeiler"],
   },
   {
-    time: "4:35 PM - 5:05 PM",
+    time: "4:40 PM - 5:10 PM",
     title: "Japan’s XRPL Ecosystem: Local Innovation and Global Opportunities",
     track: "Panel",
     speakerNames: [
       "Ai Kosuke",
-      "Matsuda Ikkei",
+      "Ikkei Matsuda",
       "Sojun Katsura",
       "Jean Zhu",
       "Yusuke Hirota",
@@ -526,14 +544,15 @@ export const AGENDA_ITEMS: AgendaItem[] = [
     moderatorNames: ["Tatsuya Kohrogi"],
   },
   {
-    time: "5:10 PM - 5:18 PM",
+    time: "5:15 PM - 5:23 PM",
     title:
       "Introducing the Endowed Chair for Blockchain Innovation at the University of Tokyo",
+    titleJa: "東京大学ブロックチェーンイノベーション寄付講座 活動紹介",
     track: "Keynote",
     speakerNames: ["Kyohei Shibano"],
   },
   {
-    time: "5:18 PM - 5:30 PM",
+    time: "5:23 PM - 5:35 PM",
     title: "XRP Tokyo 2026: Our Journey Ahead",
     track: "Closing Remarks",
     speakerNames: ["Mai Furukawa", "Hinza Asif"],
