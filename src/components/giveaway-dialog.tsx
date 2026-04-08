@@ -1,17 +1,10 @@
 "use client";
 import { createContext, useContext, useEffect, useState, useCallback } from "react";
-import { useTranslations } from "next-intl";
-import { ArrowRight } from "lucide-react";
-import {
-  Dialog,
-  DialogPanel,
-  DialogClose,
-} from "@/components/animate-ui/components/headless/dialog";
+import Image from "next/image";
 import { useSplash } from "@/contexts/splash-context";
 import { cn } from "@/lib/utils";
 
 const STORAGE_KEY = "giveaway-dialog-dismissed";
-const LUMA_REGISTRATION_URL = "https://luma.com/0dww2xk3";
 
 type GiveawayDialogContextType = {
   openDialog: () => void;
@@ -68,98 +61,155 @@ function GiveawayDialogContent({
   isOpen: boolean;
   onClose: () => void;
 }) {
-  const t = useTranslations();
+  // Body scroll lock
+  useEffect(() => {
+    if (!isOpen) return;
+    const html = document.documentElement;
+    const scrollY = window.scrollY;
+    html.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+    return () => {
+      html.style.overflow = "";
+      document.body.style.overflow = "";
+      window.scrollTo(0, scrollY);
+    };
+  }, [isOpen]);
+
+  // ESC key
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
 
   return (
-    <Dialog open={isOpen} onClose={onClose} className="relative z-[9999]">
-     
-  
-
-  {/* Center container (required so panel stays visible) */}
-  <div className="fixed inset-0 flex items-center justify-center p-4">
-    <DialogPanel
-  from="bottom"
-  showCloseButton={false}
-  className={cn(
-    "fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2",
-    "w-[min(480px,calc(100%-2rem))]",
-    "rounded-2xl overflow-hidden",
-    "shadow-2xl",
-    "border border-[#e81111]/70",
-    "bg-black p-0"
-  )}
->
-      {/* Background image */}
+    <>
+      {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-[url('/popup.png')] bg-cover bg-center bg-no-repeat"
+        className="fixed inset-0 z-[9998] bg-black/40 backdrop-blur-[2px]"
         aria-hidden="true"
+        onClick={onClose}
       />
 
-      {/* Dark overlay (for readability) */}
-      <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
-
-      {/* Top accent line (optional) */}
-      <div className="relative h-[2px] bg-gradient-to-r from-transparent via-[#e81111]/80 to-transparent" />
-
-      {/* Content */}
-      <div className="relative px-7 pt-9 pb-7 sm:px-9 sm:pt-11 sm:pb-9">
-        {/* glow (optional) */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-56 h-56 rounded-full bg-amber-500/[0.03] blur-3xl pointer-events-none" />
-
-        <div className="relative">
-          <p className="text-center text-[11px] text-[#e81111] font-semibold tracking-[0.2em] uppercase  mb-6 sm:mb-7">
-            Exclusive
-          </p>
-
-          <h2 className="text-center text-xl sm:text-2xl font-bold tracking-tight text-zinc-50 leading-snug mb-2.5">
-            {t("giveaway.subtitle")}
-          </h2>
-
-          <p className="text-center text-[13px] sm:text-sm leading-relaxed text-zinc-400 mb-9 sm:mb-10 whitespace-pre-line">
-            {t("giveaway.title")} &mdash; {t("giveaway.description")}
-          </p>
-
-          <a
-  href={LUMA_REGISTRATION_URL}
-  target="_blank"
-  rel="noopener noreferrer"
-  className={cn(
-    "group w-full flex items-center justify-center gap-2.5",
-
-    // height + pill shape
-    "h-14 rounded-full",
-
-    // smooth luxury gold gradient
-    "bg-gradient-to-r from-[#b67c2c] via-[#e7b75c] to-[#b67c2c]",
-
-    // text
-    "text-black text-sm font-bold tracking-wide",
-
-    // depth + glow
-    "shadow-[0_8px_25px_rgba(231,183,92,0.35)]",
-
-    // smooth hover
-    "transition-all duration-300",
-    "hover:brightness-105 hover:scale-[1.01]",
-
-    // focus
-    "focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/60"
-  )}
->
-  {t("giveaway.cta.register")}
-  <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
-</a>
-
-          <DialogClose
-            as="button"
-            className="w-full mt-5 text-center text-xs text-zinc-400/80 hover:text-zinc-200 transition-colors cursor-pointer"
+      <div
+        className="fixed inset-0 z-[9999] overflow-y-auto overscroll-y-contain [-webkit-overflow-scrolling:touch]"
+        data-lenis-prevent=""
+      >
+        <div
+          className="flex min-h-full items-center justify-center p-4 py-8"
+          onClick={onClose}
+        >
+          <div
+            className={cn(
+              "relative w-[min(480px,calc(100%-2rem))] min-h-0",
+              "max-h-[min(92dvh,calc(100dvh-2rem))]",
+              "overflow-y-auto overflow-x-hidden overscroll-y-contain touch-pan-y [-webkit-overflow-scrolling:touch]",
+              "rounded-3xl",
+              "shadow-[0_8px_16px_-4px_rgba(232,17,17,0.15),0_24px_60px_-8px_rgba(232,17,17,0.2),0_0_0_1px_rgba(232,17,17,0.08)]",
+              "bg-white"
+            )}
+            data-lenis-prevent=""
+            role="dialog"
+            aria-modal="true"
+            onClick={(e) => e.stopPropagation()}
           >
-            閉じる
-          </DialogClose>
+            {/* Top accent line */}
+            <div className="h-[3px] bg-gradient-to-r from-transparent via-[#e81111]/60 to-transparent" aria-hidden="true" />
+
+            {/* Hero area */}
+            <div className="relative flex flex-col items-center pt-8 pb-4">
+
+              <div className="relative mb-5 px-5 py-1 rounded-full bg-[#e81111]/[0.07] border border-[#e81111]/20">
+                <span className="text-[10px] font-bold tracking-[0.4em] text-[#e81111] uppercase">
+                  Thank You
+                </span>
+              </div>
+
+              <Image
+                src="/toushindai_1200_1500.png"
+                alt="XRP Tokyo 2026"
+                width={1200}
+                height={1500}
+                sizes="(max-width: 640px) 150px, 170px"
+                className="relative w-[140px] sm:w-[160px] h-auto"
+              />
+            </div>
+
+            {/* Content */}
+            <div className="px-7 pt-5 pb-8 sm:px-9 sm:pb-10">
+
+              {/* Bilingual title */}
+              <div className="text-center mb-5">
+                <h2 className="text-[21px] sm:text-[23px] font-bold tracking-tight text-zinc-900 leading-snug">
+                  心より御礼申し上げます
+                </h2>
+                <p className="mt-1.5 text-[13px] text-zinc-400 font-medium tracking-wide">
+                  From the Bottom of Our Hearts
+                </p>
+              </div>
+
+              {/* Ornamental divider */}
+              <div className="flex items-center gap-3 mb-5" aria-hidden="true">
+                <div className="flex-1 h-px bg-gradient-to-r from-transparent to-zinc-200" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[#e81111]/35" />
+                <div className="flex-1 h-px bg-gradient-to-l from-transparent to-zinc-200" />
+              </div>
+
+              {/* Japanese message */}
+              <p className="text-[13px] sm:text-[13.5px] leading-[2.05] text-zinc-600 mb-5">
+                ご来場いただいた皆さま、スポンサーとしてご支援くださった企業の皆さま、スピーカーとして貴重な知見を共有してくださった皆さま、遠方から温かい応援をいただいた皆さま、そしてSNSでイベントを盛り上げてくださったすべての皆さまに、運営チーム一同、心より感謝申し上げます。
+                <br /><br />
+                皆さまと共に創り上げたこの一日は、XRPコミュニティにとってかけがえのない財産です。
+              </p>
+
+              {/* Language separator */}
+              <div className="flex items-center gap-2.5 mb-5" aria-hidden="true">
+                <div className="flex-1 h-px bg-zinc-100" />
+                <span className="text-[9px] font-bold tracking-[0.3em] text-zinc-300 uppercase">English</span>
+                <div className="flex-1 h-px bg-zinc-100" />
+              </div>
+
+              {/* English message */}
+              <p className="text-[12px] sm:text-[12.5px] leading-[1.9] text-zinc-400 mb-6">
+                To everyone who attended, the sponsors who made this possible, the speakers who shared their invaluable insights, those who supported us from afar, and everyone who amplified our event on social media — the entire XRP Tokyo team extends our deepest gratitude.
+                <br /><br />
+                The day we built together is an irreplaceable treasure for the XRP community.
+              </p>
+
+              {/* Bilingual closing / signature */}
+              <div className="text-center mb-7">
+                <p className="text-[13.5px] font-semibold text-zinc-800 tracking-wide">
+                  XRPL Japan & Asia Web3 Alliance JAPAN 一同
+                </p>
+                <p className="text-[11px] text-zinc-400 mt-1 tracking-wider leading-relaxed">
+                  XRPL Japan &amp; Asia Web3 Alliance JAPAN
+                </p>
+              </div>
+
+              {/* Close button */}
+              <button
+                type="button"
+                onClick={onClose}
+                className={cn(
+                  "w-full flex items-center justify-center gap-2",
+                  "h-11 rounded-full",
+                  "bg-zinc-900 text-white",
+                  "text-[13px] font-medium tracking-wide",
+                  "transition-all duration-200",
+                  "hover:bg-zinc-700",
+                  "focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400"
+                )}
+              >
+                <span>また東京で</span>
+                <span className="text-zinc-500 text-[12px]">/ See You in Tokyo</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </DialogPanel>
-  </div>
-</Dialog>
+    </>
   );
 }

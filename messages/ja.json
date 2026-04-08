@@ -8,7 +8,7 @@
     "openMenu": "メニューを開く",
     "followOnX": "Xでフォロー",
     "selectLanguage": "言語を選択",
-    "giveaway": "Giveaway",
+    "giveaway": "お礼",
     "about": "概要",
     "agenda":"プログラム",
     "highlights": "ハイライト",
@@ -104,11 +104,9 @@
     "poweredBy": "Powered by XRPL Japan"
   },
   "giveaway": {
-    "title": "チケット購入者限定",
-    "subtitle": "ハードウェアウォレットをプレゼント",
-    "description": "数量限定でプレゼント！\nなくなり次第終了。",
-    "cta": {
-      "register": "専用サイトで申し込む"
-    }
+    "kicker": "Thank You",
+    "title": "心より御礼申し上げます",
+    "message": "ご来場いただいた皆さま、スポンサーとしてご支援くださった企業の皆さま、スピーカーとして貴重な知見を共有してくださった皆さま、遠方から温かい応援をいただいた皆さま、そしてSNSでイベントを盛り上げてくださったすべての皆さまに、運営チーム一同、心より感謝申し上げます。\n\n皆さまと共に創り上げたこの一日は、XRPコミュニティにとってかけがえのない財産です。",
+    "closing": "XRPL Japan / Asia Web3 Alliance JAPAN 一同"
   }
 }

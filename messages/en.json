@@ -8,7 +8,7 @@
     "openMenu": "Open menu",
     "followOnX": "Follow on X",
     "selectLanguage": "Select language",
-    "giveaway": "Giveaway",
+    "giveaway": "Thank You",
     "about": "About",
     "agenda": "Agenda",
     "highlights": "Highlights",
@@ -104,12 +104,9 @@
     "poweredBy": "Powered by XRPL Japan"
   },
   "giveaway": {
-    "title": "Exclusive for Ticket Holders",
-    "subtitle": "XRP Hardware Wallet Giveaway",
-
-    "description": "Limited quantity giveaway!\nFirst come, first served.",
-    "cta": {
-      "register": "Register on the dedicated site"
-    }
+    "kicker": "Thank You",
+    "title": "From the Bottom of Our Hearts",
+    "message": "To everyone who attended, the sponsors who made this possible, the speakers who shared their invaluable insights, those who supported us from afar, and everyone who amplified our event on social media — the entire XRP Tokyo team extends our deepest gratitude.\n\nThe day we built together is an irreplaceable treasure for the XRP community.",
+    "closing": "XRPL Japan / Asia Web3 Alliance JAPAN"
   }
 }
